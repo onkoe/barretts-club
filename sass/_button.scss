@@ -1,0 +1,25 @@
+@import "colors.scss";
+
+.button {
+    background-color: $background;
+    color: $accent;
+    padding: 0.4em;
+    border-radius: 0.4em;
+    outline-style: solid;
+
+    a {
+        color: $accent;
+    }
+}
+
+.button:hover {
+    background-color: $accent;
+    padding: 0.4em;
+    border-radius: 0.4em;
+    outline-style: solid;
+
+    a {
+        color: $background;
+        text-decoration: none;
+    }
+}

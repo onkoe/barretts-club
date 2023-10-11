@@ -1,7 +1,5 @@
 @import "colors.scss";
 
-
-
 @mixin box-shadows {
     //box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; // old
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; // ooo good
@@ -31,14 +29,17 @@ body {
 
 a:link,
 a:visited {
-    color: $text;
+    color: $accent;
     text-decoration: normal;
     text-decoration-style: none;
 }
 
 a:hover,
 a:active {
-    text-decoration: underline;
+    text-decoration: none;
+    background-color: $accent;
+    color: $background;
+    background-color: $accent;
 }
 
 .content {
@@ -118,7 +119,26 @@ a:active {
         background-color: $accent;
         border-radius: 15%;
 
+        background-color: $background;
+        color: $accent;
+        padding: 0.4em;
+        border-radius: 0.4em;
+        outline-style: solid;
+
         a {
+            text-decoration: none;
+            color: $accent;
+        }
+    }
+
+    .read-more:hover {
+        background-color: $accent;
+        padding: 0.4em;
+        border-radius: 0.4em;
+        outline-style: solid;
+
+        a {
+            color: $background;
             text-decoration: none;
         }
     }

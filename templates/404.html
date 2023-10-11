@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+
+<link
+rel="stylesheet"
+href="{{ get_url(path="404.css",
+    trailing_slash=false)
+}}"
+/>
+
+
+<div class="lost-container">
+    <img id="gif" src="https://media.tenor.com/9nr_IfnA8pgAAAAC/pup-head.gif" alt="Burnese mountain dog puppy tilting its head back and forth!">
+
+    <h1>404!</h1>
+    <h2>Seems like you're a bit lost...</h2>
+
+    <div id="button">
+        <a href="/">Wanna go home..?</a>
+    </div>
+    
+</div>
+
+{% endblock content %}
