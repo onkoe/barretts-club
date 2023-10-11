@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Barrett's Club</title>
+        <link
+            rel="stylesheet"
+            href="{{ get_url(path="styles.css",
+                trailing_slash=false)
+            }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ get_url(path="header.css",
+                trailing_slash=false)
+            }}"
+        />
+    </head>
+
+    <header class="main-header">
+        <div class="nav-container">
+            <nav class="header-bar">
+                <ul class="nav-list">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#posts">Posts</a>
+                    </li>
+                    <li>
+                        <a href="#aboot">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <body>
+        <section class="section">
+            <div class="container">{% block content %} {% endblock %}</div>
+        </section>
+    </body>
+</html>

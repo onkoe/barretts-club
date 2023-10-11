@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://barretts.club/</loc>
+    </url>
+    <url>
+        <loc>https://barretts.club/posts/</loc>
+    </url>
+    <url>
+        <loc>https://barretts.club/posts/first/</loc>
+        <lastmod>2022-05-17</lastmod>
+    </url>
+    <url>
+        <loc>https://barretts.club/posts/second/</loc>
+        <lastmod>2022-05-17</lastmod>
+    </url>
+    <url>
+        <loc>https://barretts.club/tags/</loc>
+    </url>
+    <url>
+        <loc>https://barretts.club/tags/first-post/</loc>
+    </url>
+    <url>
+        <loc>https://barretts.club/tags/more/</loc>
+    </url>
+</urlset>

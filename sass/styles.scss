@@ -1,0 +1,83 @@
+@use "./colors.scss" as *;
+
+html {
+    font-family: "cantarell", system-ui, "avenir next", arial, sans-serif;
+    color: $text-color;
+}
+
+body {
+    background-color: $background-color;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 24pt;
+    padding: 0.4em;
+}
+
+a:link,
+a:visited {
+    color: $text-color;
+    text-decoration: normal;
+    text-decoration-style: none;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+.content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.post-preview {
+    background-color: $container-background-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 60%;
+    border-radius: 12pt;
+    margin: 8pt;
+    padding: 10pt;
+
+    // apply "clearfix"
+    clear: both;
+    display: table;
+
+    .post-title {
+        font-size: 1.8em;
+        font-weight: 900;
+        text-decoration: none;
+    }
+
+    // The little list of tags on every post
+    .post-tags-container {
+        padding: 4pt;
+        height: flex;
+        flex-wrap: wrap;
+
+        .post-tag {
+            display: inline-block;
+            background-color: $background-color;
+            padding: 6pt;
+            margin: 1pt;
+            border-radius: 8pt;
+        }
+    }
+
+    .read-more {
+        padding: 8pt;
+        float: right;
+        text-decoration: none;
+        background-color: $background-color;
+        border-radius: 10%;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
