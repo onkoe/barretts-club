@@ -8,7 +8,7 @@
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
-    
+
     display: flex;
     margin: auto;
     justify-content: center;
@@ -29,43 +29,33 @@
         margin-top: 0;
         border-radius: 0.4rem;
     }
-    
+
     h2 {
         font-size: 1.8rem;
     }
-    
+
 
     #button {
         background-color: $background;
         color: $accent;
-        padding: 0.4em;
+        padding: 0.6em;
         border-radius: 0.4em;
         outline-style: solid;
-
-        a {
-            color: $accent;
-        }
     }
 
     #button:hover {
         background-color: $accent;
-        padding: 0.4em;
+        color: $background;
+        outline-color: $accent;
+        padding: 0.6em;
         border-radius: 0.4em;
         outline-style: solid;
-
-        a {
-            color: $background;
-            text-decoration: none;
-        }
     }
 
-    a, a:visited {
+    a,
+    a:visited {
         padding: 0;
-        
         border-radius: 0;
         text-decoration: none;
     }
 }
-
-
-

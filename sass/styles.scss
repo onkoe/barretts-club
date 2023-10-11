@@ -133,14 +133,11 @@ a:active {
 
     .read-more:hover {
         background-color: $accent;
+        color: $background;
+        outline-color: $accent;
         padding: 0.6em;
         border-radius: 0.4em;
         outline-style: solid;
-
-        a {
-            color: $background;
-            text-decoration: none;
-        }
     }
 }
 
