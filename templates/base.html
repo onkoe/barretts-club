@@ -2,7 +2,24 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Barrett's Club</title>
+
+        {# Handle tab title logic #}
+        {% if page.title%}
+            <title>{{page.title}} - {{config.extra.site_name}}</title>
+        {% elif section.title %}
+            <title>{{section.title}} - {{config.extra.site_name}}</title>
+        {% else %}
+            <title>{{config.extra.site_name}}</title>
+        {% endif %}
+
+        {# Enable favicon, if necessary #}
+        {% if config.extra.favicon %}
+            <link rel="icon" href="{{ get_url(path=config.extra.favicon, trailing_slash=false) }}" type="image/svg+xml">
+        {% else %}
+        <script> console.log("wtf") </script>
+        {% endif %}
+
+
         <link
             rel="stylesheet"
             href="{{ get_url(path="styles.css",
@@ -43,4 +60,26 @@
             <div class="container">{% block content %} {% endblock %}</div>
         </section>
     </body>
+
+    <footer> 
+
+        <link
+rel="stylesheet"
+href="{{ get_url(path="footer.css",
+    trailing_slash=false)
+}}"
+/>
+
+        {# copyright info, if you want... see config.toml! #}
+        {% if config.extra.copyright.enable == True %}
+            {% if config.extra.copyright.use_copyleft == True %}
+                {% set rights_icon = "🄯" %}
+            {% else %}
+                {% set rights_icon = "©" %}
+            {% endif %}
+
+
+            <p class=copyright-info> {{rights_icon}} {% if config.extra.copyright.include_author_name == True and config.extra.author %} {{config.extra.author}} {% endif %} {{now()|date(format="%Y")|int}} </p>
+        {% endif %}
+    </footer>
 </html>

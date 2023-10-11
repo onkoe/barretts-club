@@ -1,0 +1,28 @@
+@import "colors.scss";
+
+.post {
+    padding: 5% 20%; // TODO: fix this shit, so ugly when big and too small at half
+    line-height: 1.5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+code {
+    background-color: $outline;
+}
+
+pre code {
+    background-color: transparent;
+}
+
+pre {
+    border-radius: 0.4em;
+    padding: 0.6em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    word-wrap: none;
+    scrollbar-width: thin;
+}
+
+.post-title {}

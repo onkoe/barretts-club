@@ -1,7 +1,22 @@
 {% extends "index.html" %} {% block content %}
+
+<link
+rel="stylesheet"
+href="{{ get_url(path="blog-post.css",
+    trailing_slash=false)
+}}"
+/>
+
 <div class="post">
     <h1 class="post-title">{{ page.title }}</h1>
-    <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+
+    {# filter folks who hate freedom 🦅 #}
+    {% if config.extra.date.use_ansi_time == True %}
+        <span class="post-date">{{ page.date | date(format="%B %e, %Y") }}</span>
+    {% else %}
+        <span class="post-date">{{ page.date | date(format="%e %B %Y") }}</span>
+    {% endif %}
+
     {{ page.content | safe }}
 </div>
 {% endblock content %}
