@@ -1,0 +1,38 @@
+$text-color: #74daa3;
+$background-color: #003821;
+$container-background-color: #005232;
+
+$light-bg: #F7F7F7; // the background of the page only!
+$light-accent: #00563B; // highlighted text, buttons, etc.
+$light-text: #0D0A0B; // text
+$light-outline: #E0E0E0; // faint outline of things :)
+
+$dark-bg: #111111;
+$dark-accent: $light-accent;
+$dark-text: #F7F7F7;
+$dark-outline: #1F1F1F;
+
+$do-it: #00CC66;
+$info: #576CA8;
+$caution: #C59849;
+$warning: #EF3E36;
+
+$background: $light-bg;
+$accent: $light-accent;
+$text: $light-text;
+$outline: $light-outline;
+// TODO: container background/fg???
+
+@mixin light-theme {
+    $background: $light-bg;
+    $accent: $light-accent;
+    $text: $light-text;
+    $outline: $light-outline;
+}
+
+@mixin dark-theme {
+    $background: $dark-bg;
+    $accent: $dark-accent;
+    $text: $dark-text;
+    $outline: $dark-outline;
+}

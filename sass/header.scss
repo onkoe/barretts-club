@@ -1,9 +1,9 @@
-@use "./colors.scss" as *;
-@use "./animations.scss" as *;
+@import "colors.scss";
+@import "animations.scss";
 
 .nav-container {
     margin: 0 auto;
-    background: $container-background-color;
+    background: $background;
     border-radius: 12px;
     overflow: hidden;
     // https://getcssscan.com/css-box-shadow-examples
@@ -28,6 +28,7 @@
     margin: 0em;
     margin-right: -0.3em;
 }
+
 .header-bar a {
     display: block;
     padding: 1.2em 1.5em;

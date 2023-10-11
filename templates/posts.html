@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 <h1 class="title">{{ section.title }}</h1>
+<div class="preview-container">
 <ul>
     <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
     {% for page in section.pages %}
@@ -27,4 +28,5 @@
     </li>
     {% endfor %}
 </ul>
+</div>
 {% endblock %}

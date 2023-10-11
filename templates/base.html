@@ -21,18 +21,18 @@
         <div class="nav-container">
             <nav class="header-bar">
                 <ul class="nav-list">
+
+                    {# Custom navigation listings. 
+                    Add more in `config.toml`! #}
+
+                    {% if config.extra.header_nav %}
+                        {% for s in config.extra.header_nav.get %}
                     <li>
-                        <a href="#home">Home</a>
+                        <a href="{{s.link}}">{{s.name}}</a>
                     </li>
-                    <li>
-                        <a href="#posts">Posts</a>
-                    </li>
-                    <li>
-                        <a href="#aboot">About</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
+                        {% endfor %}
+                    {% endif %}
+                    
                 </ul>
             </nav>
         </div>

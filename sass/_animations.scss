@@ -1,4 +1,4 @@
-@use "./colors.scss" as *;
+@import "colors.scss";
 
 // rainbow barf thing
 @keyframes button-fade {
@@ -6,6 +6,7 @@
         background: $container-background-color;
         color: $text-color;
     }
+
     to {
         animation: color-change-5x;
     }
@@ -15,18 +16,22 @@
     0% {
         background: #19dcea;
     }
+
     25% {
         background: #b22cff;
         color: black;
     }
+
     50% {
         background: #ea2222;
         color: black;
     }
+
     75% {
         background: #f5be10;
         color: black;
     }
+
     100% {
         background: #3bd80d;
         color: black;

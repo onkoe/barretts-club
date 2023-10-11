@@ -16,3 +16,11 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+
+[extra.header_nav]
+get = [
+    { name = "Home", link = "/" },
+    { name = "Articles", link = "posts" },
+    { name = "About", link = "about" },
+    { name = "Contact", link = "contact" },
+]
