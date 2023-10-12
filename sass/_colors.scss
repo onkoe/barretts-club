@@ -1,21 +1,19 @@
-$text-color: #74daa3;
-$background-color: #003821;
-$container-background-color: #005232;
+$light-bg: #f7f7f7; // the background of the page only!
+$light-accent: #00563b; // highlighted text, buttons, etc.
+$light-text: #0d0a0b; // text
+$light-outline: #e0e0e0; // faint outline of things :)
 
-$light-bg: #F7F7F7; // the background of the page only!
-$light-accent: #00563B; // highlighted text, buttons, etc.
-$light-text: #0D0A0B; // text
-$light-outline: #E0E0E0; // faint outline of things :)
-
+// i'm not using `var(--stuff)` to get things everywhere.
+// lemme know if you can do this statically without that
 $dark-bg: #111111;
 $dark-accent: $light-accent;
-$dark-text: #F7F7F7;
-$dark-outline: #1F1F1F;
+$dark-text: #f7f7f7;
+$dark-outline: #1f1f1f;
 
-$do-it: #00CC66;
-$info: #576CA8;
-$caution: #C59849;
-$warning: #EF3E36;
+$do-it: #00cc66;
+$info: #576ca8;
+$caution: #c59849;
+$warning: #ef3e36;
 
 $background: $light-bg;
 $accent: $light-accent;

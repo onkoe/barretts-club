@@ -3,8 +3,8 @@
 // rainbow barf thing
 @keyframes button-fade {
     from {
-        background: $container-background-color;
-        color: $text-color;
+        background: $background;
+        color: $text;
     }
 
     to {

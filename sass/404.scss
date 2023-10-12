@@ -2,8 +2,8 @@
 
 .lost-container {
     #gif {
-        max-width: 30%;
-        max-height: 30%;
+        max-width: 15em;
+        max-height: 15em;
         border-radius: 0.5em;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -32,8 +32,8 @@
 
     h2 {
         font-size: 1.8rem;
+        text-align: center;
     }
-
 
     #button {
         background-color: $background;

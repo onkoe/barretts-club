@@ -9,6 +9,11 @@ body {
     background-color: $background;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 .title {
     font-weight: 900;
     font-size: 24pt;
