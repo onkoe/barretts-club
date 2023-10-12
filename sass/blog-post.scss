@@ -1,5 +1,58 @@
 @import "colors.scss";
 
+.date-and-tags {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin: auto 0.6em;
+    }
+
+    .post-tags-container {
+        display: flex;
+        flex-direction: row;
+        gap: 0.4em;
+
+        .post-tag {
+            outline-color: $outline;
+            outline-width: 0.1em;
+            outline-style: solid;
+            border-radius: 0.4em;
+            padding: 0.2em;
+            margin: 0;
+        }
+    }
+}
+
+.toc {
+    .toc-button {
+        // appearance: none; // removes the checkbox
+
+        #text {
+            padding: none;
+            margin: none;
+        }
+    }
+
+    outline-color: $outline;
+    outline-width: 0.1em;
+    outline-style: solid;
+    border-radius: 0.4em;
+    padding: 0.6em;
+    margin: 1em 0;
+    width: fit-content;
+    background: transparent;
+    color: adjust-color($accent, $lightness: 20%);
+
+    .toc-list {
+        display: none;
+    }
+
+    .toc-button:checked ~ .toc-list {
+        display: block;
+    }
+}
+
 .post {
     padding: 5% 5%; // mobile devices
     line-height: 1.5em;

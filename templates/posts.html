@@ -1,28 +1,36 @@
 {% extends 'base.html' %} {% block content %}
-<h1 class="title">{{ section.title }}</h1>
+
+<link
+rel="stylesheet"
+href="{{ get_url(path="posts.css",
+    trailing_slash=false)
+}}"
+/>
+
+<h1 class="title">{{ section.title | safe }}</h1>
 <div class="preview-container">
 <ul>
     <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
     {% for page in section.pages %}
     <li>
         <div class="post-preview">
-            <a class="post-title" href="{{ page.permalink|safe }}"
-                >{{ page.title }}</a
-            >
-            <p class="post-timestamp">{{ page.date }}</p>
-            <p class="post-description">{{ page.description }}</p>
+            <a class="post-title" href="{{ page.permalink | safe }}">
+                {{ page.title }}
+            </a>
+            <p class="post-timestamp">{{ page.date | safe}}</p>
+            <p class="post-description">{{ page.description | safe }}</p>
 
             <div class="post-tags-container">
                 {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags
                 %}
-                <p class="post-tag">{{ tag }}</p>
+                <p class="post-tag">{{ tag | safe }}</p>
                 {% endfor %} {% else %}
                 <p class="post-tag">No tags.</p>
                 {% endif %}
             </div>
 
 
-            <a href="{{ page.permalink }}">
+            <a href="{{ page.permalink | safe }}">
                 <div class="read-more">
                     Read more...
                 </div>

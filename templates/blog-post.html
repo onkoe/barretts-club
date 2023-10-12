@@ -10,25 +10,50 @@ href="{{ get_url(path="blog-post.css",
 <div class="post">
     <h1 class="post-title">{{ page.title }}</h1>
 
-    {# filter folks who hate freedom 🦅 #}
-    {% if config.extra.date.use_ansi_time == True %}
-        <span class="post-date">{{ page.date | date(format="%B %e, %Y") }}</span>
-    {% else %}
-        <span class="post-date">{{ page.date | date(format="%e %B %Y") }}</span>
-    {% endif %}
+    <div class="date-and-tags">
+        {# filter folks who hate freedom 🦅 #}
+        {% if config.extra.date.use_ansi_time == True %}
+            <span class="post-date">{{ page.date | date(format="%B %e, %Y") }}</span>
+        {% else %}
+            <span class="post-date">{{ page.date | date(format="%e %B %Y") }}</span>
+        {% endif %}
 
-    <a class="toc-button">
-        <div>Show Table of Contents</div> 
-    </a>
+        <p>•</p>
 
-    <div class="toc-list"> 
-        <ul>
-            {% for header in page.toc %}
-            <li> 
-                <a href="{{header.permalink}}"> {{header.title}} </a>
-            </li>
-            {% endfor %}
-        </ul>
+        <div class="post-tags-container">
+            {% if page.taxonomies.tags %} 
+                {% for tag in page.taxonomies.tags %}
+                    <p class="post-tag">{{ tag | safe }}</p>
+                {% endfor %} 
+            {% else %}
+                <p class="post-tag">No tags.</p>
+            {% endif %}
+        </div>
+    </div> 
+
+
+    <div class="toc">
+        <input type="checkbox" class="toc-button" id="toc-cb"></input>
+        <label for="toc-cb">Show Table of Contents</label>
+
+        <div class="toc-list"> 
+            <ul>
+                {% for header in page.toc %}
+                    <li> 
+                        <a href="{{header.permalink | safe }}"> {{ header.title | safe }} </a>
+                    </li>
+                    {% if header.children %}
+                        <ul>
+                            {% for subheader in header.children %}
+                            <li> 
+                                <a href="{{subheader.permalink | safe}}"> {{subheader.title | safe}} </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 
 
