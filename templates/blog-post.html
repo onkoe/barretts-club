@@ -17,6 +17,35 @@ href="{{ get_url(path="blog-post.css",
         <span class="post-date">{{ page.date | date(format="%e %B %Y") }}</span>
     {% endif %}
 
+    <a class="toc-button">
+        <div>Show Table of Contents</div> 
+    </a>
+
+    <div class="toc-list"> 
+        <ul>
+            {% for header in page.toc %}
+            <li> 
+                <a href="{{header.permalink}}"> {{header.title}} </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
     {{ page.content | safe }}
 </div>
 {% endblock content %}
+
+
+{% macro get_header_children(header, type="Header") %}
+    {% if header.children %}
+        <ul>
+            {% for h in header.children %}
+                <li> 
+                    <a href="{{h.permalink}}"> {{h.title}} </a>
+                </li>
+                {{ self::get_header_children(header=h) }}
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endmacro get_headers %}

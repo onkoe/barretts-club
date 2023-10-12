@@ -12,6 +12,14 @@ You can expect a lot of reviews, tutorials, and general thoughts here - especial
 
 :)
 
+## Header 2
+
+Wow, this sure is cool!
+
+### Header 3
+
+It's a lot smaller, woah!
+
 ```rust
 let highlight = true;
 // what the fuck

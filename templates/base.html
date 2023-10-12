@@ -15,8 +15,6 @@
         {# Enable favicon, if necessary #}
         {% if config.extra.favicon %}
             <link rel="icon" href="{{ get_url(path=config.extra.favicon, trailing_slash=false) }}" type="image/svg+xml">
-        {% else %}
-        <script> console.log("wtf") </script>
         {% endif %}
 
 
@@ -44,9 +42,10 @@
 
                     {% if config.extra.header_nav %}
                         {% for s in config.extra.header_nav.get %}
-                    <li>
-                        <a href="{{s.link}}">{{s.name}}</a>
-                    </li>
+                            <li>
+                                {% set url = get_url(path=s.link, trailing_slash=false) %}
+                                <a href="{{url}}">{{s.name}}</a>
+                            </li>
                         {% endfor %}
                     {% endif %}
                     

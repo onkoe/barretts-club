@@ -22,17 +22,3 @@ $accent: $light-accent;
 $text: $light-text;
 $outline: $light-outline;
 // TODO: container background/fg???
-
-@mixin light-theme {
-    $background: $light-bg;
-    $accent: $light-accent;
-    $text: $light-text;
-    $outline: $light-outline;
-}
-
-@mixin dark-theme {
-    $background: $dark-bg;
-    $accent: $dark-accent;
-    $text: $dark-text;
-    $outline: $dark-outline;
-}
