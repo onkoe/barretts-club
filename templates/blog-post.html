@@ -8,31 +8,44 @@ href="{{ get_url(path="blog-post.css",
 />
 
 <div class="post">
-    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="info">
 
-    {# filter folks who hate freedom 🦅 #}
-    {% if config.extra.date.use_ansi_time == True %}
-        <span class="post-date">{{ page.date | date(format="%B %e, %Y") }}</span>
-    {% else %}
-        <span class="post-date">{{ page.date | date(format="%e %B %Y") }}</span>
-    {% endif %}
+        <div class="date-and-tags">
+            {# date: filter folks who hate freedom 🦅 #}
+            {% if config.extra.date.use_ansi_time == True %}
+                <span class="post-date">{{ page.date | date(format="%B %e, %Y") }}</span>
+            {% else %}
+                <span class="post-date">{{ page.date | date(format="%e %B %Y") }}</span>
+            {% endif %}
 
-    <a class="toc-button">
-        <div>Show Table of Contents</div> 
-    </a>
+            <p id="dt-separator"> • </p>
 
-    <div class="toc-list"> 
-        <ul>
-            {% for header in page.toc %}
-            <li> 
-                <a href="{{header.permalink}}"> {{header.title}} </a>
-            </li>
-            {% endfor %}
-        </ul>
+            <div class="tags">
+                {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags %}
+                <a class="tag">{{tag}}</a>
+                {% endfor %} {% endif %}
+            </div>
+        </div>
+
+        <h1 class="post-title">{{ page.title }}</h1>
+
+        <a class="toc-button">
+            <div>Show Table of Contents</div> 
+        </a>
+
+        <div class="toc-list"> 
+            <ul>
+                {% for header in page.toc %}
+                <li> 
+                    <a href="{{header.permalink}}"> {{header.title}} </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 
-
     {{ page.content | safe }}
+
 </div>
 {% endblock content %}
 

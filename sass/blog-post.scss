@@ -1,5 +1,23 @@
 @import "colors.scss";
 
+.date-and-tags {
+    display: flex;
+
+    .post-date {
+        color: gray;
+    }
+
+    #dt-separator {
+        padding: 0;
+        margin: 0 0.2em;
+    }
+}
+
+
+.post-title {
+    font-size: 24pt;
+}
+
 .post {
     padding: 5% 20%; // TODO: fix this shit, so ugly when big and too small at half
     line-height: 1.5em;
@@ -24,5 +42,3 @@ pre {
     word-wrap: none;
     scrollbar-width: thin;
 }
-
-.post-title {}
