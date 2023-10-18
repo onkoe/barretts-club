@@ -85,25 +85,25 @@
         padding: 8pt;
         float: right;
         text-decoration: none;
-        background-color: $accent;
+        background-color: $primary;
         border-radius: 15%;
 
         background-color: $background;
-        color: $accent;
+        color: $primary;
         padding: 0.6em;
         border-radius: 0.4em;
         outline-style: solid;
 
         a {
             text-decoration: none;
-            color: $accent;
+            color: $primary;
         }
     }
 
     .read-more:hover {
-        background-color: $accent;
+        background-color: $primary;
         color: $background;
-        outline-color: $accent;
+        outline-color: $primary;
         padding: 0.6em;
         border-radius: 0.4em;
         outline-style: solid;

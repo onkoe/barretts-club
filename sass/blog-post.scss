@@ -42,7 +42,7 @@
     margin: 1em 0;
     width: fit-content;
     background: transparent;
-    color: adjust-color($accent, $lightness: 20%);
+    color: adjust-color($primary, $lightness: 20%);
 
     .toc-list {
         display: none;

@@ -2,18 +2,18 @@
 
 .button {
     background-color: $background;
-    color: $accent;
+    color: $primary;
     padding: 0.4em;
     border-radius: 0.4em;
     outline-style: solid;
 
     a {
-        color: $accent;
+        color: $primary;
     }
 }
 
 .button:hover {
-    background-color: $accent;
+    background-color: $primary;
     padding: 0.4em;
     border-radius: 0.4em;
     outline-style: solid;

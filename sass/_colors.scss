@@ -1,3 +1,12 @@
+$primary: #006d40;
+$secondary: #4e6354;
+$tertiary: #3b6470;
+$error: #ba1a1a;
+$background: #fbfdf8;
+$outline: #717972;
+$text: #191c1a;
+
+// DEPRECATED: OLD COLORS
 $light-bg: #f7f7f7; // the background of the page only!
 $light-accent:
     /*#00563b*/
@@ -17,8 +26,8 @@ $info: #576ca8;
 $caution: #c59849;
 $warning: #ef3e36;
 
-$background: $light-bg;
-$accent: $light-accent;
-$text: $light-text;
-$outline: $light-outline;
+//$background: $light-bg;
+//$accent: $light-accent;
+//$text: $light-text;
+//$outline: $light-outline;
 // TODO: container background/fg???
