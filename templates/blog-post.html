@@ -22,49 +22,34 @@ href="{{ get_url(path="blog-post.css",
 
             <div class="tags">
                 {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags %}
-                <a class="tag">{{tag}}</a>
+                <a class="tag">{{ tag | truncate(length=20) | safe }}</a>
                 {% endfor %} {% endif %}
             </div>
         </div>
 
         <h1 class="post-title">{{ page.title }}</h1>
 
-        <p>•</p>
-
-        <div class="post-tags-container">
-            {% if page.taxonomies.tags %} 
-                {% for tag in page.taxonomies.tags %}
-                    <p class="post-tag">{{ tag | safe }}</p>
-                {% endfor %} 
-            {% else %}
-                <p class="post-tag">No tags.</p>
-            {% endif %}
-        </div>
-    </div> 
-
-
-    <div class="toc">
-        <input type="checkbox" class="toc-button" id="toc-cb"></input>
-        <label for="toc-cb">Show Table of Contents</label>
+    <a class="toc-button">
+        <div>Show Table of Contents</div> 
+    </a>
 
             <div class="toc-list"> 
                 <ul>
                     {% for header in page.toc %}
                         <li> 
-                            <a href="{{header.permalink | safe }}"> {{ header.title | safe }} </a>
+                            <a href="{{header.permalink | safe }}"> {{ header.title | truncate(length=65) | safe }} </a>
                     </li>
                     {% if header.children %}
                         <ul>
                             {% for subheader in header.children %}
                             <li> 
-                                <a href="{{subheader.permalink | safe}}"> {{subheader.title | safe}} </a>
+                                <a href="{{subheader.permalink | safe}}"> {{subheader.title | truncate(length=65) | safe}} </a>
                                 </li>
                                 {% endfor %}
                             </ul>
                     {% endif %}
                 {% endfor %}
             </ul>
-        </div>
         </div>
     </div>
 

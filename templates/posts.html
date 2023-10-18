@@ -15,15 +15,15 @@ href="{{ get_url(path="posts.css",
     <li>
         <div class="post-preview">
             <a class="post-title" href="{{ page.permalink | safe }}">
-                {{ page.title }}
+                {{ page.title | truncate(length=200) | safe }}
             </a>
-            <p class="post-timestamp">{{ page.date | safe}}</p>
-            <p class="post-description">{{ page.description | safe }}</p>
+            <p class="post-timestamp">{{ page.date | safe }}</p>
+            <p class="post-description">{{ page.description | truncate(length=200) | safe }}</p>
 
             <div class="post-tags-container">
                 {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags
                 %}
-                <p class="post-tag">{{ tag | safe }}</p>
+                <p class="post-tag">{{ tag | truncate(length=20) | safe }}</p>
                 {% endfor %} {% else %}
                 <p class="post-tag">No tags.</p>
                 {% endif %}
