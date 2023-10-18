@@ -16,8 +16,8 @@ img {
 
 .title {
     font-weight: 900;
-    font-size: 24pt;
-    padding: 0.4em;
+    font-size: 30pt;
+    padding: 0.8em;
 }
 
 a {
@@ -27,6 +27,7 @@ a {
     text-decoration-style: solid;
     text-underline-offset: 0.22em;
     text-decoration-thickness: 0.15em;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 a:link,

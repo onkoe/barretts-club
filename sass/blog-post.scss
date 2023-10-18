@@ -1,4 +1,11 @@
 @import "colors.scss";
+@import "button.scss";
+
+.info {
+    background: $secondary-container;
+    padding: 2em;
+    border-radius: 0.6em;
+}
 
 .date-and-tags {
     display: flex;
@@ -25,6 +32,8 @@
 }
 
 .toc {
+
+
     .toc-button {
         // appearance: none; // removes the checkbox
 

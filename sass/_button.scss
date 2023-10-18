@@ -1,25 +1,52 @@
 @import "colors.scss";
 
-.button {
-    background-color: $background;
-    color: $primary;
-    padding: 0.4em;
-    border-radius: 0.4em;
-    outline-style: solid;
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.2em;
+    border-radius: 2rem;
+    width: fit-content;
+    height: fit-content;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 
-    a {
-        color: $primary;
+.extended-fab-btn {
+    @extend .btn;
+    border-radius: 0.8rem;
+    padding: 0.8em;
+
+    display: inline-flex;
+    align-items: center;
+
+
+    img {
+        height: 2.4rem;
+        width: 2.4rem;
+        padding-right: 0.4em;
     }
 }
 
-.button:hover {
-    background-color: $primary;
-    padding: 0.4em;
-    border-radius: 0.4em;
-    outline-style: solid;
+.btn-wrapper .btn-wrapper-primary {
+    .btn {
+        background-color: $primary;
+    }
 
-    a {
-        color: $background;
-        text-decoration: none;
+    a:hover,
+    a:active {
+        background: lighten($primary, $amount: 1);
+        box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+    }
+}
+
+.btn-wrapper-tertiary-container {
+    .btn {
+        background-color: $tertiary-container;
+        color: $secondary-container-text;
+    }
+
+    a:hover,
+    a:active {
+        background: lighten($tertiary-container, $amount: 1);
+        box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
 }

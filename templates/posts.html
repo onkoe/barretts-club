@@ -1,46 +1,40 @@
-{% extends 'base.html' %} {% block content %}
-
-<link
-rel="stylesheet"
-href="{{ get_url(path="posts.css",
-    trailing_slash=false)
-}}"
-/>
+{% extends 'base.html' %} {% block content %} <link rel="stylesheet" href="{{
+get_url(path="posts.css", trailing_slash=false) }}" />
 
 <h1 class="title">{{ section.title | safe }}</h1>
 <div class="preview-container">
-<ul>
-    <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
-    {% for page in section.pages %}
-    <li>
-        <div class="post-preview">
-            <a class="post-title" href="{{ page.permalink | safe }}">
-                {{ page.title | truncate(length=200) | safe }}
-            </a>
-            <p class="post-timestamp">{{ page.date | safe }}</p>
-            <p class="post-description">{{ page.description | truncate(length=200) | safe }}</p>
+    <ul>
+        <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
+        {% for page in section.pages %}
+        <li>
+            <div class="post-preview">
+                <a class="post-title" href="{{ page.permalink | safe }}">
+                    {{ page.title | truncate(length=200) | safe }}
+                </a>
+                <p class="post-timestamp">{{ page.date | safe }}</p>
+                <p class="post-description">
+                    {{ page.description | truncate(length=200) | safe }}
+                </p>
 
-            <div class="post-tags-container">
-                {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags
-                %}
-                <p class="post-tag">{{ tag | truncate(length=20) | safe }}</p>
-                {% endfor %} {% else %}
-                <p class="post-tag">No tags.</p>
-                {% endif %}
-            </div>
-
-
-            <a href="{{ page.permalink | safe }}">
-                <div class="read-more">
-                    Read more...
+                <div class="post-tags-container">
+                    {% if page.taxonomies.tags %} {% for tag in
+                    page.taxonomies.tags %}
+                    <p class="post-tag">
+                        {{ tag | truncate(length=20) | safe }}
+                    </p>
+                    {% endfor %} {% else %}
+                    <p class="post-tag">No tags.</p>
+                    {% endif %}
                 </div>
-            </a>
 
-
-            
-        </div>
-    </li>
-    {% endfor %}
-</ul>
+                <div class="btn-wrapper" class="read-more">
+                    <a class="btn" href="{{ page.permalink | safe }}">
+                        <div>Read more...</div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 {% endblock %}

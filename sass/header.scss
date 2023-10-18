@@ -3,7 +3,7 @@
 
 .nav-container {
     margin: 0 auto;
-    background: $background;
+    background: $secondary-container;
     border-radius: 12px;
     overflow: hidden;
     box-shadow:
@@ -33,6 +33,7 @@
 }
 
 .nav-list {
+    color: $secondary-container-text;
     grid-column: 2;
     display: flex;
     align-items: center;
@@ -42,7 +43,7 @@
 #menu-button {
     grid-column: 3;
     display: none;
-    color: $text;
+    color: $secondary-container-text;
 }
 
 
@@ -81,7 +82,6 @@
     display: inline-flex;
     padding-left: 0em;
     margin: 0em;
-    margin-right: -0.3em;
 }
 
 .header-bar a {
@@ -92,5 +92,6 @@
 }
 
 .header-bar a:hover {
-    animation: color-change-5x 2s ease-in-out infinite;
+    background-color: $secondary;
+    color: $secondary-text;
 }

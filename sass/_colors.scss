@@ -1,10 +1,25 @@
-$primary: #006d40;
-$secondary: #4e6354;
-$tertiary: #3b6470;
+// Note: dump $primary into this website for new Material You colors...
+// https://m3.material.io/theme-builder#/custom
+
+$primary: #386a1f;
+$secondary: #55624c;
+$tertiary: #386666;
 $error: #ba1a1a;
-$background: #fbfdf8;
-$outline: #717972;
+$background: #fdfdf5;
+$outline: #74796d;
 $text: #191c1a;
+
+$secondary-text: #ffffff;
+
+$primary-container: #b8f397;
+
+$secondary-container: #d9e7cb;
+$secondary-container-text: #131f0d;
+
+$tertiary-container: #bfe9f8;
+$tertiary-container-text: #002020;
+
+$outline-container: #e0e4d6;
 
 // DEPRECATED: OLD COLORS
 $light-bg: #f7f7f7; // the background of the page only!
