@@ -1,5 +1,7 @@
 $light-bg: #f7f7f7; // the background of the page only!
-$light-accent: #00563b; // highlighted text, buttons, etc.
+$light-accent:
+    /*#00563b*/
+    #62bd65; // highlighted text, buttons, etc.
 $light-text: #0d0a0b; // text
 $light-outline: #e0e0e0; // faint outline of things :)
 

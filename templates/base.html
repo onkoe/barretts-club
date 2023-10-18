@@ -4,27 +4,43 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {# Handle tab title logic #} {% if page.title%}
-        <title>{{page.title}} - {{config.extra.site_name}}</title>
+        {# Handle tab title logic #} 
+        {% if page.title %}
+            <title>{{page.title}} - {{config.extra.site_name}}</title>
         {% elif section.title %}
-        <title>{{section.title}} - {{config.extra.site_name}}</title>
+            <title>{{section.title}} - {{config.extra.site_name}}</title>
         {% else %}
-        <title>{{config.extra.site_name}}</title>
-        {% endif %} {# Enable favicon, if necessary #} {% if
-        config.extra.favicon %}
+            <title>{{config.extra.site_name}}</title>
+        {% endif %} 
+        
+        {# Enable favicon, if necessary #} 
+        {% if config.extra.favicon %}
         <link
             rel="icon"
             href="{{ get_url(path=config.extra.favicon, trailing_slash=false) }}"
             type="image/svg+xml"
         />
-        {% endif %} <link rel="stylesheet" href="{{ get_url(path="styles.css",
-        trailing_slash=false) }}" /> <link rel="stylesheet" href="{{
+        {% endif %} 
+        
+        <link rel="stylesheet" href="{{ get_url(path="styles.css",
+        trailing_slash=false) }}" />
+        
+        <link rel="stylesheet" href="{{
         get_url(path="header.css", trailing_slash=false) }}" />
     </head>
 
     <header class="main-header">
         <div class="nav-container">
+
+
             <nav class="header-bar">
+
+                <div class="left-section">
+                    <img src="{{get_url(path="svg/box.svg",
+                    trailing_slash=false)}}" id="header-icon" alt="icon">
+                </div>
+
+                <div class="center-section">
                 <ul class="nav-list">
                     {# Custom navigation listings. Add more in `config.toml`! #}
                     {% if config.extra.header_nav %} {% for s in
@@ -32,11 +48,15 @@
                     <li>
                         {% set url = get_url(path=s.link, trailing_slash=false)
                         %}
-                        <a href="{{url}}">{{s.name}}</a>
+                        <a class="nav-button" href="{{url}}">{{s.name | safe}}</a>
                     </li>
                     {% endfor %} {% endif %}
                 </ul>
+                </div>
             </nav>
+
+            <img src="{{get_url(path="svg/menu.svg",
+            trailing_slash=false)}}" id="menu-button" alt="*">
         </div>
     </header>
 
