@@ -20,19 +20,25 @@ img {
     padding: 0.4em;
 }
 
+a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #69e46d;
+    text-decoration-style: solid;
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 0.15em;
+}
+
 a:link,
 a:visited {
-    color: $accent;
-    text-decoration: normal;
-    text-decoration-style: none;
+    // color: $accent;
+    color: black;
 }
 
 a:hover,
 a:active {
-    text-decoration: none;
-    background-color: $accent;
-    color: $background;
-    background-color: $accent;
+    background-color: #a6ffc2;
+    color: black;
 }
 
 .content {
