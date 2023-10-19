@@ -62,7 +62,7 @@
                             {# Check to see if a section is selected #}
                             {% if current_url | safe | slugify | replace(from="/", to="") 
                                 == url | safe | slugify | replace(from="/", to="") %}
-                                <a class="nav-button current" href="{{url}}">{{s.name | safe}}</a>
+                                <a class="nav-button" id="current" href="{{url}}">{{s.name | safe}}</a>
                             {% else %}
                                 <a class="nav-button" href="{{url}}">{{s.name | safe}}</a>
                             {% endif %}

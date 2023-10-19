@@ -45,7 +45,6 @@
     color: $secondary-container-text;
 }
 
-
 #header-icon {
     width: 2.5em;
     height: 2.5em;
@@ -90,7 +89,18 @@
     text-decoration: none;
 }
 
-.header-bar a:hover {
+#current {
+    text-decoration: solid;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.12em;
+    text-underline-offset: 0.3em;
+    background: $tertiary-container;
+    outline: $outline;
+    outline-width: 0.1em;
+}
+
+.header-bar a:hover,
+#current:hover {
     background-color: $secondary;
     color: $secondary-text;
 }
