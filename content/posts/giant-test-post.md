@@ -4,7 +4,7 @@ description = "This is a test post! Use it to check all the little things!!! :)"
 date = 2023-10-17
 draft = true
 [taxonomies]
-tags = [";)", "weird 🤩 tag", "Really Really Long Tag that should probably be cut off or something i don't want it to be this long", "this", "post", "has", "too", "many", "tags", ";;;;"]
+tags = [";)", "weird 🤩 tag", "Really Really Long Tag that should probably be cut off or something i don't want it to be this long", "this", "post", "has", "too", "many", "tags"]
 +++
 
 # Heading 1: Testing Your Zola Blog Theme

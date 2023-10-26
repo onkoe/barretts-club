@@ -15,10 +15,16 @@ default_language = "en"    # language to show in feeds
 
 taxonomies = [{ name = "tags", feed = true, paginate_by = 10 }]
 
+[slugify]
+paths = "safe"
+taxonomies = "safe"
+anchors = "safe"
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+highlight_theme = "css"
 
 render_emoji = true # ex. :smile: --> 😄
 

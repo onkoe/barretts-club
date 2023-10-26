@@ -41,6 +41,7 @@
     width: fit-content;
     height: fit-content;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    outline: $outline 1.5px solid;
 
     img {
         display: flex;

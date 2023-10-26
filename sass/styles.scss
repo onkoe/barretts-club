@@ -4,8 +4,13 @@
 
 $fa-font-path: "../static/webfonts";
 
+@font-face {
+    font-family: "cantarell";
+    src: url("webfonts/Cantarell-VF.woff2") format("woff2"),
+}
+
 html {
-    font-family: "cantarell", system-ui, "avenir next", arial, sans-serif;
+    font-family: "cantarell", system-ui, sans-serif;
     color: $text;
 }
 
@@ -30,6 +35,7 @@ a {
     text-decoration-color: $primary;
     text-decoration-style: solid;
     text-underline-offset: 0.22em;
+    text-decoration-skip-ink: none;
     text-decoration-thickness: 0.15em;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }

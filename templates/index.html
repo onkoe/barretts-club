@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% block content %}
-<h1 class="title">This is my blog made with Zola.</h1>
+<h1 class="title">Welcome to the Club!</h1>
 <p>
     Click <a href="{{ get_url(path='@/posts/_index.md') }}">here</a> to see my
     posts.
@@ -7,5 +7,12 @@
 
 <div class="recent">
     <h2>Recent Posts</h2>
+    <p>My most recent blog posts.</p>
+
+    <h2>Top Tags</h2>
+    <p>Tags that appear on the most posts.</p>
+
+    <h2>Longest Posts</h2>
+    <p>For the psychopaths in the audience. I'm talking about you, Bob!</p>
 </div>
 {% endblock content %}
