@@ -24,9 +24,9 @@
             <div class="tags-list">
                 {% if page.taxonomies.tags %} 
                     {% for tag in page.taxonomies.tags %}
-                        <a class="post-tag" href={{ get_url(path="tags/" ~ tag, trailing_slash=false) | safe }}>
-                            {{ tag | truncate(length=20) | safe }}
-                        </a>
+                    <a class="post-tag" href="{{get_taxonomy_url(kind="tags", name=tag) | safe }}">
+                        {{ tag | truncate(length=20) | safe }}
+                    </a>
                     {% endfor %} 
                 {% else %}
                     <p class="post-tag">No tags.</p>

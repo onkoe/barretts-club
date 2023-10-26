@@ -9,7 +9,16 @@
 <link rel="stylesheet" href="{{ get_url(path="posts.css",
 trailing_slash=false) }}" />
 
-<h1 class="title">{{ section.title | safe }}</h1>
+
+{# FIXME: there's a Zola bug on collisions between taxonomy + term... #}
+{# https://github.com/getzola/zola/issues/2338 #}
+<h1 class="title">
+    All Posts with Tag: 
+    <i class="tag-name">
+    {{ term.name | safe }}
+    </i>
+</h1>
+
 <div class="preview-container">
     <ul>
         {% for page in paginator.pages %}
