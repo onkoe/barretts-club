@@ -32,24 +32,24 @@
             <div class="post-desc"> {{ page.description | truncate(length=200) | safe }} </div>
 
 
-            {# Table of Contents (TODO: make this good w/ macros) #}
+            {# Table of Contents #}
             <div class="toc">
-            <input type="checkbox" class="toc-button" id="toc-cb"></input>
-
-            {# Custom button b/c of the `label` :p #}
-            <div class="btn-wrapper-tertiary-container">
-                <label for="toc-cb">
-                    <a class="extended-fab-btn">
-                        <img src="{{get_url(path="svg/caret-down.svg", trailing_slash=false)}}" />
-                        Show Table of Contents
-                    </a>
-                </label>
-            </div>
+            <input type="checkbox" id="toc-cb"></input>
 
             <div class="toc-list">
                 {% for header in page.toc %}
                     {{ toc::toc(header = header, depth_limit=4) }}
                 {% endfor %}
+            </div>
+
+            {# Custom button b/c of the `label` :p #}
+            <div class="btn-wrapper-primary toc-button">
+                <label for="toc-cb">
+                    <a class="extended-fab-btn">
+                        <i class="fa-solid fa-eye toc-btn-icon"></i>
+                        Show Table of Contents
+                    </a>
+                </label>
             </div>
 
 

@@ -23,65 +23,7 @@
     width: 100%;
     max-width: 42em; // completely arbitrary but looks fine i guess lmao
 
-
     @media (max-width: 768px) {
         max-width: 90%;
-    }
-}
-
-.post-preview {
-    background-color: $secondary-container;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
-    // Media Query for smaller screens
-    @media (max-width: 768px) {
-        max-width: 100%; // Take full width on smaller screens
-    }
-
-    border-radius: 12pt;
-    margin: 2em;
-    padding: 2em;
-
-    color: $secondary-container-text;
-    outline: 0.1em solid $outline-container;
-    overflow: hidden;
-
-    // remove the bullet points n stuff
-    ul,
-    li {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .post-title {
-        color: $secondary-container-text;
-        font-size: 1.8em;
-        font-weight: 900;
-        text-decoration: none;
-    }
-
-    // The little list of tags on every post
-    .post-tags-container {
-        padding: 4pt;
-        height: flex;
-        flex-wrap: wrap;
-
-        .post-tag {
-            outline-color: $outline;
-            outline-width: 0.1em;
-            outline-style: solid;
-
-            display: inline-block;
-            color: $tertiary-container-text;
-            background-color: $tertiary-container;
-            padding: 6pt;
-            margin: 1pt;
-            border-radius: 8pt;
-        }
-    }
-
-    .btn {
-        float: right;
     }
 }

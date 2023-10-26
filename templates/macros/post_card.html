@@ -1,0 +1,41 @@
+{% import "macros/button.html" as button %} 
+
+{# A card that holds info about a post, like on the Posts page. #}
+{% macro post_card(page) %}
+    <link rel="stylesheet" href="{{ get_url(path="post-card.css", trailing_slash=false) }}"/>
+
+
+    <div class="post-card">
+        <a class="post-title" href="{{ page.permalink | safe }}">
+            {{ page.title | truncate(length=200) | safe }}
+        </a>
+
+        <div class="post-date">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p class="post-timestamp">{{ freedom_time::freedom_time(given_date = page.date) }}</p>
+        </div>
+        <p class="post-description">
+            {{ page.description | truncate(length=200) | safe }}
+        </p>
+
+        <div class="post-tags-container">
+            <i class="fa-solid fa-tags"></i>
+
+            <div class="tags-list">
+                {% if page.taxonomies.tags %} 
+                    {% for tag in page.taxonomies.tags %}
+                        <a class="post-tag" href={{ get_url(path="tags/" ~ tag, trailing_slash=false) | safe }}>
+                            {{ tag | truncate(length=20) | safe }}
+                        </a>
+                    {% endfor %} 
+                {% else %}
+                    <p class="post-tag">No tags.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        {{ button::button(label="Read more...", type="extended-fab",
+        color="tertiary-container", other_classes="read-more",
+        href=page.permalink) }}
+    </div>
+{% endmacro post %}
