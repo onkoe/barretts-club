@@ -54,9 +54,20 @@
 
     .toc-button {
         justify-self: right;
+        display: block;
+        min-width: 14.45em;
 
         .toc-btn-icon {
             padding-right: 0.6em;
+        }
+
+        // show/hide text + icon
+        #show-toc {
+            display: block;
+        }
+
+        #hide-toc {
+            display: none;
         }
     }
 
@@ -67,6 +78,15 @@
     }
 
     #toc-cb:checked~.toc-list {
+        display: block;
+    }
+
+    // show/hide text + icon, swapped
+    #toc-cb:checked~.btn-wrapper-primary #show-toc {
+        display: none;
+    }
+
+    #toc-cb:checked~.btn-wrapper-primary #hide-toc {
         display: block;
     }
 
