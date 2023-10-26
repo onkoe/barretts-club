@@ -33,7 +33,7 @@
 
 .toc {
     .toc-button {
-        // appearance: none; // removes the checkbox
+        display: none; // removes the checkbox
 
         #text {
             padding: none;
@@ -41,22 +41,22 @@
         }
     }
 
+    display: flex;
     outline-color: $outline;
     outline-width: 0.1em;
     outline-style: solid;
     border-radius: 0.4em;
     padding: 0.6em;
-    margin: 1em 0;
-    width: fit-content;
     background: transparent;
     color: adjust-color($primary, $lightness: 20%);
+    justify-content: right;
 
     .toc-list {
         display: none;
     }
 
     .toc-button:checked~.toc-list {
-        display: block;
+        display: flex;
     }
 }
 
@@ -71,7 +71,9 @@
 }
 
 code {
-    background-color: $outline;
+    background-color: $outline-container;
+    border-radius: 0.2em;
+    padding: 0.2em;
 }
 
 pre code {
@@ -97,4 +99,55 @@ blockquote {
     margin: 0.5em 1em;
     padding: 0.2em;
     padding-left: 0.6em;
+}
+
+table {
+    margin: 1em;
+}
+
+table,
+th,
+td {
+    border: 0.15em solid $outline;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.footnote-definition {
+    background: $secondary-container;
+    border-radius: 0.8em;
+    margin: 0.4em 0;
+
+    display: flex;
+    align-items: center;
+
+    .footnote-definition-label {
+        text-decoration: underline solid;
+        background: $tertiary-container;
+        padding: 0.4em 0.8em;
+        border-radius: 0.8em;
+        margin: 0 0.6em;
+    }
+}
+
+p img {
+    max-width: 90%;
+    max-height: 26em;
+    border-radius: 0.8rem;
+    margin: auto;
+}
+
+.summary {
+    background: $secondary-container;
+    color: $secondary-container-text;
+    border-radius: 0.8em;
+    display: block;
+    padding: 1em;
+    margin: 0.8em 0;
+
+    .summary-heading {
+        padding: 0.2em 0;
+        font-size: 18pt;
+        font-weight: 600;
+    }
 }

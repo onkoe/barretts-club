@@ -2,6 +2,7 @@
 title = "Giant Test Post !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! the quick brown fox jumps over the lazy dog"
 description = "This is a test post! Use it to check all the little things!!! :)"
 date = 2023-10-17
+draft = true
 [taxonomies]
 tags = [";)", "weird 🤩 tag", "Really Really Long Tag that should probably be cut off or something i don't want it to be this long", "this", "post", "has", "too", "many", "tags"]
 +++
@@ -64,6 +65,10 @@ Now let's move on to tables and definitions.
 | Header | Title |
 | Paragraph | Text |
 
+{% summary() %}
+It can be a little hard to understand exactly what's up with HTML tables sometimes, so let me explain quickly! Basically, we have this table. No chairs. No tablecloth. Nothing - just the table! Then we gotta put some little heading friends at the top so we know what's up. Underneath those, there are some datapoints or something. For example, we might have a fun little truth table or something. But not right now! ☺️
+{% end %}
+
 ## Heading 2: Strikethrough and Task Lists
 
 ~~The world is flat. We know better now.~~
@@ -76,10 +81,26 @@ Now let's move on to tables and definitions.
 
 That is so funny! :joy:
 
-Here is a footnote. [^1]
+Here is a footnote. [^1] [^2]
 
-Heading 2: ![im an image](https://placehold.co/4000x4000)
+Heading 2: xp
+
+![im an image](https://placehold.co/4000x4000)
 
 ## By the way, let's make a really long header to test the table of contents and stress-test other systems 🤩 This is so incredibly long that no one would ever dare take this much space up
 
+Before we go, here's another test image that's more rectangular!
+
+![yt image](https://i.ytimg.com/vi/XI7Rvl-saOI/maxresdefault.jpg)
+
+Wow, what a fantastic image! I hope you enjoyed! :) [^3] [^4] [^5]
+
 [^1]: Here's the footnote text. Hope it shows up well!
+
+[^2]: Here's the footnote text. Hope it shows up well!
+
+[^3]: Here's the footnote text. Hope it shows up well!
+
+[^4]: Here's the footnote text. Hope it shows up well!
+
+[^5]: Here's the footnote text. Hope it shows up well!
