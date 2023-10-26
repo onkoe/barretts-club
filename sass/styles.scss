@@ -6,7 +6,12 @@ $fa-font-path: "../static/webfonts";
 
 @font-face {
     font-family: "cantarell";
-    src: url("webfonts/Cantarell-VF.woff2") format("woff2"),
+    src: url("webfonts/Cantarell-VF.woff2") format("woff2");
+    font-style: normal;
+}
+
+em {
+    font-style: oblique 8deg;
 }
 
 html {
