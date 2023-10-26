@@ -31,14 +31,16 @@ get_url(path="blog-post.css", trailing_slash=false) }}" />
 
         <div class="toc">
         <input type="checkbox" class="toc-button" id="toc-cb"></input>
-        <label for="toc-cb">Show Table of Contents</label>
 
         <div class="btn-wrapper-tertiary-container">
-            <a class="extended-fab-btn" href="/">
-                <img src="{{get_url(path="svg/caret-down.svg",
-                trailing_slash=false)}}" />
-                <div>Show Table of Contents</div>
-            </a>
+            
+                <label for="toc-cb">
+                    <a class="extended-fab-btn">
+                        <img src="{{get_url(path="svg/caret-down.svg",
+                        trailing_slash=false)}}" />
+                        Show Table of Contents
+                    </a>
+                </label>
         </div>
 
         <div class="toc-list">

@@ -1,4 +1,8 @@
 @import "colors.scss";
+@import "./fontawesome/fontawesome.scss";
+@import "./fontawesome/solid.scss";
+
+$fa-font-path: "../static/webfonts";
 
 html {
     font-family: "cantarell", system-ui, "avenir next", arial, sans-serif;
@@ -23,7 +27,7 @@ img {
 a {
     font-weight: 600;
     text-decoration: underline;
-    text-decoration-color: #69e46d;
+    text-decoration-color: $primary;
     text-decoration-style: solid;
     text-underline-offset: 0.22em;
     text-decoration-thickness: 0.15em;
@@ -37,7 +41,7 @@ a:visited {
 
 a:hover,
 a:active {
-    background-color: #a6ffc2;
+    background-color: $primary-container;
     color: black;
 }
 

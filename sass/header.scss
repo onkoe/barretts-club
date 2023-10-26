@@ -99,8 +99,12 @@
     outline-width: 0.1em;
 }
 
-.header-bar a:hover,
 #current:hover {
+    background-color: $tertiary;
+    color: $secondary-text;
+}
+
+.header-bar a:hover {
     background-color: $secondary;
     color: $secondary-text;
 }
