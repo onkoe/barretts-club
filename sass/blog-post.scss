@@ -31,8 +31,12 @@
     }
 }
 
+.post-desc {
+    padding-bottom: 0.8em;
+}
+
 .toc {
-    .toc-button {
+    #toc-cb {
         display: none; // removes the checkbox
 
         #text {
@@ -41,22 +45,34 @@
         }
     }
 
-    display: flex;
-    outline-color: $outline;
-    outline-width: 0.1em;
-    outline-style: solid;
-    border-radius: 0.4em;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
     padding: 0.6em;
-    background: transparent;
     color: adjust-color($primary, $lightness: 20%);
-    justify-content: right;
+
+    .toc-button {
+        justify-self: right;
+
+        .toc-btn-icon {
+            padding-right: 0.6em;
+        }
+    }
 
     .toc-list {
         display: none;
+        padding-left: 1em;
+        padding-bottom: 1em;
     }
 
-    .toc-button:checked~.toc-list {
-        display: flex;
+    #toc-cb:checked~.toc-list {
+        display: block;
+    }
+
+    // get rid of ugly spaces
+    ul {
+        padding: 0 auto;
+        margin: 0 auto;
     }
 }
 

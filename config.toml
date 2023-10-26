@@ -13,7 +13,7 @@ feed_filename = "atom.xml"
 feed_limit = 20            # maximum num of articles in feed
 default_language = "en"    # language to show in feeds
 
-taxonomies = [{ name = "tags", feed = true }]
+taxonomies = [{ name = "tags", feed = true, paginate_by = 10 }]
 
 [markdown]
 # Whether to do syntax highlighting

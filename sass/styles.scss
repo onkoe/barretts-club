@@ -41,8 +41,9 @@ a:visited {
 
 a:hover,
 a:active {
-    background-color: $primary-container;
+    background-color: $primary-container-text;
     color: black;
+    cursor: pointer;
 }
 
 .content {
