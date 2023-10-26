@@ -1,0 +1,8 @@
+{# Based on config values, return the time with correct formatting (🦅) #}
+{% macro freedom_time(given_date) %}
+    {% if config.extra.date.use_ansi_time == True %}
+        {{ given_date | date(format="%B %e, %Y") | safe }}
+    {% else %}
+        {{ given_date | date(format="%e %B %Y") | safe }}
+    {% endif %}
+{% endmacro freedom_time %}

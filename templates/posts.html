@@ -1,5 +1,6 @@
 {% import "macros/button.html" as button %} 
 {% import "macros/page_switcher.html" as page_switcher %}
+{% import "macros/freedom_time.html" as freedom_time %}
 
 {% extends 'base.html' %} 
 {% block content %} 
@@ -17,7 +18,7 @@ trailing_slash=false) }}" />
                 <a class="post-title" href="{{ page.permalink | safe }}">
                     {{ page.title | truncate(length=200) | safe }}
                 </a>
-                <p class="post-timestamp">{{ page.date | safe }}</p>
+                <p class="post-timestamp">{{ freedom_time::freedom_time(given_date = page.date) }}</p>
                 <p class="post-description">
                     {{ page.description | truncate(length=200) | safe }}
                 </p>

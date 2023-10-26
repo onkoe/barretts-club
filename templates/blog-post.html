@@ -1,81 +1,76 @@
-{% extends "index.html" %} {% block content %} <link rel="stylesheet" href="{{
-get_url(path="blog-post.css", trailing_slash=false) }}" />
+{% import "macros/freedom_time.html" as freedom_time %}
+
+{% extends "index.html" %} 
+{% block content %} 
+
+<link rel="stylesheet" href="{{ get_url(path="blog-post.css", trailing_slash=false) }}" />
 
 <div class="post">
     <div class="info">
         <div class="date-and-tags">
-            {# date: filter folks who hate freedom 🦅 #} {% if
-            config.extra.date.use_ansi_time == True %}
-            <span class="post-date"
-                >{{ page.date | date(format="%B %e, %Y") }}</span
-            >
-            {% else %}
-            <span class="post-date"
-                >{{ page.date | date(format="%e %B %Y") }}</span
-            >
-            {% endif %}
+
+            {# date: filter folks who hate freedom 🦅 #} 
+            <span class="post-date">
+                {{ freedom_time::freedom_time(given_date = page.date) }}
+            </span>
 
             <p id="dt-separator">•</p>
 
             <div class="tags">
-                {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags
-                %}
-                <a class="tag">{{ tag | truncate(length=20) | safe }}</a>
-                {% endfor %} {% endif %}
+                {% if page.taxonomies.tags %} 
+                    {% for tag in page.taxonomies.tags %}
+                        <a class="tag">{{ tag | truncate(length=20) | safe }}</a>
+                    {% endfor %} 
+                {% endif %}
             </div>
+
         </div>
 
-        <h1 class="post-title">{{ page.title | safe }}</h1>
+            <h1 class="post-title">{{ page.title | safe }}</h1>
 
-        <div class="post-desc"> {{ page.description | truncate(length=200) | safe }} </div>
+            <div class="post-desc"> {{ page.description | truncate(length=200) | safe }} </div>
 
-        <div class="toc">
-        <input type="checkbox" class="toc-button" id="toc-cb"></input>
+            <div class="toc">
+            <input type="checkbox" class="toc-button" id="toc-cb"></input>
 
-        <div class="btn-wrapper-tertiary-container">
-            
+            {# Custom button b/c of the `label` :p #}
+            <div class="btn-wrapper-tertiary-container">
                 <label for="toc-cb">
                     <a class="extended-fab-btn">
-                        <img src="{{get_url(path="svg/caret-down.svg",
-                        trailing_slash=false)}}" />
+                        <img src="{{get_url(path="svg/caret-down.svg", trailing_slash=false)}}" />
                         Show Table of Contents
                     </a>
                 </label>
-        </div>
+            </div>
 
-        <div class="toc-list">
-            <ul>
-                {% for header in page.toc %}
-                <li>
-                    <a href="{{header.permalink | safe }}">
-                        {{ header.title | truncate(length=65) | safe }}
-                    </a>
-                </li>
-                {% if header.children %}
+
+            {# Table of Contents (TODO: make this good w/ macros) #}
+            <div class="toc-list">
                 <ul>
-                    {% for subheader in header.children %}
-                    <li>
-                        <a href="{{subheader.permalink | safe}}">
-                            {{subheader.title | truncate(length=65) | safe}}
-                        </a>
-                    </li>
+                    {% for header in page.toc %}
+                        <li>
+                            <a href="{{header.permalink | safe }}">
+                                {{ header.title | truncate(length=65) | safe }}
+                            </a>
+                        </li>
+                        {% if header.children %}
+                        <ul>
+                            {% for subheader in header.children %}
+                            <li>
+                                <a href="{{subheader.permalink | safe}}">
+                                    {{subheader.title | truncate(length=65) | safe}}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %} 
                     {% endfor %}
                 </ul>
-                {% endif %} {% endfor %}
-            </ul>
+            </div>
+
         </div>
-    </div>
     </div>
 
     {{ page.content | safe }}
 </div>
-{% endblock content %} {% macro get_header_children(header, type="Header") %} {%
-if header.children %}
-<ul>
-    {% for h in header.children %}
-    <li>
-        <a href="{{h.permalink}}"> {{h.title}} </a>
-    </li>
-    {{ self::get_header_children(header=h) }} {% endfor %}
-</ul>
-{% endif %} {% endmacro get_headers %}
+{% endblock content %} 
