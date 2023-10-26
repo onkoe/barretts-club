@@ -1,0 +1,56 @@
+{% import "macros/button.html" as button %}
+
+{% macro page_switcher() %}
+
+    {% if paginator %}
+
+        {# Add button stylesheet to mooch off of 🤩 #}
+        <link rel="stylesheet" href="{{ get_url(path="button.css", trailing_slash=false) }}"/>
+        <link rel="stylesheet" href="{{ get_url(path="page_switcher.css", trailing_slash=false) }}"/>
+
+        <div class="page-switcher">
+            {% if paginator.previous %}
+                {{ page_switcher::page_button(type="left") }}
+            {% else %}
+                {{ page_switcher::page_button(enabled=false, type="left") }}
+            {% endif %}
+
+            <p class="page-count">Page {{paginator.current_index}} </p>
+
+            {% if paginator.next %}
+                {{ page_switcher::page_button(type="right") }}
+            {% else %}
+                {{ page_switcher::page_button(enabled=false, type="right") }}
+            {% endif %}
+        </div>
+    {% else %} {% endif %} {# <--- return nothing if there's no paginator! #}
+
+{% endmacro page_switcher %}
+
+{% macro page_button(enabled=true, type) %}
+
+    {# Determine which way to go #}
+    {% if type == "left" %}
+        {% set href = paginator.previous %}
+    {% elif type == "right" %}
+        {% set href = paginator.next %}
+    {% else %}
+        {% set href = paginator.first %}
+    {% endif %}
+
+    {% if enabled == true %}
+        <div class="btn-wrapper btn-wrapper-tertiary-container">
+            <a class="extended-fab-btn page-btn" href={{href}}>
+                <i class="fa-solid fa-chevron-{{type}}"></i>
+            </a>
+        </div>
+    {% else %}
+        {# return a fake (unclickable) button instead. no shadows! #}
+        <div class="btn-wrapper btn-disabled">
+            <p class="extended-fab-btn page-btn">
+                <i class="fa-solid fa-chevron-{{type}}"></i>
+            </p>
+        </div>
+    {% endif %}
+
+{% endmacro page_button %}

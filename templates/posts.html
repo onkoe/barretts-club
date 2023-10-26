@@ -1,11 +1,17 @@
-{% extends 'base.html' %} {% block content %} <link rel="stylesheet" href="{{
-get_url(path="posts.css", trailing_slash=false) }}" />
+{% import "macros/button.html" as button %} 
+{% import "macros/page_switcher.html" as page_switcher %}
+
+{% extends 'base.html' %} 
+{% block content %} 
+
+<link rel="stylesheet" href="{{ get_url(path="posts.css",
+trailing_slash=false) }}" />
 
 <h1 class="title">{{ section.title | safe }}</h1>
 <div class="preview-container">
     <ul>
         <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
-        {% for page in section.pages %}
+        {% for page in paginator.pages %}
         <li>
             <div class="post-preview">
                 <a class="post-title" href="{{ page.permalink | safe }}">
@@ -27,14 +33,15 @@ get_url(path="posts.css", trailing_slash=false) }}" />
                     {% endif %}
                 </div>
 
-                <div class="btn-wrapper" class="read-more">
-                    <a class="btn" href="{{ page.permalink | safe }}">
-                        <div>Read more...</div>
-                    </a>
-                </div>
+                {{ button::button(label="Read more...", type="extended-fab",
+                color="tertiary-container", other_classes="read-more",
+                href=page.permalink) }}
             </div>
         </li>
         {% endfor %}
     </ul>
 </div>
+
+{{ page_switcher::page_switcher() }}
+
 {% endblock %}

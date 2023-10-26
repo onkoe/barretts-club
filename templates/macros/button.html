@@ -1,0 +1,29 @@
+{% macro button(label, type="default", color="primary", href="#", other_classes="", left_image="", right_image="") %}
+
+<link rel="stylesheet" href="{{ get_url(path="button.css", trailing_slash=false) }}"/>
+
+{% if type == "default" %}
+    <div class="btn-wrapper btn-wrapper-{{color}} {{ other_classes }}">
+        <a class="btn" href="{{ href }}">
+            <div>{{label}}</div>
+        </a>
+    </div>
+{% elif type == "extended-fab" %}
+    <div class="btn-wrapper btn-wrapper-{{color}} {{ other_classes }}">
+        <a class="extended-fab-btn" href="{{ href }}">
+            {% if left_image != "" %}
+                <img src="{{get_url(path=left_image, trailing_slash=false) | safe}}" />
+            {% endif %}
+
+            <div>{{label}}</div>
+
+            {% if right_image != "" %}
+                <img src="{{get_url(path=right_image, trailing_slash=false) | safe}}" />
+            {% endif %}
+
+        </a>
+    </div>
+{% endif %}
+
+{% endmacro button %}
+
