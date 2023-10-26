@@ -1,0 +1,21 @@
+{# This macro should be called in a for loop of the page's headers. #}
+{# Give it a depth limit if necessary. #}
+{% macro toc(header, depth_limit=100, current_depth=1) %}
+
+    <li>
+        {# First, do the header itself #}
+        <a href="{{header.permalink | safe}}">
+            {{header.title | truncate(length=65) | safe}}
+        </a>
+
+        {# Then, do its subtrees recursively (if any) #}
+        {% if header.children and current_depth <= depth_limit %}
+            <ul>
+            {% for subheader in header.children %}
+                {{ toc::toc(header = subheader, depth_limit = depth_limit, current_depth = current_depth + 1) }}
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+
+{% endmacro toc %}

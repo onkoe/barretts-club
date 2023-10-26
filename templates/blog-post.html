@@ -1,4 +1,5 @@
 {% import "macros/freedom_time.html" as freedom_time %}
+{% import "macros/toc.html" as toc %}
 
 {% extends "index.html" %} 
 {% block content %} 
@@ -30,6 +31,8 @@
 
             <div class="post-desc"> {{ page.description | truncate(length=200) | safe }} </div>
 
+
+            {# Table of Contents (TODO: make this good w/ macros) #}
             <div class="toc">
             <input type="checkbox" class="toc-button" id="toc-cb"></input>
 
@@ -43,30 +46,12 @@
                 </label>
             </div>
 
-
-            {# Table of Contents (TODO: make this good w/ macros) #}
             <div class="toc-list">
-                <ul>
-                    {% for header in page.toc %}
-                        <li>
-                            <a href="{{header.permalink | safe }}">
-                                {{ header.title | truncate(length=65) | safe }}
-                            </a>
-                        </li>
-                        {% if header.children %}
-                        <ul>
-                            {% for subheader in header.children %}
-                            <li>
-                                <a href="{{subheader.permalink | safe}}">
-                                    {{subheader.title | truncate(length=65) | safe}}
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %} 
-                    {% endfor %}
-                </ul>
+                {% for header in page.toc %}
+                    {{ toc::toc(header = header, depth_limit=4) }}
+                {% endfor %}
             </div>
+
 
         </div>
     </div>
