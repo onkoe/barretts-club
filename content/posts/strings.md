@@ -41,15 +41,15 @@ pub fn city_search(list: Vec<&str>, search_key: &str) -> bool {
 I think that looks good! Let's write a test to make sure it works.
 
 ```rust
-    #[test]
-    fn test() {
-        let list = vec!["Tulsa", "Oklahoma City", "Tokio"];
+#[test]
+fn test() {
+    let list = vec!["Tulsa", "Oklahoma City", "Tokio"];
 
-        let x = city_search(list, "fake city");
+    let x = city_search(list, "fake city");
 
-        // COMPILER ERROR: expected &str, found String 👇️👇️👇️
-        let y = city_search(list, String::from("Tokio"));
-    }
+    // COMPILER ERROR: expected &str, found String 👇️👇️👇️
+    let y = city_search(list, String::from("Tokio"));
+}
 ```
 
 Well, it works when we pass in an `&str`, but Strings are off-limits. The compiler appropriately suggests a fix on the caller side of things.

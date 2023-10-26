@@ -1,6 +1,8 @@
 // Note: dump $primary into this website for new Material You colors...
 // https://m3.material.io/theme-builder#/custom
 
+
+// Color theming
 $primary: #386a1f;
 $secondary: #55624c;
 $tertiary: #386666;
@@ -13,6 +15,15 @@ $primary-text: #113800;
 
 $secondary-text: #ffffff;
 
+$error-text: #690005;
+
+// (for codeblock strings, from #ffc482)
+$codeblock-string: #875200;
+$codeblock-string-text: #482900;
+$codeblock-string-container: #673d00;
+$codebloack-string-container-text: #2b1700;
+
+// Container theming
 $primary-container: #205106;
 $primary-container-text: #b8f397;
 
@@ -21,6 +32,9 @@ $secondary-container-text: #131f0d;
 
 $tertiary-container: #bfe9f8;
 $tertiary-container-text: #002020;
+
+$error-container: #93000a;
+$error-container-text: #ffdad6;
 
 $outline-container: #e0e4d6;
 

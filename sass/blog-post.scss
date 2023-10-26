@@ -1,5 +1,6 @@
 @import "colors.scss";
 @import "button.scss";
+@import "macros/codeblock.scss";
 
 .info {
     background: $secondary-container;
@@ -103,6 +104,9 @@ pre {
     overflow-y: hidden;
     word-wrap: none;
     scrollbar-width: thin;
+
+    outline: $outline 1.5px solid;
+    border-radius: 0.2em;
 }
 
 .post-title {
