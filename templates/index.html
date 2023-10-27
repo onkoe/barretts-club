@@ -1,18 +1,32 @@
-{% extends "base.html" %} {% block content %}
-<h1 class="title">Welcome to the Club!</h1>
-<p>
-    Click <a href="{{ get_url(path='@/posts/_index.md') }}">here</a> to see my
-    posts.
-</p>
+{% import "macros/post_card.html" as post_card %}
 
-<div class="recent">
-    <h2>Recent Posts</h2>
-    <p>My most recent blog posts.</p>
+{% extends "base.html" %} 
+{% block content %}
+    <h1 class="title">Welcome to the Club!</h1>
+    <p>
+        Click <a href="{{ get_url(path='@/posts/_index.md') }}">here</a> to see my
+        posts.
+    </p>
 
-    <h2>Top Tags</h2>
-    <p>Tags that appear on the most posts.</p>
+    <div class="recent">
+        <h2>Recent Posts</h2>
+        <p>My most recent blog posts.</p>
 
-    <h2>Longest Posts</h2>
-    <p>For the psychopaths in the audience. I'm talking about you, Bob!</p>
-</div>
+        <div class="posts-preview-container">
+            <ul>
+                {% set posts_section = get_section(path="posts/_index.md") %}
+                {% for page in posts_section.pages | slice(end = 3) %}
+                <li>
+                    {{ post_card::post_card(page = page) }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <h2>Top Tags</h2>
+        <p>Tags that appear on the most posts.</p>
+
+        <h2>Longest Posts</h2>
+        <p>For the psychopaths in the audience. I'm talking about you, Bob!</p>
+    </div>
 {% endblock content %}
