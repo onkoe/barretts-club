@@ -33,6 +33,32 @@
     }
 }
 
+.btn-wrapper-secondary {
+    .btn {
+        background-color: $secondary;
+        color: white;
+    }
+
+    a:hover,
+    a:active {
+        background: lighten($secondary, $amount: 1);
+        box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+    }
+}
+
+.btn-wrapper-tertiary {
+    .btn {
+        background-color: $tertiary;
+        color: white;
+    }
+
+    a:hover,
+    a:active {
+        background: lighten($tertiary, $amount: 1);
+        box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+    }
+}
+
 .btn {
     display: inline-block;
     text-decoration: none;

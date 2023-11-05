@@ -1,16 +1,24 @@
 {% import "macros/post_card.html" as post_card %}
+{% import "macros/button.html" as button %}
 
 {% extends "base.html" %} 
 {% block content %}
-    <h1 class="title">Welcome to the Club!</h1>
-    <p>
-        Click <a href="{{ get_url(path='@/posts/_index.md') }}">here</a> to see my
-        posts.
-    </p>
+    <link rel="stylesheet" href="{{ get_url(path="home_page.css",
+        trailing_slash=false) }}" />
 
-    <div class="recent">
-        <h2>Recent Posts</h2>
-        <p>My most recent blog posts.</p>
+    <h1 class="title">Welcome to the Club!</h1>
+
+    <div class="sect-div recent">
+        <div class="info">
+            <div class="left">
+                <h2 class="section-header">Recent Posts</h2>
+                
+            </div>
+
+            <div class="right">
+                {{ button::button(label="See All Posts...", color="tertiary", href=get_url(path="posts", trailing_slash=false)) }}
+            </div>
+        </div>
 
         <div class="posts-preview-container">
             <ul>
@@ -22,11 +30,44 @@
                 {% endfor %}
             </ul>
         </div>
+        
+        </div>
 
-        <h2>Top Tags</h2>
-        <p>Tags that appear on the most posts.</p>
 
-        <h2>Longest Posts</h2>
-        <p>For the psychopaths in the audience. I'm talking about you, Bob!</p>
+    <div class="sect-div top-tags">
+        <div class="info">
+            <div class="left">
+                <h2 class="section-header">Top Tags</h2>
+                
+            </div>
+
+            <div class="right">
+                {{ button::button(label="See All Tags...", color="tertiary", href=get_url(path="tags", trailing_slash=false)) }}
+            </div>
+        </div>
+
+        <div class="tags-container"> 
+            <p class="soon">Coming Soon!</p>
+        </div>
+
+        <div class="sect-div longest-posts">
+            <div class="info">
+                <div class="left">
+                    <h2 class="section-header">Longest Posts</h2>
+                    
+                </div>
+    
+                <div class="right">
+                    {{ button::button(label="See All Posts...", color="tertiary", href=get_url(path="posts", trailing_slash=false)) }}
+                </div>
+            </div>
+
+            <div class="tags-container"> 
+                <p class="soon">
+                    Coming Soon! <br> <br> For the psychopaths in the audience. I'm talking about you, Bob!
+                </p>
+            </div>
+        
+        </div>
     </div>
 {% endblock content %}
