@@ -1,4 +1,5 @@
 {% import "macros/header.html" as header %}
+{% import "macros/footer.html" as footer %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,24 +57,6 @@
     </body>
 
     <footer>
-        <link rel="stylesheet" href="{{ get_url(path="footer.css", trailing_slash=false) }}" /> 
-
-        {# copyright info, if you want... see config.toml! #} 
-        {% if config.extra.copyright.enable == True %} 
-            {% if config.extra.copyright.use_copyleft == True %} 
-                {% set rights_icon = "🄯" %} 
-            {% else %} 
-                {% set rights_icon = "©" %} 
-            {% endif %}
-
-        <p class="copyright-info">
-            {{rights_icon}} {% if config.extra.copyright.include_author_name ==
-            True and config.extra.author %} 
-                {{config.extra.author}} 
-            {% endif %}
-            
-            {{now()|date(format="%Y")|int}}
-        </p>
-        {% endif %}
+        {{ footer::footer() }}
     </footer>
 </html>

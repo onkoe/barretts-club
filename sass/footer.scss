@@ -1,8 +1,23 @@
 @import "colors.scss";
 
-.copyright-info {
+
+footer {
     display: flex;
-    align-items: center;
+    flex-flow: column wrap;
     justify-content: center;
+    align-items: center;
+    object-fit: contain;
     padding: 2em;
+
+
+    .copyright-info {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-nav a {
+        padding: 0 0.2em;
+    }
 }

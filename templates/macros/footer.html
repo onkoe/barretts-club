@@ -1,0 +1,40 @@
+{% macro footer() %}
+
+    <link rel="stylesheet" href="{{ get_url(path="footer.css", trailing_slash=false) }}" /> 
+
+    {# copyright info, if you want... see config.toml! #} 
+    {% if config.extra.copyright.enable == True %} 
+        {% if config.extra.copyright.use_copyleft == True %} 
+            {% set rights_icon = "🄯" %} 
+        {% else %} 
+            {% set rights_icon = "©" %} 
+        {% endif %}
+
+    <p class="copyright-info">
+        {{rights_icon}} {% if config.extra.copyright.include_author_name ==
+        True and config.extra.author %} 
+            {{config.extra.author}} 
+        {% endif %}
+        
+        {{now()|date(format="%Y")|int}}
+    </p>
+    {% endif %}
+
+
+    <div class="footer-nav">
+        {% if config.extra.footer_nav %}
+            {% for x in config.extra.footer_nav.get %}
+                {% set url = get_url(path=x.link, trailing_slash=false) %}
+
+                {% if x.link == "atom.xml" %}
+                    {% if config.generate_feed == true %}
+                        <a href="{{url}}">{{x.name | safe}}</a>
+                    {% endif %}
+                {% else %}
+                    <a href="{{url}}">{{x.name | safe}}</a>
+                {% endif %}                
+            {% endfor %}
+        {% endif %}
+    </div>
+
+{% endmacro footer %}

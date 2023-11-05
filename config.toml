@@ -8,9 +8,9 @@ compile_sass = true
 build_search_index = false # TODO: set this up? 
 
 # Feed config
-generate_feed = false      # set to true to enable!
+generate_feed = true      # set to false to disable!
 feed_filename = "atom.xml"
-feed_limit = 20            # maximum num of articles in feed
+#feed_limit = 20            # maximum num of articles in feed. 0 = inf
 default_language = "en"    # language to show in feeds
 
 taxonomies = [{ name = "tags", feed = true, paginate_by = 10 }]
@@ -50,3 +50,8 @@ get = [
 
 [extra.date]
 use_ansi_time = true # change if you hate freedom
+
+[extra.footer_nav]
+get = [
+    { name = "RSS Feed", link = "atom.xml" },
+]
