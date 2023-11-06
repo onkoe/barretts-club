@@ -10,6 +10,21 @@ $fa-font-path: "../static/webfonts";
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Iosevka';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/webfonts/iosevka-regular-minimal.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Iosevka';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/webfonts/iosevka-bold-minimal.woff2') format('woff2');
+}
+
+
 em {
     font-style: oblique 8deg;
 }
