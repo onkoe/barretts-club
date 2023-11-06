@@ -35,3 +35,14 @@
         color: $error-container;
     }
 }
+
+.language-console {
+
+    font-feature-settings: "calt" 0; // get rid of weird arrow (⤳) on fish shell's "barrett@fedora ~>"
+
+    .z-text,
+    .z-plain,
+    .z-code {
+        color: $primary-container;
+    }
+}
