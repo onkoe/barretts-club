@@ -1,6 +1,6 @@
 {% import "macros/freedom_time.html" as freedom_time %}
 {% import "macros/toc.html" as toc %}
-{% import "macros/article_suggestions.html" as ars %}
+{% import "macros/article_suggestions.html" as article_suggestions %}
 
 {% extends "index.html" %} 
 {% block content %} 
@@ -72,6 +72,6 @@
 
     {{ page.content | safe }}
 
-    {{ ars::suggestions() }}
+    {{ article_suggestions::suggestions() }}
 </div>
 {% endblock content %} 
