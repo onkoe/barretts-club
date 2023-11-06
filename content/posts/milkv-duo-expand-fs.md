@@ -243,6 +243,10 @@ Of course, you can also just open it in Nautilius (or some other file manager)!
 
 {% conclusion() %}
 
-Great job - you've expanded your disk the old-fashioned way! If you have any questions, suggestions, or concerns, please let me know by <a href="mailto:contact@barretts.club">email</a>! Thank you! :)
+Great job - you've expanded your disk the old-fashioned way!
+
+If you have any questions, suggestions, or concerns, please let me know by <a href="mailto:contact@barretts.club">email</a>! You can also [make an issue](https://github.com/onkoe/barretts-club/issues/new?title=problem:%20How%20to%20Expand%20the%20Filesystem%20on%20a%20Milk-V%20Duo&body=I%20found%20a%20problem%20in%20How%20to%20Expand%20the%20Filesystem%20on%20a%20Milk-V%20Duo!%20Let%20me%20explain...) on GitHub.
+
+Thank you! :)
 
 {% end %}

@@ -1,5 +1,6 @@
 {% import "macros/freedom_time.html" as freedom_time %}
 {% import "macros/toc.html" as toc %}
+{% import "macros/article_suggestions.html" as ars %}
 
 {% extends "index.html" %} 
 {% block content %} 
@@ -13,6 +14,12 @@
             {# date: filter folks who hate freedom 🦅 #} 
             <span class="post-date">
                 {{ freedom_time::freedom_time(given_date = page.date) }}
+
+                {% if page.updated %}
+                    <p>
+                        (updated on {{ freedom_time::freedom_time(given_date = page.updated) }})
+                    </p>
+                {% endif %}
             </span>
 
             <p id="dt-separator">•</p>
@@ -64,5 +71,7 @@
     </div>
 
     {{ page.content | safe }}
+
+    {{ ars::suggestions() }}
 </div>
 {% endblock content %} 

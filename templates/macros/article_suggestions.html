@@ -1,0 +1,52 @@
+{% macro suggestions() %} 
+
+<link rel="stylesheet" href="{{ get_url(path="button.css", trailing_slash=false) }}" /> 
+<link rel="stylesheet" href="{{ get_url(path="macros/article-suggestions.css", trailing_slash=false)}}" />
+
+<div class="article-suggestions">
+    {% if page.lower %}
+        {% set lower_label = "Previous Article" %}
+        {% set lower_icon = "fa-angles-left" %}
+        {% set lower_title = page.lower.title | truncate(length=25) | safe %}
+        {% set lower_url = page.lower.permalink | safe %}
+    {% else %}
+        {% set lower_label = "Go Home" %}
+        {% set lower_icon = "fa-house" %}
+        {% set lower_title = "" %}
+        {% set lower_url = get_url(path="/", trailing_slash=false) | safe %}
+    {% endif %}
+    <div class="ars-parent previous-article btn-wrapper-transparent">
+        <a class="ars-btn btn extended-fab-btn" href="{{ lower_url }}">
+            <div class="suggested-heading">
+                <i class="suggested-icon fa-solid {{ lower_icon }}"></i>
+                <p class="suggested-label">{{ lower_label }}</p>
+            </div>
+
+            <p class="suggested-title">{{ lower_title }}</p>
+        </a>
+    </div>
+
+    {% if page.higher %}
+        {% set higher_label = "Next Article" %}
+        {% set higher_icon = "fa-angles-right" %}
+        {% set higher_title = page.higher.title | truncate(length=25) | safe %}
+        {% set higher_url = page.higher.permalink | safe %}
+    {% else %}
+        {% set higher_label = "Go Home" %}
+        {% set higher_icon = "fa-house" %}
+        {% set higher_title = "" %}
+        {% set higher_url = get_url(path="/", trailing_slash=false) | safe %}
+    {% endif %}
+    <div class="ars-parent next-article btn-wrapper-transparent">
+        <a class="ars-btn btn extended-fab-btn" href="{{ higher_url }}">
+            <div class="suggested-heading">
+                <i class="suggested-icon fa-solid {{ higher_icon }}"></i>
+                <p class="suggested-label">{{ higher_label }}</p>
+            </div>
+
+            <p class="suggested-title">{{ higher_title }}</p>
+        </a>
+    </div>
+</div>
+
+{% endmacro %}

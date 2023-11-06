@@ -132,3 +132,17 @@
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
 }
+
+.btn-wrapper-transparent {
+    .btn {
+        background-color: transparent;
+        color: $text;
+    }
+
+    a:hover,
+    a:active {
+        background: lighten($primary-container, $amount: 1);
+        color: $primary-container-text;
+        box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+    }
+}
