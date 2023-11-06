@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @import "colors.scss";
 @import "button.scss";
 @import "macros/codeblock.scss";
@@ -170,24 +172,40 @@ td {
     }
 }
 
-p img {
+p img,
+object img,
+object {
     max-width: 90%;
     max-height: 26em;
     border-radius: 0.8rem;
     margin: auto;
 }
 
-.summary {
-    background: $secondary-container;
-    color: $secondary-container-text;
+// for summary, warning, and any other future "blocky" shortcodes
+.textblock {
     border-radius: 0.8em;
     display: block;
     padding: 1em;
     margin: 0.8em 0;
 
-    .summary-heading {
+    .textblock-heading {
         padding: 0.2em 0;
         font-size: 18pt;
         font-weight: 600;
+    }
+}
+
+.summary {
+    background: $secondary-container;
+    color: $secondary-container-text;
+}
+
+.warning {
+    background: $warn-container;
+    color: $warn-container-text;
+
+    code {
+        // i don't like workarounds but this is surprisingly fun
+        background-color: color.adjust($warn, $saturation: -60%, $lightness: +40%);
     }
 }

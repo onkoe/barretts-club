@@ -7,6 +7,7 @@ $primary: #386a1f;
 $secondary: #55624c;
 $tertiary: #386666;
 $error: #ba1a1a;
+$warn: #875200; // from #ffc482
 $background: #fdfdf5;
 $outline: #74796d;
 $text: #191c1a;
@@ -15,6 +16,7 @@ $primary-text: #113800;
 
 $secondary-text: #ffffff;
 
+$warn-text: #ffffff;
 $error-text: #690005;
 
 // (for codeblock strings, from #ffc482)
@@ -32,6 +34,9 @@ $secondary-container-text: #131f0d;
 
 $tertiary-container: #bfe9f8;
 $tertiary-container-text: #002020;
+
+$warn-container: #ffddba;
+$warn-container-text: #2b1700;
 
 $error-container: #93000a;
 $error-container-text: #ffdad6;
