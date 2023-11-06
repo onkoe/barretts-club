@@ -199,7 +199,7 @@ The message says there's "no file," but really, it just can't load the dynamic l
 
 On your desktop computer, you can do as follows:
 
-```
+```console
 barrett@canopy ~/D/f/t/r/release (main)> readelf -l binary 
 
 Elf file type is DYN (Position-Independent Executable file) Entry point 0xa634 There are 10 program headers, starting at offset 64 
