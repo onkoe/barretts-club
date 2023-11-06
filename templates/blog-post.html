@@ -15,11 +15,6 @@
             <span class="post-date">
                 {{ freedom_time::freedom_time(given_date = page.date) }}
 
-                {% if page.updated %}
-                    <p>
-                        (updated on {{ freedom_time::freedom_time(given_date = page.updated) }})
-                    </p>
-                {% endif %}
             </span>
 
             <p id="dt-separator">•</p>
@@ -31,8 +26,15 @@
                     {% endfor %} 
                 {% endif %}
             </div>
+            
 
         </div>
+
+        {% if page.updated %}
+            <p class="updated-date">
+                Last updated on {{ freedom_time::freedom_time(given_date = page.updated) | trim }}.
+            </p>
+        {% endif %}
 
             <h1 class="post-title">{{ page.title | safe }}</h1>
 

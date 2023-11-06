@@ -2,6 +2,7 @@
 title = "How to Expand the Filesystem on a Milk-V Duo"
 description = "What do you do when you need more space? Well, you use fdisk of course!"
 date = 2023-11-03
+updated = 2023-11-05
 [taxonomies]
 tags = ["linux", "risc-v", "milk-v", "duo", "guide"]
 +++
