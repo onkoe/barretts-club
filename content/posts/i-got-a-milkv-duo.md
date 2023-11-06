@@ -30,7 +30,7 @@ As [Milk-V's site](https://milkv.io/duo) says, the Duo is packing down there! It
 
 Regarding its capabilities, we can use the Raspberry Pi as a mediator. Here, the Duo takes a comfy seat between the Pi Pico and Zero. Like the Pico, this board eschews desktop integration for a better development experience, relying on a USB-C connection for communication. As it turns out, you can plug and play on Linux, though Windows and macOS [require some setup](https://milkv.io/docs/duo/getting-started/setup), as usual.
 
-You'll also need to stick their Linux Buildroot image [on a microSD card](https://milkv.io/docs/duo/getting-started/boot), which takes just a few minutes. You may also want to expand the
+You'll also need to stick their Linux Buildroot image [on a microSD card](https://milkv.io/docs/duo/getting-started/boot), which takes just a few minutes.
 
 After it's all working, though, you can easily talk to it with an SSH command: `ssh root@192.168.42.1`.
 
@@ -40,7 +40,7 @@ At my university, I work on some engineering competition teams, including a Form
 
 Both utilize microcontrollers lavishly, and we've traditionally programmed them in either C or Python. However, everyone's been looking at other options, and Rust is something I've been interested in! So I bought one!
 
-However, I had a lot of (very minor) difficulties. First, the microSD card didn't automatically expand, so I wrote [an article](TODO) about it! The default Buildroot image also reserves about HALF of the board's memory for the official Milk-V Camera, even if you don't have it. So... you need to remove the restriction by recompiling the Buildroot with different memory parameters. A [nice forum post](https://community.milkv.io/t/memory-size/223) explains how in about two lines. (thanks!)
+However, I had a lot of (very minor) difficulties. First, the microSD card didn't automatically expand, so I wrote [an article](@/posts/milkv-duo-expand-fs.md) about it! The default Buildroot image also reserves about HALF of the board's memory for the official Milk-V Camera, even if you don't have it. So... you need to remove the restriction by recompiling the Buildroot with different memory parameters. A [nice forum post](https://community.milkv.io/t/memory-size/223) explains how in about two lines. (thanks!)
 
 Even after those things, though, the biggest challenge is the C toolchain: Milk-V currently uses `musl` over `gnu` for their `libc`. That's important for one reason - Rust gives `riscv64gc-unknown-linux-gnu` a [tier 2 status (with host tools)](https://doc.rust-lang.org/rustc/platform-support.html#tier-2-with-host-tools) but leaves `riscv64gc-unknown-linux-musl` in [tier 3](https://doc.rust-lang.org/rustc/platform-support.html#tier-3)!
 
