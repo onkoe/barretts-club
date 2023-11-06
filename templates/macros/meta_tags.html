@@ -1,0 +1,36 @@
+{% macro meta_tags() %}
+    <title>{{config.extra.site_name}}</title>
+    <meta name="title" content="{{config.extra.site_name}}" />
+    {% if page.description %}
+        <meta name="description" content="{{page.description}}" />
+        <meta property="og:description" content="{{page.description}}" />
+        <meta property="twitter:description" content={{page.description}} />
+    {% else %}
+        <meta name="description" content="{{config.extra.site_desc}}" />
+        <meta property="og:description" content="{{config.extra.site_desc}}" />
+        <meta property="twitter:description" content="{{config.extra.site_desc}}" />
+    {% endif %}
+
+    <meta property="og:type" content="website" />
+
+    {% if page.title %}
+        <meta property="og:title" content="{{page.title}} - {{config.extra.site_name}}" />
+        <meta property="twitter:title" content="{{page.title}}  - {{config.extra.site_name}}" />
+    {% elif section.title %}
+        <meta property="og:title" content="{{section.title}} - {{config.extra.site_name}}" />
+        <meta property="twitter:title" content="{{section.title}}  - {{config.extra.site_name}}" />
+    {% else %}
+        <meta property="og:title" content="{{config.extra.site_name}}" />
+        <meta property="twitter:title" content="{{config.extra.site_name}}" />
+    {% endif %}
+
+    <meta property="twitter:card" content="summary_large_image" />
+
+    {% if page.permalink %}
+        <meta property="og:url" content="{{page.permalink}}" />
+        <meta property="twitter:url" content="{{page.permalink}}" />
+    {% else %}
+        <meta property="og:url" content="{{get_url(path="/")}}" />
+        <meta property="twitter:url" content="{{get_url(path="/")}}" />
+    {% endif %}
+{% endmacro %}

@@ -8,10 +8,10 @@ compile_sass = true
 build_search_index = false # TODO: set this up? 
 
 # Feed config
-generate_feed = true      # set to false to disable!
+generate_feed = true       # set to false to disable!
 feed_filename = "atom.xml"
 #feed_limit = 20            # maximum num of articles in feed. 0 = inf
-default_language = "en"    # language to show in feeds
+default_language = "en" # language to show in feeds
 
 taxonomies = [{ name = "tags", feed = true, paginate_by = 10 }]
 
@@ -30,9 +30,10 @@ render_emoji = true # ex. :smile: --> 😄
 
 # Put all your custom variables here
 [extra]
-site_name = "Barrett's Club" # change to your site's name
-favicon = "svg/box.svg"      # use an svg please! leave blank if no favicon
-author = "Barrett"           # put your name here!
+site_name = "Barrett's Club"       # change to your site's name
+site_desc = "Welcome to the Club!" # a little slogan or something idk
+favicon = "svg/box.svg"            # use an svg please! leave blank if no favicon
+author = "Barrett"                 # put your name here!
 
 [extra.copyright]
 enable = true
@@ -52,6 +53,4 @@ get = [
 use_ansi_time = true # change if you hate freedom
 
 [extra.footer_nav]
-get = [
-    { name = "RSS Feed", link = "atom.xml" },
-]
+get = [{ name = "RSS Feed", link = "atom.xml" }]

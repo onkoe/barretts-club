@@ -1,5 +1,6 @@
 {% import "macros/header.html" as header %}
 {% import "macros/footer.html" as footer %}
+{%import "macros/meta_tags.html" as meta_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +16,9 @@
         {% else %}
             <title>{{config.extra.site_name}}</title>
         {% endif %} 
+
+        {# Enable meta tags #}
+        {{ meta_tags::meta_tags() }}
         
         {# Enable favicon, if necessary #} 
         {% if config.extra.favicon %}
