@@ -21,43 +21,43 @@ html {
 
 body {
     background-color: $background;
-}
 
-img {
-    max-width: 100%;
-    display: block;
-}
+    img {
+        max-width: 100%;
+        display: block;
+    }
 
-.title {
-    font-weight: 900;
-    font-size: 30pt;
-    padding: 0.8em;
-}
+    .title {
+        font-weight: 900;
+        font-size: 30pt;
+        padding: 0.8em;
+    }
 
-a {
-    font-weight: 600;
-    text-decoration: underline;
-    text-decoration-color: $primary;
-    text-decoration-style: solid;
-    text-underline-offset: 0.22em;
-    text-decoration-skip-ink: none;
-    text-decoration-thickness: 0.15em;
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
+    a {
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: $primary;
+        text-decoration-style: solid;
+        text-underline-offset: 0.22em;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: 0.15em;
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
 
-a:link,
-a:visited {
-    color: black;
-}
+    a:link,
+    a:visited {
+        color: black;
+    }
 
-a:hover,
-a:active {
-    background-color: $primary-container-text;
-    color: black;
-    cursor: pointer;
-}
+    a:hover,
+    a:active {
+        background-color: $primary-container-text;
+        color: black;
+        cursor: pointer;
+    }
 
-.content {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    .content {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
 }
