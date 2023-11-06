@@ -1,7 +1,7 @@
 @import "../colors.scss";
 
 [class^="language-"] {
-    font-family: "iosevka";
+    font-family: "iosevka", monospace;
     font-size: 12pt;
     //background: white;
     color: $secondary-container-text;
