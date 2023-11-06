@@ -121,10 +121,6 @@ code {
     padding: 0.2em;
 }
 
-pre code {
-    background-color: transparent;
-}
-
 pre {
     border-radius: 0.4em;
     padding: 0.6em;
@@ -135,6 +131,11 @@ pre {
 
     outline: $outline 1.5px solid;
     border-radius: 0.2em;
+
+    code {
+        background-color: transparent;
+        padding: 0;
+    }
 }
 
 .post-title {
