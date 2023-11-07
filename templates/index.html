@@ -11,8 +11,7 @@
     <div class="sect-div recent">
         <div class="info">
             <div class="left">
-                <h2 class="section-header">Recent Posts</h2>
-                
+                <h2 class="section-header">Recent Posts</h2> 
             </div>
 
             <div class="right">
@@ -29,16 +28,14 @@
                 </li>
                 {% endfor %}
             </ul>
-        </div>
-        
-        </div>
+        </div>      
+    </div>
 
 
     <div class="sect-div top-tags">
         <div class="info">
             <div class="left">
                 <h2 class="section-header">Top Tags</h2>
-                
             </div>
 
             <div class="right">
@@ -49,25 +46,23 @@
         <div class="tags-container"> 
             <p class="soon">Coming Soon!</p>
         </div>
+    </div>
 
-        <div class="sect-div longest-posts">
-            <div class="info">
-                <div class="left">
-                    <h2 class="section-header">Longest Posts</h2>
-                    
-                </div>
-    
-                <div class="right">
-                    {{ button::button(label="See All Posts...", color="tertiary", href=get_url(path="posts", trailing_slash=false)) }}
-                </div>
+    <div class="sect-div longest-posts">
+        <div class="info">
+            <div class="left">
+                <h2 class="section-header">Longest Posts</h2>
             </div>
 
-            <div class="tags-container"> 
-                <p class="soon">
-                    Coming Soon! <br> <br> For the psychopaths in the audience. I'm talking about you, Bob!
-                </p>
+            <div class="right">
+                {{ button::button(label="See All Posts...", color="tertiary", href=get_url(path="posts", trailing_slash=false)) }}
             </div>
-        
+        </div>
+
+        <div class="tags-container"> 
+            <p class="soon">
+                Coming Soon! <br> <br> For the psychopaths in the audience. I'm talking about you, Bob!
+            </p>
         </div>
     </div>
 {% endblock content %}

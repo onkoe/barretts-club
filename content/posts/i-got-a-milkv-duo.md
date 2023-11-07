@@ -1,5 +1,5 @@
 +++
-title = " I Got a Milk-V Duo (and It’s Running Rust)"
+title = "I Got a Milk-V Duo (and It’s Running Rust)"
 description = "This is a scary new hobby... 🤤️"
 date = 2023-11-06
 [taxonomies]
@@ -22,9 +22,9 @@ I'd also grab some of these [headers](https://amzn.to/3Mw5tMW) (affiliate link b
 
 ## Backstory
 
-Anyway, it arrived after just over a week, arriving in one of the tiniest boxes I've ever received. ...Or held!
+Anyway, it arrived after just over a week, arriving in one of the tiniest boxes I've ever received... or held!
 
-{{ cache_image(alt="a text convo with my friend, Leo. i sent him a photo of the tiny box and said 'ITS SO CUTE!' he replied with a stonehenge emoji.", link="/images/i-got-a-milkv-duo/tiny.png", filetype="png") }}
+{{ cache_image(alt="a text convo with my friend, Leo. i sent him a photo of the tiny box and said 'ITS SO CUTE!' he replied with 'BRO' followed by a couple of stonehenge emojis.", link="/images/i-got-a-milkv-duo/tiny.png", filetype="png") }}
 
 As [Milk-V's site](https://milkv.io/duo) says, the Duo is packing down there! It has two [C906 cores](https://www.cnx-software.com/2020/11/09/xuantie-c906-based-allwinner-risc-v-processor-to-power-12-linux-sbcs/) (one for Linux and another for FreeRTOS). The board also has a balmy 64MB of memory and includes a CVITEK TPU - marketed as an "AI acceleration engine... *shudders*. I'm not sure if Google would appreciate their name either, but because it can run [YOLO](https://milkv.io/docs/duo/application-development/tpu/tpu-yolov5) and even a limited [OpenCV](https://milkv.io/docs/duo/resources/opencv-mobile), I'm not particularly concerned!
 
