@@ -6,22 +6,6 @@ header {
         display: none;
     }
 
-    // TODO: fix this!
-    #menu-button-checkbox:checked~.nav-container {
-        height: 12em;
-
-        .header-bar {
-            height: 12em;
-
-            nav {
-                display: flex;
-                flex-direction: column;
-                gap: 1em;
-            }
-        }
-
-    }
-
     .nav-container {
         margin: 0 auto;
         background: $secondary-container;
@@ -81,14 +65,34 @@ header {
         @media (max-width: 768px) {
             min-height: 3.6em;
 
-            .nav-list-container {
-                display: flex; // or 'flex', to disable the grid layout
+            .mobile-nav-container {
+                .mobile-navigation {
+                    width: 100%;
+
+                    .nav-list-mobile {
+                        padding: 0;
+                        margin: 0;
+
+                        li {
+                            width: 100%;
+
+                            a {
+                                width: 100%;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
             }
 
-            nav {
+            // hide desktop navigation completely
+            .nav-list {
                 display: none;
                 height: auto;
             }
+
+            // show mobile nav by default
+
 
             #nav-overflow-button {
                 display: grid;
@@ -100,20 +104,8 @@ header {
                 }
             }
 
-            // TODO: fix this!
-            #menu-button-checkbox:checked~nav {
-                display: flex;
-                flex-direction: column;
-                gap: 1em;
-            }
-
             .nav-button {
                 width: auto;
-            }
-
-            nav,
-            .nav-button {
-                border: 1px solid red; // Temporary for debugging
             }
 
         }

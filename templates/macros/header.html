@@ -26,6 +26,17 @@
                     <i class="overflow-icon fa-solid fa-bars fa-lg"></i>
                 </label>
             </div>
+
+            <div class="mobile-nav-container">
+                <nav class="mobile-navigation">
+                    {{ nav_list::nav_list(device="phone") }}
+                </nav>
+            </div>
         </div>
+
+
     </header>
+
+    <script charset="utf-8" src="{{
+        get_url(path="js/header/mobile.js", trailing_slash=false) }}"> </script>
 {% endmacro header %}

@@ -47,5 +47,40 @@
         background-color: $secondary;
         color: $secondary-text;
     }
+}
 
+// MOBILE NAV LIST
+
+.nav-list-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .mobile-navigation {
+        display: flex;
+        width: 100%
+    }
+
+
+    // nav list stuff
+    ul {
+        text-align: center;
+        margin: 0;
+        padding-left: 0;
+
+    }
+
+    li {
+        display: flex;
+        padding-left: 0em;
+        margin: 0em;
+    }
+
+    a {
+        display: block;
+        padding: 1.2em 1.5em;
+        font-weight: 500;
+        text-decoration: none;
+        width: 100%;
+    }
 }
