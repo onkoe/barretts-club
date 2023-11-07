@@ -1,0 +1,28 @@
+{% macro nav_list() %}
+
+<ul class="nav-list">
+    <link rel="stylesheet" href="{{
+    get_url(path="macros/nav_list.css", trailing_slash=false) }}" />
+
+    {# Custom navigation listings. Add more in `config.toml`! #}
+    {% if config.extra.header_nav %} {% for s in
+    config.extra.header_nav.get %}
+    <li>
+        {% set url = get_url(path=s.link, trailing_slash=false)
+        %}
+        {% if current_path %}
+            {# Check to see if a section is selected #}
+            {% if current_url | safe | slugify | replace(from="/", to="") 
+                == url | safe | slugify | replace(from="/", to="") %}
+                <a class="nav-button" id="current" href="{{url}}">{{s.name | safe}}</a>
+            {% else %}
+                <a class="nav-button" href="{{url}}">{{s.name | safe}}</a>
+            {% endif %}
+        {% else %}
+            <a class="nav-button" href="{{url}}">{{s.name | safe}}</a>
+        {% endif %} 
+    </li>
+    {% endfor %} {% endif %}
+</ul>
+
+{% endmacro nav_list %}
