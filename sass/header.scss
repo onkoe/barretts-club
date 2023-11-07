@@ -1,110 +1,123 @@
 @import "colors.scss";
 @import "animations.scss";
 
-.nav-container {
-    margin: 0 auto;
-    background: $secondary-container;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow:
-        0px 1px 3px rgba(0, 0, 0, 0.1),
-        0px 4px 6px rgba(0, 0, 0, 0.1),
-        0px 10px 20px rgba(0, 0, 0, 0.1),
-}
-
-.main-header .nav-container {
-    display: flex;
-}
-
-.header-bar {
-    width: 100%;
-    height: 3.6em;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr; // use three grid columns
-    align-items: center;
-}
-
-.left-section {
-    grid-column: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; // left-align column
-}
-
-.nav-list {
-    color: $secondary-container-text;
-    grid-column: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center; // centered column
-}
-
-#menu-button {
-    grid-column: 3;
-    display: none;
-    color: $secondary-container-text;
-}
-
-#header-icon {
-    width: 2.5em;
-    height: 2.5em;
-    margin-left: 0.4em;
-}
-
-@media (max-width: 750px) {
-    #menu-button {
-        display: flex;
-        padding: 1.05em 1.5em;
-        width: 1.4em;
-        height: 1.4em;
-        margin-left: auto;
-    }
-
-    .header-bar {
-        display: flex;
-    }
-
-    .nav-button {
+header {
+    #menu-button-checkbox {
         display: none;
-        font-size: 0;
     }
-}
 
-.header-bar ul {
-    text-align: center;
-    margin: 0em;
-    padding-left: 0;
-}
+    // TODO: fix this!
+    #menu-button-checkbox:checked~.nav-container {
+        height: 12em;
 
-.header-bar li {
-    display: inline-flex;
-    padding-left: 0em;
-    margin: 0em;
-}
+        .header-bar {
+            height: 12em;
 
-.header-bar a {
-    display: block;
-    padding: 1.2em 1.5em;
-    font-weight: 500;
-    text-decoration: none;
-}
+            nav {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+            }
+        }
 
-#current {
-    text-decoration: solid;
-    text-decoration-line: underline;
-    text-decoration-thickness: 0.12em;
-    text-underline-offset: 0.3em;
-    background: $tertiary-container;
-    outline: $outline;
-    outline-width: 0.1em;
-}
+    }
 
-#current:hover {
-    background-color: $tertiary;
-    color: $secondary-text;
-}
+    .nav-container {
+        margin: 0 auto;
+        background: $secondary-container;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow:
+            0px 1px 3px rgba(0, 0, 0, 0.1),
+            0px 4px 6px rgba(0, 0, 0, 0.1),
+            0px 10px 20px rgba(0, 0, 0, 0.1);
 
-.header-bar a:hover {
-    background-color: $secondary;
-    color: $secondary-text;
+        .header-bar {
+            width: 100%;
+            height: 3.6em;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+
+            // LEFT: logo
+            .left-section {
+                position: absolute;
+
+                #header-icon {
+                    width: 2.5em;
+                    height: 2.5em;
+                    margin-left: 0.4em;
+                }
+            }
+
+            // MIDDLE: nav links
+            .nav-list-container {
+                grid-column: 2;
+                display: grid;
+                justify-self: center;
+                align-items: center;
+                align-self: center;
+                align-content: center;
+            }
+
+            // RIGHT: menu icon (mobile only)
+            // ... so, by default: nothing here
+        }
+
+        .nav-list {
+            color: $secondary-container-text;
+        }
+
+        // COMPUTER
+        // hide overflow button
+        #nav-overflow-button {
+            display: none;
+        }
+
+        // PHONE
+        @media (max-width: 768px) {
+            min-height: 3.6em;
+
+            .nav-list-container {
+                display: flex; // or 'flex', to disable the grid layout
+            }
+
+            nav {
+                display: none;
+                height: auto;
+            }
+
+            #nav-overflow-button {
+                display: grid;
+                grid-column: 3;
+                justify-self: end;
+
+                .overflow-icon {
+                    margin-right: 0.8em;
+                }
+            }
+
+            // TODO: fix this!
+            #menu-button-checkbox:checked~nav {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+            }
+
+            .nav-button {
+                width: auto;
+            }
+
+            nav,
+            .nav-button {
+                border: 1px solid red; // Temporary for debugging
+            }
+
+        }
+
+
+    }
 }

@@ -1,45 +1,31 @@
+{% import "macros/header/nav_list.html" as nav_list %}
+
 {% macro header() %}
-<link rel="stylesheet" href="{{
+    <link rel="stylesheet" href="{{
     get_url(path="header.css", trailing_slash=false) }}" />
 
-    <header class="main-header">
+    <header class="header">
+
+        <input type="checkbox" id="menu-button-checkbox">
+
         <div class="nav-container">
-
-
-            <nav class="header-bar">
+            <div class="header-bar">
 
                 <div class="left-section">
                     <img src="{{get_url(path="svg/box.svg",
-                    trailing_slash=false)}}" id="header-icon" alt="icon">
+                        trailing_slash=false)}}" id="header-icon" alt="icon">
                 </div>
 
-                <div class="center-section">
-                <ul class="nav-list">
-                    {# Custom navigation listings. Add more in `config.toml`! #}
-                    {% if config.extra.header_nav %} {% for s in
-                    config.extra.header_nav.get %}
-                    <li>
-                        {% set url = get_url(path=s.link, trailing_slash=false)
-                        %}
-                        {% if current_path %}
-                            {# Check to see if a section is selected #}
-                            {% if current_url | safe | slugify | replace(from="/", to="") 
-                                == url | safe | slugify | replace(from="/", to="") %}
-                                <a class="nav-button" id="current" href="{{url}}">{{s.name | safe}}</a>
-                            {% else %}
-                                <a class="nav-button" href="{{url}}">{{s.name | safe}}</a>
-                            {% endif %}
-                        {% else %}
-                            <a class="nav-button" href="{{url}}">{{s.name | safe}}</a>
-                        {% endif %} 
-                    </li>
-                    {% endfor %} {% endif %}
-                </ul>
+                <div class="nav-list-container"> 
+                    <nav class="navigation">
+                        {{ nav_list::nav_list() }}
+                    </nav>
                 </div>
-            </nav>
 
-            <img src="{{get_url(path="svg/menu.svg",
-            trailing_slash=false)}}" id="menu-button" alt="*">
+                <label for="menu-button-checkbox" id="nav-overflow-button">
+                    <i class="overflow-icon fa-solid fa-bars fa-lg"></i>
+                </label>
+            </div>
         </div>
     </header>
 {% endmacro header %}
