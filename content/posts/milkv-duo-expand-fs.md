@@ -101,7 +101,7 @@ Device     Boot   Start     End Sectors  Size Id Type
 
 Okay, make sure to write down those values! You can also snap a photo of them or open them in [Text Editor](https://apps.gnome.org/TextEditor/) (my beloved)! 🤤️
 
-{{ cache_image(alt="a photo of me pointing at GNOME Text Editor, complete with the f disk output inside!", link="/images/milkv-duo-expand-fs/gte-saved.jpeg", filetype="jpeg") }}
+{{ cache_image(alt="a photo of me pointing at GNOME Text Editor, complete with the f disk output inside!", link="/images/milkv-duo-expand-fs/gte-saved.webp", filetype="webp") }}
 
 Alright, now we have to do the hard part! We'll (temporarily) delete the Linux partition and make it much longer.
 
@@ -225,7 +225,7 @@ barrett@farts ~>
 
 This action should take a moment. In fact, for my USB 2.0 SD card reader with a microSD to SD converter, it took FOREVER..!
 
-{{ cache_image(alt="a screenshot of GNOME Mission Control watching my slow-ass SD card reader from the mid 2000s!", link="/images/milkv-duo-expand-fs/sd-struggles.png", filetype="png") }}
+{{ cache_image(alt="a screenshot of GNOME Mission Control watching my slow-ass SD card reader from the mid 2000s!", link="/images/milkv-duo-expand-fs/sd-struggles.webp", filetype="webp") }}
 
 After it's done, though, we've completed the project!
 
@@ -240,7 +240,7 @@ sudo mount -t /dev/sdg2 /mnt/duo
 
 Of course, you can also just open it in Nautilius (or some other file manager)!
 
-{{ cache_image(alt="GNOME Files, also known as Nautilus, displaying mount information about slash dev slash s d g two. It says we have around 120 gigabytes free!", link="/images/milkv-duo-expand-fs/all-done.png", filetype="png") }}
+{{ cache_image(alt="GNOME Files, also known as Nautilus, displaying mount information about slash dev slash s d g two. It says we have around 120 gigabytes free!", link="/images/milkv-duo-expand-fs/all-done.webp", filetype="webp") }}
 
 {% conclusion() %}
 

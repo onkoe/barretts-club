@@ -6,14 +6,16 @@
 
     <header class="header">
 
-        <input type="checkbox" id="menu-button-checkbox">
+        <input type="checkbox" id="menu-button-checkbox" class="cbox">
 
         <div class="nav-container">
             <div class="header-bar">
 
                 <div class="left-section">
-                    <img src="{{get_url(path="svg/box.svg",
-                        trailing_slash=false)}}" id="header-icon" alt="icon">
+                    <a href={{get_url(path="/", trailing_slash=false)}}>
+                        <img src="{{get_url(path="svg/box.svg",
+                            trailing_slash=false)}}" id="header-icon">
+                    </a>
                 </div>
 
                 <div class="nav-list-container"> 
