@@ -69,7 +69,8 @@ body {
     }
 
     a:hover,
-    a:active {
+    a:active,
+    a:focus-visible {
         background-color: $primary-container-text;
         color: black;
         cursor: pointer;

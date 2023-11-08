@@ -14,20 +14,17 @@
             {# date: filter folks who hate freedom 🦅 #} 
             <span class="post-date">
                 {{ freedom_time::freedom_time(given_date = page.date) }}
-
             </span>
 
             <p id="dt-separator">•</p>
 
-            <div class="tags">
+            <div class="post-tags-container">
                 {% if page.taxonomies.tags %} 
                     {% for tag in page.taxonomies.tags %}
-                        <a class="tag">{{ tag | truncate(length=20) | safe }}</a>
+                        <a class="post-tag" href="{{get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag | truncate(length=20) | safe }}</a>
                     {% endfor %} 
                 {% endif %}
             </div>
-            
-
         </div>
 
         {% if page.updated %}
