@@ -2,7 +2,7 @@
 @import "animations.scss";
 
 header {
-    #menu-button-checkbox {
+    .cbox {
         display: none;
     }
 
@@ -41,14 +41,34 @@ header {
             .nav-list-container {
                 grid-column: 2;
                 display: grid;
-                justify-self: center;
-                align-items: center;
-                align-self: center;
-                align-content: center;
             }
 
-            // RIGHT: menu icon (mobile only)
-            // ... so, by default: nothing here
+            // RIGHT: menu icon (mobile only) + dark mode icon
+            // no menu icon by default.
+            .right-section {
+                margin-left: auto;
+                display: grid;
+                grid-column: 3;
+                justify-self: end;
+
+                .header-buttons {
+                    text-align: center;
+                    display: flex;
+
+                    :hover {
+                        cursor: pointer;
+                    }
+
+                    .header-btn {
+                        padding-left: 1em;
+                        padding-right: 1em;
+                    }
+
+                    i {
+                        line-height: 1.6em;
+                    }
+                }
+            }
         }
 
         .nav-list {
@@ -61,11 +81,31 @@ header {
             display: none;
         }
 
+        // hide mobile links
+        .mobile-nav-container {
+            visibility: hidden;
+            display: none;
+        }
+
         // PHONE
         @media (max-width: 768px) {
             min-height: 3.6em;
 
             .mobile-nav-container {
+                display: flex;
+                max-height: 500px;
+                overflow: hidden;
+                transition: max-height 0.5s ease;
+                visibility: visible;
+
+                &.collapsed {
+                    max-height: 0;
+                }
+
+                &.no-transition {
+                    transition: none;
+                }
+
                 .mobile-navigation {
                     width: 100%;
 
@@ -83,6 +123,13 @@ header {
                         }
                     }
                 }
+
+                &.visible {
+                    max-height: 500px; 
+                    opacity: 1; 
+                    visibility: visible; 
+                    display: flex;
+                }
             }
 
             // hide desktop navigation completely
@@ -92,12 +139,8 @@ header {
             }
 
             // show mobile nav by default
-
-
             #nav-overflow-button {
-                display: grid;
-                grid-column: 3;
-                justify-self: end;
+                display: flex;
 
                 .overflow-icon {
                     margin-right: 0.8em;
