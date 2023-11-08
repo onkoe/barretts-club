@@ -8,7 +8,7 @@ header {
 
     .nav-container {
         margin: 0 auto;
-        background: $secondary-container;
+        background: var(--secondary-container);
         border-radius: 12px;
         overflow: hidden;
         box-shadow:
@@ -72,7 +72,7 @@ header {
         }
 
         .nav-list {
-            color: $secondary-container-text;
+            color: var(--secondary-container-text);
         }
 
         // COMPUTER
@@ -125,9 +125,9 @@ header {
                 }
 
                 &.visible {
-                    max-height: 500px; 
-                    opacity: 1; 
-                    visibility: visible; 
+                    max-height: 500px;
+                    opacity: 1;
+                    visibility: visible;
                     display: flex;
                 }
             }

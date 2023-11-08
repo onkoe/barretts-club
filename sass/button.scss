@@ -6,7 +6,7 @@
 
     .btn,
     .extended-fab-btn {
-        background-color: $outline-container;
+        background-color: var(--outline-container);
         color: darken(white, 30%);
     }
 }
@@ -15,46 +15,46 @@
 
     a:hover,
     a:active {
-        background: lighten($primary, $amount: 1);
+        // background: lighten(var(--primary), $amount: 1); // TODO
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
 }
 
 .btn-wrapper-primary {
     .btn {
-        background-color: $primary;
+        background-color: var(--primary);
         color: white;
     }
 
     a:hover,
     a:active {
-        background: lighten($primary, $amount: 1);
+        // background: lighten(var(--primary), $amount: 1); // TODO
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
 }
 
 .btn-wrapper-secondary {
     .btn {
-        background-color: $secondary;
+        background-color: var(--secondary);
         color: white;
     }
 
     a:hover,
     a:active {
-        background: lighten($secondary, $amount: 1);
+        // background: lighten(var(--secondary), $amount: 1); // TODO
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
 }
 
 .btn-wrapper-tertiary {
     .btn {
-        background-color: $tertiary;
-        color: white;
+        background-color: var(--tertiary);
+        color: var(--tertiary-text);
     }
 
     a:hover,
     a:active {
-        background: lighten($tertiary, $amount: 1);
+        //  background: lighten(var(--tertiary), $amount: 1); //TODO
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
 }
@@ -67,7 +67,7 @@
     width: fit-content;
     height: fit-content;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    outline: $outline 1.5px solid;
+    outline: var(--outline) 1.5px solid;
 
     img {
         display: flex;
@@ -94,28 +94,28 @@
 
 .btn-wrapper-tertiary-container {
     .btn {
-        background-color: $tertiary-container;
-        color: $tertiary-container-text;
+        background-color: var(--tertiary-container);
+        color: var(--tertiary-container-text);
     }
 
     a:hover,
     a:active,
     a:focus-visible {
-        background: lighten($tertiary-container, $amount: 1);
+        // background: lighten(var(--tertiary-container), $amount: 1); // TODO
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
 }
 
 .btn-wrapper-secondary-container {
     .btn {
-        background-color: $secondary-container;
-        color: $secondary-container-text;
+        background-color: var(--secondary-container);
+        color: var(--secondary-container-text);
     }
 
     a:hover,
     a:active,
     a:focus-visible {
-        background: lighten($secondary-container, $amount: 1);
+        //  background: lighten(var(--secondary-container), $amount: 1); TODO
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
 
@@ -124,14 +124,14 @@
 
 .btn-wrapper-primary-container {
     .btn {
-        background-color: $primary-container;
-        color: $secondary-container-text;
+        background-color: var(--primary-container);
+        color: var(--secondary-container-text);
     }
 
     a:hover,
     a:active,
     a:focus-visible {
-        background: lighten($primary-container, $amount: 1);
+        // background: lighten(var(--primary-container), $amount: 1); // TODO
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
 }
@@ -139,14 +139,14 @@
 .btn-wrapper-transparent {
     .btn {
         background-color: transparent;
-        color: $text;
+        color: var(--text);
     }
 
     a:hover,
     a:active,
     a:focus-visible {
-        background: lighten($primary-container, $amount: 1);
-        color: $primary-container-text;
+        // background: lighten(var(--primary-container), $amount: 1); // TODO
+        color: var(--primary-container-text);
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
 }

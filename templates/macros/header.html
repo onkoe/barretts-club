@@ -25,12 +25,11 @@
                 </div>
 
                 <div class="right-section">
-                    <input type="checkbox" id="dark-light-toggle" class="cbox">
 
                     <div class="header-buttons">
-                        <label for="dark-light-toggle" id="dark-light-toggle-button" class="header-btn">
+                        <a onclick="toggle_dark_mode()" class="header-btn">
                             <i class="fa-solid fa-sun fa-lg"></i>
-                        </label>
+                        </a>
 
                         <label for="menu-button-checkbox" id="nav-overflow-button" class="header-btn">
                             <i class="overflow-icon fa-solid fa-bars fa-lg"></i>
@@ -51,4 +50,7 @@
 
     <script charset="utf-8" src="{{
         get_url(path="js/header/mobile.js", trailing_slash=false) }}"> </script>
+
+    <script charset="utf-8" src="{{
+        get_url(path="js/dark_mode.js", trailing_slash=false) }}"> </script>
 {% endmacro header %}

@@ -37,14 +37,14 @@ $max_width: 42em;
     display: grid;
     grid-template-columns: auto auto;
     gap: 0.2em;
-    background-color: $tertiary-container;
+    background-color: var(--tertiary-container);
     border-radius: 1.4em;
 }
 
 .left {
     .section-header {
         font-size: 2em;
-        color: $tertiary-container-text;
+        color: var(--tertiary-container-text);
     }
 
     display: flex;

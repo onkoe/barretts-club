@@ -5,7 +5,7 @@
 @import "macros/codeblock.scss";
 
 .info {
-    background: $secondary-container;
+    background: var(--secondary-container);
     padding: 2em;
     border-radius: 0.6em;
 }
@@ -27,7 +27,7 @@
         gap: 0.4em;
 
         .post-tag {
-            outline-color: $outline;
+            outline-color: var(--outline);
             outline-width: 0.1em;
             outline-style: solid;
 
@@ -42,7 +42,7 @@
 }
 
 .updated-date {
-    color: $outline;
+    color: var(--outline);
     margin: 0;
     margin-top: 0.2em;
 }
@@ -65,7 +65,7 @@
     grid-template-rows: auto auto;
     grid-template-columns: 100%;
     padding: 0.6em;
-    color: adjust-color($primary, $lightness: 20%);
+    // color: adjust-color(var(--primary), $lightness: 20%); // TODO
 
     .toc-button {
         justify-self: right;
@@ -123,7 +123,7 @@
 }
 
 code {
-    background-color: $outline-container;
+    background-color: var(--outline-container);
     border-radius: 0.2em;
     padding: 0.2em;
 }
@@ -136,7 +136,7 @@ pre {
     word-wrap: none;
     scrollbar-width: thin;
 
-    outline: $outline 1.5px solid;
+    outline: var(--outline) 1.5px solid;
     border-radius: 0.2em;
 
     code {
@@ -164,13 +164,13 @@ table {
 table,
 th,
 td {
-    border: 0.15em solid $outline;
+    border: 0.15em solid var(--outline);
     border-collapse: collapse;
     text-align: center;
 }
 
 .footnote-definition {
-    background: $secondary-container;
+    background: var(--secondary-container);
     border-radius: 0.8em;
     margin: 0.4em 0;
 
@@ -179,7 +179,7 @@ td {
 
     .footnote-definition-label {
         text-decoration: underline solid;
-        background: $tertiary-container;
+        background: var(--tertiary-container);
         padding: 0.4em 0.8em;
         border-radius: 0.8em;
         margin: 0 0.6em;
@@ -210,16 +210,16 @@ object {
 }
 
 .summary {
-    background: $secondary-container;
-    color: $secondary-container-text;
+    background: var(--secondary-container);
+    color: var(--secondary-container-text);
 }
 
 .warning {
-    background: $warn-container;
-    color: $warn-container-text;
+    background: var(--warn-container);
+    color: var(--warn-container-text);
 
     code {
         // i don't like workarounds but this is surprisingly fun
-        background-color: color.adjust($warn, $saturation: -60%, $lightness: +40%);
+        // background-color: color.adjust(var(--warn), $saturation: -60%, $lightness: +40%); // TODO
     }
 }

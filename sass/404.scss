@@ -19,8 +19,8 @@
 
     h1 {
         font-family: "inter", system-ui;
-        background-color: $warning;
-        color: $background;
+        background-color: var(--warning);
+        color: var(--background);
         font-weight: 900;
         font-size: 8em;
         padding: 0;

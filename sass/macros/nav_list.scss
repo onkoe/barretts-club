@@ -13,14 +13,14 @@
         text-decoration-line: underline;
         text-decoration-thickness: 0.12em;
         text-underline-offset: 0.3em;
-        background: $tertiary-container;
-        outline: $outline;
+        background: var(--tertiary-container);
+        outline: var(--outline);
         outline-width: 0.1em;
     }
 
     .current:hover {
-        background-color: $tertiary;
-        color: $secondary-text;
+        background-color: var(--tertiary);
+        color: var(--secondary-text);
     }
 
     // nav list stuff
@@ -44,8 +44,8 @@
     }
 
     a:hover {
-        background-color: $secondary;
-        color: $secondary-text;
+        background-color: var(--secondary);
+        color: var(--secondary-text);
     }
 }
 
@@ -89,7 +89,7 @@
         text-decoration-line: underline;
         text-decoration-thickness: 0.12em;
         text-underline-offset: 0.3em;
-        outline: $outline;
+        outline: var(--outline);
         outline-width: 0.1em;
     }
 }

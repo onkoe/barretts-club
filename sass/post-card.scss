@@ -2,7 +2,7 @@
 @import "button.scss";
 
 .post-card {
-    background-color: $secondary-container;
+    background-color: var(--secondary-container);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     // Media Query for smaller screens
@@ -14,8 +14,8 @@
     margin: 2em;
     padding: 2em;
 
-    color: $secondary-container-text;
-    outline: 0.1em solid $outline-container;
+    color: var(--secondary-container-text);
+    outline: 0.1em solid var(--outline-container);
     overflow: hidden;
 
     // remove the bullet points n stuff
@@ -41,7 +41,7 @@
     }
 
     .post-title {
-        color: $secondary-container-text;
+        color: var(--secondary-container-text);
         font-size: 1.8em;
         font-weight: 900;
         text-decoration: none;
@@ -58,7 +58,7 @@
         flex-wrap: wrap;
 
         .post-tag {
-            outline-color: $outline;
+            outline-color: var(--outline);
             outline-width: 0.1em;
             outline-style: solid;
 

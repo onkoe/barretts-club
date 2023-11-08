@@ -4,35 +4,35 @@
     font-family: "Iosevka", monospace;
     font-size: 12pt;
     //background: white;
-    color: $secondary-container-text;
+    color: var(--secondary-container-text);
 
     .z-storage,
     .z-type {
-        color: $primary;
+        color: var(--primary);
         font-weight: 700;
     }
 
     .z-string {
-        color: $codeblock-string;
+        color: var(--codeblock-string);
     }
 
     .z-operator,
     .z-assignment,
     .z-keyword {
-        color: $secondary;
+        color: var(--secondary);
     }
 
     .z-constant,
     .z-language {
-        color: $tertiary;
+        color: var(--tertiary);
     }
 
     .z-comment {
-        color: $outline;
+        color: var(--outline);
     }
 
     .z-support {
-        color: $error-container;
+        color: var(--error);
     }
 }
 
@@ -43,6 +43,6 @@
     .z-text,
     .z-plain,
     .z-code {
-        color: $primary;
+        color: var(--primary);
     }
 }
