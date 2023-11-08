@@ -12,6 +12,8 @@
 
 .date-and-tags {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
 
     p {
@@ -21,15 +23,20 @@
     .post-tags-container {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         gap: 0.4em;
 
         .post-tag {
             outline-color: $outline;
             outline-width: 0.1em;
             outline-style: solid;
-            border-radius: 0.4em;
-            padding: 0.2em;
-            margin: 0;
+
+            display: inline-block;
+            padding: 6pt;
+            margin: 3pt 1pt;
+            border-radius: 8pt;
+
+            text-decoration: none;
         }
     }
 }
