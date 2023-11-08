@@ -99,7 +99,8 @@
     }
 
     a:hover,
-    a:active {
+    a:active,
+    a:focus-visible {
         background: lighten($tertiary-container, $amount: 1);
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
@@ -112,7 +113,8 @@
     }
 
     a:hover,
-    a:active {
+    a:active,
+    a:focus-visible {
         background: lighten($secondary-container, $amount: 1);
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
@@ -127,7 +129,8 @@
     }
 
     a:hover,
-    a:active {
+    a:active,
+    a:focus-visible {
         background: lighten($primary-container, $amount: 1);
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     }
@@ -140,7 +143,8 @@
     }
 
     a:hover,
-    a:active {
+    a:active,
+    a:focus-visible {
         background: lighten($primary-container, $amount: 1);
         color: $primary-container-text;
         box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
