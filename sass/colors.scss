@@ -1,0 +1,91 @@
+// Note: dump $primary into this website for new Material You colors...
+// https://m3.material.io/theme-builder#/custom
+
+@import "dark-colors.scss";
+@import "light-colors.scss";
+
+
+@mixin light-theme {
+    $primary: $light-primary;
+    $primary-text: $light-primary-text;
+    $primary-container: $light-primary-container;
+    $primary-container-text: $light-primary-container-text;
+
+    $secondary: $light-secondary;
+    $secondary-text: $light-secondary-text;
+    $secondary-container: $light-secondary-container;
+    $secondary-container-text: $light-secondary-container-text;
+
+    $tertiary: $light-tertiary;
+    $tertiary-text: $light-tertiary-text;
+    $tertiary-container: $light-tertiary-container;
+    $tertiary-container-text: $light-tertiary-container-text;
+
+    $error: $light-error;
+    $error-text: $light-error-text;
+    $error-container: $light-error-container;
+    $error-container-text: $light-error-container-text;
+
+    $codeblock-string: $light-codeblock-string;
+    $codeblock-string-text: $light-codeblock-string-text;
+    $codeblock-string-container: $light-codeblock-string-container;
+    $codeblock-string-container-text: $light-codeblock-string-container-text;
+
+    $background: $light-background;
+    $text: $light-text;
+
+    $outline: $light-outline;
+    $outline-container: $light-outline-container;
+
+    $warn: $codeblock-string; // from #ffc482
+    $warn-container: $codeblock-string-container;
+    $warn-container-text: $codeblock-string-container-text;
+}
+
+$do-it: #00cc66;
+$info: #576ca8;
+$caution: #c59849;
+$warning: #ef3e36;
+
+@mixin dark-theme {
+    $primary: $dark-primary;
+    $primary-text: $dark-primary-text;
+    $primary-container: $dark-primary-container;
+    $primary-container-text: $dark-primary-container-text;
+
+    $secondary: $dark-secondary;
+    $secondary-text: $dark-secondary-text;
+    $secondary-container: $dark-secondary-container;
+    $secondary-container-text: $dark-secondary-container-text;
+
+    $tertiary: $dark-tertiary;
+    $tertiary-text: $dark-tertiary-text;
+    $tertiary-container: $dark-tertiary-container;
+    $tertiary-container-text: $dark-tertiary-container-text;
+
+    $error: $dark-error;
+    $error-text: $dark-error-text;
+    $error-container: $dark-error-container;
+    $error-container-text: $dark-error-container-text;
+
+    $codeblock-string: $dark-codeblock-string;
+    $codeblock-string-text: $dark-codeblock-string-text;
+    $codeblock-string-container: $dark-codeblock-string-container;
+    $codeblock-string-container-text: $dark-codeblock-string-container-text;
+
+    $background: $dark-background;
+    $text: $dark-text;
+
+    $outline: $dark-outline;
+    $outline-container: $dark-outline-container;
+
+    $warn: $codeblock-string; // from #ffc482
+    $warn-container: $codeblock-string-container;
+    $warn-container-text: $codeblock-string-container-text;
+}
+
+@include light-theme;
+
+@media (prefers-color-scheme: dark) {
+    @include dark-theme;
+}

@@ -65,14 +65,14 @@ body {
 
     a:link,
     a:visited {
-        color: black;
+        color: $text;
     }
 
     a:hover,
     a:active,
     a:focus-visible {
         background-color: $primary-container-text;
-        color: black;
+        color: $text;
         cursor: pointer;
     }
 
