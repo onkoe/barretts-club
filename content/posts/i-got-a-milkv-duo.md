@@ -2,6 +2,7 @@
 title = "I Got a Milk-V Duo (and It’s Running Rust)"
 description = "This is a scary new hobby... 🤤️"
 date = 2023-11-06
+updated = 2023-11-10
 [taxonomies]
 tags = ["rust", "linux", "risc-v", "milk-v", "duo"]
 +++
@@ -101,13 +102,13 @@ barrett@canopy ~/Downloads>
 We'll also add some complex dependencies to make sure all is well:
 
 ```console
-barrett@canopy ~/D/farts-testing-farts (main)> cargo add anyhow tokio tracing tracing-subscriber --features=tokio/rt-multi-thread,tracing/async-await
+barrett@canopy ~/D/farts-testing-farts (main)> cargo add anyhow tokio tracing tracing-subscriber --features=tokio/rt,tokio/macros,tracing/async-await
 ```
 
 Great, now we can make a small sample `main.rs` file:
 
 ```rust
-#[tokio::main]
+#[tokio::main(flavor = "current_thread")]
 #[tracing::instrument]
 async fn main() -> anyhow::Result<()> {
     let subscriber = tracing_subscriber::FmtSubscriber::new();
@@ -133,8 +134,8 @@ linker = "/home/barrett/Downloads/milkv-buildroot/sdk/host/bin/riscv64-buildroot
 rustflags = [
     "-C", "target-feature=-crt-static",
     "-C", "link-arg=--sysroot=/home/barrett/Downloads/milkv-buildroot/sdk/host/riscv64-buildroot-linux-musl/sysroot",
-    #"-C", "target-feature=+crt-static",
-    "-C", "panic=abort",
+    # "-C", "target-feature=+crt-static", # Uncomment me to force static compilation
+    # "-C", "panic=abort", # Uncomment me to avoid compiling in panics
 ]
 ```
 
@@ -145,7 +146,7 @@ Let's run our build command. First, though, run a `cargo clean` to make sure all
 ```console
 barrett@canopy ~/D/farts-testing-farts (main)> cargo +nightly clean
      Removed 1104 files, 694.1MiB total
-barrett@canopy ~/D/farts-testing-farts (main)> cargo +nightly build --target riscv64gc-unknown-linux-musl -Zbuild-std=core,std,panic_abort -Zbuild-std-features=panic_immediate_abort --release
+barrett@canopy ~/D/farts-testing-farts (main)> cargo +nightly build --target riscv64gc-unknown-linux-musl -Zbuild-std --release
    Compiling compiler_builtins v0.1.101
    Compiling core v0.0.0 (/home/barrett/.rustup/toolchains/nightly-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core)
    Compiling libc v0.2.149
@@ -154,7 +155,7 @@ barrett@canopy ~/D/farts-testing-farts (main)> cargo +nightly build --target ris
    Compiling tokio v1.33.0
    Compiling tracing-subscriber v0.3.17
    Compiling farts-testing-farts v0.1.0 (/home/barrett/Downloads/farts-testing-farts)
-    Finished release [optimized] target(s) in 11.39s
+    Finished release [optimized] target(s) in 12.54s
 barrett@canopy ~/D/farts-testing-farts (main)> 
 ```
 
@@ -165,7 +166,7 @@ Great, that means our toolchain is working! Let's test it on the Milk-V Duo!
 To move things to your Duo, you need a specific `scp` command:
 
 ```console
-barrett@canopy ~/D/farts-testing-farts (main)> scp -O target/riscv64gc-unknown-linux-musl/release/farts-testing-farts root@192.168.42.1:/tmp/bin
+barrett@canopy ~/D/farts-testing-farts (main)> scp -O target/riscv64gc-unknown-linux-musl/release/farts-testing-farts root@192.168.42.1:/root/bin/farts-testing-farts
 root@192.168.42.1's password: 
 farts-testing-farts                              100%  367KB   4.0MB/s   00:00    
 barrett@canopy ~/D/farts-testing-farts (main)> 
@@ -176,10 +177,10 @@ You use `-O` as the Duo doesn't come bundled with FTP, which modern `scp` uses a
 Now for the moment of truth:
 
 ```console
-[root@milkv-duo]/tmp/bin# ./farts
+[root@milkv-duo]~/bin# ./farts
 Hello, world!
-1970-01-01T00:25:02.352672Z  INFO farts: yo is this a different color or whhhhaaat
-[root@milkv-duo]/tmp/bin# 
+1970-01-01T00:31:46.516325Z  INFO farts: yo is this a different color or whhhhaaat
+[root@milkv-duo]~/bin# 
 ```
 
 Ayooooo! It's working! However, you might get an error at first, so let's take a look at what that's all about...
@@ -189,7 +190,7 @@ Ayooooo! It's working! However, you might get an error at first, so let's take a
 If you end up getting a weird error that kinda looks like:
 
 ```console
-[root@milkv-duo]/tmp/bin# ./binary 
+[root@milkv-duo]~/bin# ./binary 
 -sh: binary: not found
 ```
 
@@ -224,7 +225,7 @@ You're looking for that "requesting program interpreter" line! Let's grab the Du
 Great! Now, our weirdly named library will work just fine for our program!
 
 ```console
-[root@milkv-duo]/tmp/bin# ./binary
+[root@milkv-duo]~/bin# ./binary
 Hello, world!
 ```
 
