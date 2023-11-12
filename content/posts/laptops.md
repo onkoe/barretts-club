@@ -2,7 +2,7 @@
 title = "The Laptop List"
 description = "This is an continually-updated list of laptops that I like!"
 date = 2023-01-15
-updated = 2023-10-25
+updated = 2023-11-12
 [taxonomies]
 tags = ["laptops", "linux", "macos", "windows"]
 +++
@@ -68,6 +68,16 @@ Linux support is not mentioned on their website.
 So far, this is my favorite machine. A Ryzen version would be the perfect laptop in my view. The Coreboot support is awesome!
 
 However, the company does not offer ANSI (standard US) options for your keyboard. Bit annoying...
+
+#### [SKIKK Green 5](https://www.skikk.eu/en/laptops/green)
+
+- Battery: Perfect, at 99Wh!
+- Display: Perfect! 16:10, 1800p, 400 nits.
+- Panel Size: Perfect - 14 inches.
+- Processor: 13700H 😶
+- Linux support: Unknown.
+
+This is another generic example of the previous machines. However, they do plant a tree when you buy a laptop, so that's pretty cool. They also give you a choice of thermal paste during assembly - that's unique! I'd like to see a Ryzen prosessor and an ANSI keyboard for this to become the "prime option."
 
 ### [Star Labs StarFighter (16")](https://us.starlabs.systems/pages/starfighter)
 
@@ -142,7 +152,7 @@ I'd love one of these machines with a low-power Ryzen, such as the 7840U. Shavin
 
 I like this machine, but I'd like to see a version with a less beefy CPU.
 
-### [ASUS Zenbook 14 OED (UM3402)](https://www.asus.com/us/laptops/for-home/zenbook/zenbook-14-oled-um3402/where-to-buy/)
+### [ASUS Zenbook 14 OLED (UM3402)](https://www.asus.com/us/laptops/for-home/zenbook/zenbook-14-oled-um3402/where-to-buy/)
 
 My friend got one of these, so you get a mini review!
 
