@@ -8,13 +8,14 @@ header {
 
     .nav-container {
         margin: 0 auto;
-        background: $secondary-container;
+        background: $primary-container;
         border-radius: 12px;
         overflow: hidden;
         box-shadow:
             0px 1px 3px rgba(0, 0, 0, 0.1),
             0px 4px 6px rgba(0, 0, 0, 0.1),
             0px 10px 20px rgba(0, 0, 0, 0.1);
+        color: $primary-container-text;
 
         .header-bar {
             width: 100%;
@@ -23,8 +24,6 @@ header {
             grid-template-columns: 1fr 2fr 1fr;
             flex-wrap: wrap;
             align-items: center;
-
-
 
             // LEFT: logo
             .left-section {
@@ -119,15 +118,20 @@ header {
                             a {
                                 width: 100%;
                                 text-align: center;
+                                color: $primary-container-text;
+                            }
+
+                            a:hover {
+                                color: $primary-container;
                             }
                         }
                     }
                 }
 
                 &.visible {
-                    max-height: 500px; 
-                    opacity: 1; 
-                    visibility: visible; 
+                    max-height: 500px;
+                    opacity: 1;
+                    visibility: visible;
                     display: flex;
                 }
             }

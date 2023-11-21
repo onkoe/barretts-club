@@ -136,6 +136,22 @@
     }
 }
 
+// uhh let's do some text ones
+
+.btn-wrapper-primary-container-text {
+    .btn {
+        background-color: $primary-container-text;
+        color: $primary-container;
+    }
+
+    a:hover,
+    a:active,
+    a:focus-visible {
+        background: darken($primary-container-text, $amount: 10);
+        box-shadow: rgba(0, 0, 0, 0.70) 0px 3px 10px;
+    }
+}
+
 .btn-wrapper-transparent {
     .btn {
         background-color: transparent;

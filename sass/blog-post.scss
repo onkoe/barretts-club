@@ -169,6 +169,11 @@ td {
     text-align: center;
 }
 
+del {
+    text-decoration-thickness: 2.4px;
+    text-decoration-color: $error;
+}
+
 .footnote-definition {
     background: $secondary-container;
     border-radius: 0.8em;
