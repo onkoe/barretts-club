@@ -1,39 +1,12 @@
 @import "colors.scss";
+@import "fonts.scss";
 @import "./fontawesome/fontawesome.scss";
 @import "./fontawesome/solid.scss";
 
 $fa-font-path: "../static/webfonts";
 
-@font-face {
-    font-family: "cantarell";
-    src: url("webfonts/Cantarell-VF.woff2") format("woff2");
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Iosevka';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/webfonts/iosevka-regular-minimal.woff2') format('woff2');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Iosevka';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/webfonts/iosevka-bold-minimal.woff2') format('woff2');
-    font-display: swap;
-}
-
-
-em {
-    font-style: oblique 8deg;
-}
-
 html {
-    font-family: "cantarell", system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
     color: $text;
     box-sizing: border-box;
 }

@@ -1,0 +1,39 @@
+@mixin interVariable($style, $weightRange, $srcPath) {
+    @font-face {
+        font-family: 'InterVariable';
+        font-style: $style;
+        font-weight: $weightRange;
+        font-display: swap;
+        src: url($srcPath) format('woff2');
+    }
+}
+
+@include interVariable(normal, 100 900, 'webfonts/InterVariable.woff2');
+@include interVariable(italic, 100 900, 'webfonts/InterVariable-Italic.woff2');
+
+:root {
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: 'InterVariable', sans-serif;
+        font-optical-sizing: auto;
+    }
+}
+
+@font-face {
+    font-family: 'Iosevka';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/webfonts/iosevka-regular-minimal.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/webfonts/iosevka-bold-minimal.woff2') format('woff2');
+    font-display: swap;
+}
