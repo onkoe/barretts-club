@@ -3,28 +3,12 @@ title = "Downloading from YouTube"
 description = "Find out how you can download your favorite videos from YouTube!"
 date = "2023-05-20"
 [taxonomies]
-tags = ["YouTube", "Android", "iOS", "Linux", "macOS", "Windows", "Video", "yt-dlp"]
+tags = ["YouTube", "yt-dlp"]
 +++
 
 YouTube tends to disallow downloading content from their service, but if you have rights to the content, then you may need to access it on your own computer.
 
 Let’s talk about how to download from YouTube on your platform!
-
-<!--- TODO: when we get a ToC, add this! -->
-<!---
-## Platforms
-
-If you need to do this quickly, click on your platform and follow the short instructions.
-
-[table]
-yt-dlp (link)
-Linux (link)
-macOS and Windows (link)
-Android (link)
-iOS (link)
-Online (link)
-
--->
 
 ## The Underlying Tool
 
@@ -35,7 +19,7 @@ To get it, just download the [package for your system](https://repology.org/proj
 - Fedora: `sudo dnf install yt-dlp`
 - Ubuntu: `sudo apt install yt-dlp`
   - 20.04 needs backports: `sudo apt install yt-dlp/focal-backports`
-- macOS: `brew install yt-dlp` (if you don't have brew, [get it here](https://brew.sh/))
+- macOS: `brew install yt-dlp` (if you don't have Homebrew, [get it here](https://brew.sh/))
 - Windows: `winget install yt-dlp`
 
 If you're like most people, you'll only use one command. Just type: `yt-dlp https://www.youtube.com/watch?v=dQw4w9WgXcQ` with your YouTube link to download it. Additional download options are available. To see some common ones, [click here](https://tldr.inbrowser.app/pages/common/yt-dlp)!
@@ -50,7 +34,7 @@ You can get it from GNOME Software by typing "Tube Converter," or you can grab i
 
 Once you have it, you can get any video you'd like - pretty much anywhere!
 
-![Tube Converter is super easy!](https://i.imgur.com/spacLPX.png)
+{{ cache_image(alt="a screenshot of the libadwaita application Tube Converter", link="/images/yt-dlp/tube_converter.webp", filetype="webp") }}
 
 ## macOS and Windows
 
@@ -60,7 +44,7 @@ You can download the installer [for your system here](https://github.com/jely200
 
 Unfortunately, the app doesn't seem to support ARM Linux, so I can't show it off on my own computer. However, here's the official Windows Store screenshot!
 
-![I know what video I'd put there...](https://i.imgur.com/xqQ9gUd.png)
+{{ cache_image(alt="a screenshot of YouTube Downloader GUI running on Windows", link="/images/yt-dlp/ytdl_gui.webp", filetype="webp") }}
 
 ## Android
 
@@ -74,7 +58,7 @@ Most importantly, it has a Share button option. You can download any video as lo
 
 Here's how it looks:
 
-![Woah, it's my favorite color! And your favorite color...](https://i.imgur.com/GG070Idl.png)
+{{ cache_image(alt="a screenshot of Seal running on Android 12. It's using colors from my wallpaper due to Material You!", link="/images/yt-dlp/seal.webp", filetype="webp") }}
 
 ### dvd
 
@@ -84,7 +68,7 @@ It doesn't look great, and GUI options are limited (though you can always add yo
 
 It also has a Share button feature!
 
-![When the world ends, dvd will be downloading videos.](https://i.imgur.com/e8mkQmAl.png)
+{{ cache_image(alt="a screenshot of the dvd app. It looks dated, with an original Material Design look. it uses a purple accent", link="/images/yt-dlp/dvd.webp", filetype="webp") }}
 
 ## iOS
 
@@ -94,7 +78,7 @@ Tap here, then click "An _iOS shortcut_..." to install the script. When you want
 
 While the script has been helpful at times, I've found that it tends to freeze often. (In fact, it froze when I took the screenshot below.) I suggest using the website instead.
 
-![It's useful sometimes!](https://i.imgur.com/oH7nuxTl.jpg?1)
+{{ cache_image(alt="a screenshot of the YouTube D L shortcut running on an iPhone.", link="/images/yt-dlp/ios.webp", filetype="webp") }}
 
 ## Online
 
@@ -104,7 +88,7 @@ The iOS Shortcut uses projectlounge's site underneath, so if you want, you can j
 
 It works great, and unlike many of the other websites, the person behind it has a clear path to sustaining their website. Donate to them [here](https://patreon.com/TheEssem)!
 
-![It works pretty much anywhere..!](https://i.imgur.com/6UAB6vF.png)
+{{ cache_image(alt="a screenshot of the minimal downloader website. it has many download links for each resolution.", link="/images/yt-dlp/lounge.webp", filetype="webp") }}
 
 ## Conclusion
 
