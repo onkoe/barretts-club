@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %} 
+
+<link rel="stylesheet" href="{{
+    get_url(path="about.css", trailing_slash=false) }}" />
+
+<h1>About Me</h1>
+
+<div class="about-container">
+    <div class="left">
+        <img src="https://placehold.co/1000" />
+    </div>
+
+    <div class="right">
+        <p>
+            <span id="hi">Hi, I'm Barrett!</span> I'm an Indigenous student
+            working towards my Bachelor in Computer Science at the University of
+            Oklahoma!
+        </p>
+
+        <p>
+            My interests are wide-reaching and sometimes sporadic, as
+            highlighted by this blog's broad span of topics. ADHD drives me to
+            follow interesting things with dense subjects underneath, so you
+            won't see me stop anytime soon. 😄
+        </p>
+
+        <p>
+            Still, I've been captivated by the 
+            <a href={{ get_url(path="tags/rust", trailing_slash=false) }}>
+                Rust programming language
+            </a>,
+            embedded systems, and robotics for the past few years! I've
+            published several Rust crates and guides on these subjects.
+        </p>
+
+        <p>
+            Designing systems that make computers work well and feel pleasant is
+            my passion.
+        </p>
+
+        <p>If that sounds good to you, please feel free to 
+            <a href={{ get_url(path="contact", trailing_slash=false) }}> 
+                get in touch!
+            </a> 
+        </p>
+    </div>
+</div>
+
+{% endblock content %}
