@@ -1,6 +1,7 @@
 {% import "macros/freedom_time.html" as freedom_time %}
 {% import "macros/toc.html" as toc %}
 {% import "macros/article_suggestions.html" as article_suggestions %}
+{% import "macros/posts/post_info.html" as info %}
 
 {% extends "index.html" %} 
 {% block content %} 
@@ -8,66 +9,8 @@
 <link rel="stylesheet" href="{{ get_url(path="blog-post.css", trailing_slash=false) }}" />
 
 <div class="post">
-    <div class="info">
-        <div class="date-and-tags">
 
-            {# date: filter folks who hate freedom 🦅 #} 
-            <span class="post-date">
-                {{ freedom_time::freedom_time(given_date = page.date) }}
-            </span>
-
-            <p id="dt-separator">•</p>
-
-            <div class="post-tags-container">
-                {% if page.taxonomies.tags %} 
-                    {% for tag in page.taxonomies.tags %}
-                        <a class="post-tag" href="{{get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag | truncate(length=20) | safe }}</a>
-                    {% endfor %} 
-                {% endif %}
-            </div>
-        </div>
-
-        {% if page.updated %}
-            <p class="updated-date">
-                Last updated on {{ freedom_time::freedom_time(given_date = page.updated) | trim }}.
-            </p>
-        {% endif %}
-
-            <h1 class="post-title">{{ page.title | safe }}</h1>
-
-            <div class="post-desc"> {{ page.description | truncate(length=200) | safe }} </div>
-
-
-            {# Table of Contents #}
-            <div class="toc">
-            <input type="checkbox" id="toc-cb"></input>
-
-            <div class="toc-list">
-                {% for header in page.toc %}
-                    {{ toc::toc(header = header, depth_limit=4) }}
-                {% endfor %}
-            </div>
-
-            {# Custom button b/c of the `label` :p #}
-            <div class="btn-wrapper-primary toc-button">
-                <label for="toc-cb">
-                    <a class="extended-fab-btn">
-                        <div id="show-toc">
-                            <i class="fa-solid fa-eye toc-btn-icon"></i>
-                            Show Table of Contents
-                        </div>
-
-                        <div id="hide-toc">
-                            <i class="fa-solid fa-eye-slash toc-btn-icon"></i>
-                            Hide Table of Contents
-                        </div>
-                    </a>
-                </label>
-            </div>
-
-
-        </div>
-    </div>
+    {{ info::post_info() }}
 
     {{ page.content | safe }}
 
