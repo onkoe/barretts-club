@@ -228,7 +228,7 @@ Thank you for taking a look at my article!
 
 Check out [Henrique Bucher's article and blog][26] if you haven't already - they're great reads!
 
-Please let me know if you have any corrections, comments, or ideas for this post or others. You can [create a GitHub issue](https://github.com/onkoe/barretts-club/issues/new?title=problem: A Rusty Response: "Why I think C%2b%2b is still a desirable coding platform compared to Rust"&body=I found a problem in your article "A Rusty Response: 'Why I think C%2b%2b is still a desirable coding platform compared to Rust!'" Let me explain...), <a href="mailto:contact@barretts.club">email me</a>, or even respond to this article! Thanks again! 😄
+Please let me know if you have any corrections, comments, or ideas for this post or others. You can <a href="https://github.com/onkoe/barretts-club/issues/new?title=%22problem%3A%20A%20Rusty%20Response%3A%20%22Why%20I%20think%20C%2b%2b%20is%20still%20a%20desirable%20coding%20platform%20compared%20to%20Rust%22&body=I%20found%20a%20problem%20in%20your%20article%20A%20Rusty%20Response%3A%20%27Why%20I%20think%20C%2b%2b%20is%20still%20a%20desirable%20coding%20platform%20compared%20to%20Rust%21%27%22%20Let%20me%20explain...%22">create a GitHub issue</a>, <a href="mailto:contact@barretts.club">email me</a>, or even respond to this article! Thanks again! 😄
 
 {% end %}
 
