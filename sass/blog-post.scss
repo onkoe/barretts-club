@@ -115,3 +115,20 @@ object {
         background-color: color.adjust($warn, $saturation: -60%, $lightness: +40%);
     }
 }
+
+.quoted {
+    background: $secondary-container;
+    outline: $secondary;
+    width: 80%;
+    align-self: center;
+
+    .quoted-heading {
+        font-size: 12pt;
+    }
+
+    hr {
+        color: $primary;
+        border-style: solid;
+        border-width: 0.5px;
+    }
+}

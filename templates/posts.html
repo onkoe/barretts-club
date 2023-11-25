@@ -9,7 +9,14 @@
 <link rel="stylesheet" href="{{ get_url(path="posts.css",
 trailing_slash=false) }}" />
 
-<h1 class="title">{{ section.title | safe }}</h1>
+<div class="section-info">
+    <h1 class="title">{{ section.title | safe }}</h1>
+
+    {% if section.description %}
+        <h2 class="desc">{{ section.description | safe }}</h2>
+    {% endif %}
+</div>
+
 <div class="preview-container">
     <ul>
         {% for page in paginator.pages %}

@@ -1,8 +1,19 @@
 @import "colors.scss";
 @import "button.scss";
 
-.title {
-    text-align: center;
+
+.section-info {
+    padding: 2em 0;
+
+    .title,
+    .desc {
+        text-align: center;
+        margin: 0;
+    }
+
+    .desc {
+        font-weight: normal;
+    }
 }
 
 .preview-container ul {

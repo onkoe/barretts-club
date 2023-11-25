@@ -70,6 +70,18 @@
             text-decoration: none;
 
         }
+
+        .snippet-tag {
+            outline-color: $warn;
+            color: $warn-container-text;
+            background-color: $warn-container;
+        }
+
+        .snippet-tag:hover {
+            outline-color: $warn-container;
+            background-color: $warn;
+            color: $warn-text;
+        }
     }
 
     .btn {
