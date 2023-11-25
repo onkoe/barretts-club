@@ -77,11 +77,15 @@
             background-color: $warn-container;
         }
 
-        .snippet-tag:hover {
+        .snippet-tag:hover,
+        .snippet-tag:active,
+        .snippet-tag:focus-visible {
             outline-color: $warn-container;
             background-color: $warn;
             color: $warn-text;
         }
+
+
     }
 
     .btn {
