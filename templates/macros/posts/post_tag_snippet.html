@@ -1,0 +1,15 @@
+{% macro check_tag_snippet(page) %}
+
+    {% if page.components | nth(n = page.components | length - 2) == "snippets" %}
+
+    {# let's get the subsection itself! #}
+    {% set posts_section = get_section(path = page.ancestors | last | safe) %}
+    {% set section = get_section(path = posts_section.subsections | last | safe) %}
+
+    <a class="post-tag snippet-tag" href="{{ get_url(path = section.path) | safe }}">
+        snippet
+    </a>
+
+    {% endif %}
+
+{% endmacro %}

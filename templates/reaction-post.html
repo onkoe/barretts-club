@@ -1,1 +1,20 @@
-{% extends "blog-post.html" %}
+{% import "macros/freedom_time.html" as freedom_time %} 
+{% import"macros/toc.html" as toc %} 
+{% import "macros/posts/article_suggestions.html" as article_suggestions %} 
+{% import "macros/posts/post_info.html" as info %} 
+
+{% extends "index.html" %}
+{% block content %} 
+
+<link rel="stylesheet" href="{{
+    get_url(path="blog-post.css", trailing_slash=false) }}" />
+
+<div class="post">
+    {{ info::post_info() }} 
+    
+    {{ page.content | safe }} 
+    
+    {{ article_suggestions::suggestions() }}
+</div>
+
+{% endblock content %}
