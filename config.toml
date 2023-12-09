@@ -35,6 +35,8 @@ site_desc = "Welcome to the Club!" # a little slogan or something idk
 favicon = "svg/box.svg"            # use an svg please! leave blank if no favicon
 author = "Barrett"                 # put your name here!
 
+# 
+
 [extra.copyright]
 enable = true
 use_copyleft = true
@@ -52,5 +54,10 @@ get = [
 [extra.date]
 use_ansi_time = true # change if you hate freedom
 
+# warning: Please put "https" before an external link
 [extra.footer_nav]
-get = [{ name = "RSS Feed", link = "atom.xml" }]
+get = [
+    { name = "RSS Feed", link = "atom.xml", icon = "fa-solid fa-rss" },
+    { name = "GitHub", link = "https://github.com/onkoe/barretts-club", icon = "fa-brands fa-github" },
+    { name = "Privacy Policy", link = "privacy_policy" },
+]

@@ -1,5 +1,21 @@
-{% macro footer() %}
+{# 'Render' a footer button #}
+{% macro render(x) %}
+    {# check if this is a relative link #}
+    {% if x.link is containing("http") %}
+        {% set url = x.link %}
+    {% else %}
+        {% set url = get_url(path=x.link, trailing_slash=false) %}
+    {% endif %}
 
+    {% if x.icon %}
+        {# it's like this because there's an ugly space after the icon otherwise :p #}
+        <a class="footer-icon" href="{{url}}"><i class="{{x.icon}}"></i></a>
+    {% else %}
+        <a href="{{url}}">{{x.name | safe}}</a>
+    {% endif %}
+{% endmacro render %}
+
+{% macro footer() %}
     <link rel="stylesheet" href="{{ get_url(path="footer.css", trailing_slash=false) }}" /> 
 
     {# copyright info, if you want... see config.toml! #} 
@@ -24,14 +40,12 @@
     <div class="footer-nav">
         {% if config.extra.footer_nav %}
             {% for x in config.extra.footer_nav.get %}
-                {% set url = get_url(path=x.link, trailing_slash=false) %}
-
                 {% if x.link == "atom.xml" %}
                     {% if config.generate_feed == true %}
-                        <a href="{{url}}">{{x.name | safe}}</a>
+                        {{ footer::render(x=x) }}
                     {% endif %}
                 {% else %}
-                    <a href="{{url}}">{{x.name | safe}}</a>
+                    {{ footer::render(x=x) }}
                 {% endif %}                
             {% endfor %}
         {% endif %}
