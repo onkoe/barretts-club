@@ -1,0 +1,63 @@
+{% extends "base.html" %} 
+{% block content %} 
+
+<link rel="stylesheet" href="{{
+get_url(path="privacy-policy.css", trailing_slash=false) }}" />
+
+<div class="pp-container">
+    <h1>Privacy Policy</h1>
+
+    <p>
+        Hi! This site uses an open-source program called
+        <a href="https://www.goatcounter.com/">GoatCounter</a> for minimal web
+        analytics. However, it doesn't track you across the web, and it doesn't
+        try to collect any personal data.
+    </p>
+
+    <p>
+        Instead, it's intended to help me know which posts are most popular,
+        which devices to focus site development on, and what browsers to test.
+    </p>
+
+    <h2>What does GoatCounter collect?</h2>
+
+    <p>
+        Very little! It doesn't even need a GDPR notice. These include browser
+        info, approximate (state/country level) location, and screen size.
+    </p>
+
+    <h2>Can I turn it off?</h2>
+    <p>
+        There's no toggle on the site, but if you'd like to avoid running the
+        JavaScript, you can either:
+    </p>
+    <ul>
+        <li>Disable JavaScript, or</li>
+        <li>Use <a href="https://ublockorigin.com/">uBlock Origin</a>.</li>
+    </ul>
+
+    <p>
+        GoatCounter does allow for a 'tracking pixel' version of itself, though,
+        so disabling JavaScript won't entirely switch off GoatCounter.
+    </p>
+
+    <p>
+        However, GoatCounter doesn't collect identifiable information, so
+        blocking it provides minimal benefit. Please consider safelisting the
+        site in your content blocker if it doesn't bother you. It helps me
+        continue to create engaging content for your viewing pleasure!
+    </p>
+
+    <p>(No hard feelings if you leave it disabled, though! I get it!)</p>
+
+    <h2>Ideas</h2>
+
+    <p>
+        If you'd like to share any comments or concerns about GoatCounter or the
+        rest of the site, you can let me know
+        <a href="mailto:contact@barretts.club">via email</a>. Thanks for
+        reading! ☺️
+    </p>
+</div>
+
+{% endblock content %}
