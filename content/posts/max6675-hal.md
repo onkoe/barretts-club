@@ -1,5 +1,5 @@
 +++
-title = "MAX6675 Thermocouple Driver in Rust"
+title = "What I Learned Making an embedded-hal Driver in Rust (for the MAX6675 Thermocouple Digitizer)"
 description = "I wrote a driver for this digital thermocouple converter - what did I learn?"
 date = 2023-12-19
 [taxonomies]
