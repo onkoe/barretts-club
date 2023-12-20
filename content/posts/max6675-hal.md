@@ -233,7 +233,7 @@ The story of my MAX6675 thermocouple digitizer library was an emotional rollerco
 
 Given that there are so many of these little boards in the world, it's not hard to find one that hasn't been implemented in Rust yet. If you're interested, why not give it a try?
 
-If you want to use the library, feel free to visit [its](https://github.com/onkoe/max6675-hal) GitHub repo](https://github.com/onkoe/max6675-hal), grab it on [Crates.io](https://crates.io/crates/max6675-hal), or read its docs on [Docs.rs](https://docs.rs/max6675-hal)!
+If you want to use the library, feel free to visit [its GitHub repo](https://github.com/onkoe/max6675-hal), grab it on [Crates.io](https://crates.io/crates/max6675-hal), or read its docs on [Docs.rs](https://docs.rs/max6675-hal)!
 
 If you have any suggestions for or problems with this article, please [send a GitHub issue](https://github.com/onkoe/barretts-club/issues/new?title=%7Bproblem%20OR%20suggestion%7D%3A%20MAX6675%20Thermocouple%20Driver%20in%20Rust&body=I%20noticed%20something%20in%20this%20article...%20%28etc.%29
 ) so I can take a look! Alternatively, you can always [contact me by email](mailto:contact@barretts.club) for any concerns or ideas for this article or others! Thanks for sticking around! 😄
