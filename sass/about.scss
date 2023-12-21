@@ -34,6 +34,10 @@ p {
             align-self: center;
             padding: 10%;
             max-width: 12em;
+
+            object {
+                max-width: 12em;
+            }
         }
 
         .right {
