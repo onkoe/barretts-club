@@ -6,7 +6,8 @@ $max_width: 42em;
 .title-section {
     align-content: center;
     text-align: center;
-    padding: 6em;
+    padding: 0;
+    padding-top: 6em;
     padding-bottom: 4em;
 
     .title {
@@ -34,6 +35,7 @@ $max_width: 42em;
     justify-content: center;
     align-items: center;
     width: inherit;
+    max-width: calc(min(768px, 100%));
 
     padding: 0;
     margin: 0;
