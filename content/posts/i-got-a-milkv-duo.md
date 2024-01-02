@@ -4,7 +4,7 @@ description = "This is a scary new hobby... 🤤️"
 date = 2023-11-06
 updated = 2023-11-10
 [taxonomies]
-tags = ["rust", "linux", "risc-v", "milk-v", "duo"]
+tags = ["rust", "linux", "risc-v", "milk-v", "duo", "embedded"]
 +++
 
 I've always been interested in computer engineering, but previously, I had yet to learn how to get into it all. Luckily for me, Milk-V recently went off, creating [several new RISC-V products](https://milkv.io/)!
