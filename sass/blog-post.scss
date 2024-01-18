@@ -133,6 +133,14 @@ object {
         // i don't like workarounds but this is surprisingly fun
         background-color: color.adjust($warn, $saturation: -60%, $lightness: +40%);
     }
+
+    a {
+        text-decoration-color: $warn;
+    }
+
+    a:hover {
+        background-color: color.adjust($warn-container, $lightness: +7%);
+    }
 }
 
 .quoted {
