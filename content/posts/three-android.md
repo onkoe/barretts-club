@@ -1,5 +1,5 @@
 +++
-title = "Four Hourseman of Android Distributions"
+title = "Four Horseman of Android Distributions"
 description = "There's four types of Android ROMs. Why can't we have one?"
 date = 2024-01-18
 [taxonomies]
