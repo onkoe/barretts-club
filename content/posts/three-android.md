@@ -8,17 +8,19 @@ tags = ["android", "lineage", "rant"]
 
 Over the years, I've used a variety of Android distributions.
 
-[LineageOS](https://lineageos.org), a sensible pick for folks wanting a usable AOSP downstream, has been on most of my devices at some point over the past half-decade. To be frank, I love Lineage! It's a blend of two things: creativity and determination. Creativity is significant, as device maintainers pull out all stops to get devices running. Determination also defines the project as maintainers push toward a consistent, stable ecosystem with expected features - and only those features - working across devices.
+[LineageOS](https://lineageos.org), a sensible pick for folks wanting a usable AOSP downstream, has been on most of my devices at some point over the past half-decade. To be frank, I love Lineage! It's a blend of two things: creativity and determination.
 
-LineageOS also has some glaring flaws, though. These describe the entire Android ecosystem.
+Creativity is significant, as device maintainers pull out all stops to get devices running. Determination also defines the project as maintainers push toward a consistent, stable ecosystem with expected features - and only those features - working across devices.
+
+LineageOS also has some glaring flaws, though, and they describe the entire Android ecosystem.
 
 ## 1: Freedom
 
 Unlike alternative Android distributions, Lineage aims to give users two things: an unabridged, predictable AOSP experience and **freedom**.
 
-You can do practically anything you'd like on a Lineage device. Want to root it and run wildly insecure tweaking scripts? Go for it! Are you interested in running Google services out of a sandbox? Go ahead! Are you fascinated with Android 10's design and firmly refuse to upgrade? Well, it's your device!
+You can do practically anything you'd like on a Lineage device. Want to root it and run wildly insecure tweaking scripts? Go for it! Are you interested in running privileged Google services you found online? Go ahead! Are you fascinated with Android 10's design and firmly refuse to upgrade? Well, it's your device!
 
-LineageOS isn't just a standalone operating system - though for most people, it's great for that. However, the project also aims to be a solid base for downstream distributions. These aren't just goals - they're requirements for each maintainer and device, described [in a Charter](https://github.com/LineageOS/charter/blob/main/device-support-requirements.md) to the entire Lineage community.
+LineageOS isn't just a standalone operating system - though for most people, it's great for that. The project also aims to be a solid base for downstream distributions. These aren't just goals - they're requirements for each maintainer and device, described [in a Charter](https://github.com/LineageOS/charter/blob/main/device-support-requirements.md) to the entire Lineage community.
 
 Some downstream distros of Lineage include:
 
@@ -40,16 +42,16 @@ Be careful out there!
 
 ## Intermission: Privacy vs. Security
 
-Often, folks equate or confuse **security** and **privacy.** Others may falsely assert that all users would be better off with one over another. This topic needs some clarification before we talk about these distributions.
+Often, folks equate or confuse **security** and **privacy.** Others may falsely assert that all users would be better off with one over another. This topic needs some clarification before we talk about more distributions.
 
-I'll use the dictionary definition for both:
+I'll use [the dictionary](https://www.oed.com/) definition for both:
 
-- Security: "the state of being free from danger or threat."
-- Privacy: "the state... of being free from being observed or disturbed by \[others\]."
+- **Security**: "the state of being free from danger or threat."
+- **Privacy**: "the state... of being free from being observed or disturbed by \[others\]."
 
-The difference is minor but has cascading effects on the Android community.
+The difference is minor, but it has cascading effects on the Android community.
 
-### Security Users
+### 🛡️ Security Users
 
 Users who value security may use an Android distribution that [quickly patches](https://www.xda-developers.com/how-android-security-patch-updates-work/) attack vectors, limits user freedom to guarantee certain protections, and enables [certain defenses](https://github.com/anthraxx/linux-hardened) that are off by default.
 
@@ -57,7 +59,7 @@ They may be more willing to put up with performance losses or complex workaround
 
 Security users often create a [threat model](https://en.wikipedia.org/wiki/Threat_model) and frame their actions within it. This process is comprehensive - all related considerations will be in the model's service.
 
-### Privacy Users
+### 🏰 Privacy Users
 
 On the other hand, those seeking privacy may prioritize powerful device management settings, diminished application privileges, and general protection from oppressive corporations or systems.
 
@@ -93,9 +95,9 @@ Graphene includes various security tweaks to the system, mostly comprised of cus
 
 Unfortunately, the project is sometimes dramatic, with community members flaming others outside Graphene. Still, I don't think you should focus on that part of the project. There's a bit of backstory surrounding it.
 
-Daniel Micay, the previous lead maintainer and Foundation director of Graphene, stepped down after [being swatted](https://en.wikipedia.org/wiki/Swatting).
-
 ### A Short History of GrapheneOS
+
+Daniel Micay, the previous lead maintainer and Foundation director of Graphene, stepped down after [being swatted](https://en.wikipedia.org/wiki/Swatting).
 
 How did this even happen? The project's rowdy behavior becomes more understandable when looking at its history. Graphene, alongside Micay, split from [CopperheadOS](https://en.wikipedia.org/wiki/CopperheadOS) after its backing company began to monetize aggressively under the direction of James Donaldson, the other co-founder.
 
@@ -113,7 +115,7 @@ I respect his decision to step down from the Foundation and his social media pre
 
 ### Just a Project
 
-Graphene as a security project is incredible - with years of developer time poured into even minor details. No stone is left unturned. It includes comprehensive security vector mitigations and refuses to support devices if they aren't compatible with [such choices](https://grapheneos.org/faq#future-devices).
+In any case, Graphene as a security project is incredible - with years of developer time poured into even minor details. No stone is left unturned. It includes comprehensive security vector mitigations and refuses to support devices if they aren't compatible with [such choices](https://grapheneos.org/faq#future-devices).
 
 For example, the maintainers declined to support the Fairphone 4 due to slow, inconsistent security patches and [using test keys in production](https://forum.fairphone.com/t/bootloader-avb-keys-used-in-roms-for-fairphone-3-4/83448/11)! (off-topic, but that's crazy)
 
@@ -121,7 +123,7 @@ While it may be infamous for its community, Graphene shows what a security-orien
 
 ## 4: Habit
 
-No stock ROM is the same, so I can't make sweeping assertions about them. However, habit defines what stock Android means. Stock ROMs generally provide minimal user control and awful privacy - but deliver passable to excellent security.
+No stock ROM is the same, so I can't make sweeping assertions about them. However, **habit** defines what stock Android means. Stock ROMs generally provide minimal user control and awful privacy - but deliver passable to excellent security.
 
 Most stock users are unaware of the other Android options, and that's just fine! If it meets their needs, or there are no other options, who's to complain?
 
