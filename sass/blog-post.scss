@@ -80,6 +80,14 @@ del {
     }
 }
 
+// selects the first footnote, then inserts extra 
+// spacing between it and the conclusion 
+//
+// (doing it for all of them is ugly)
+#\31 .footnote-definition {
+    margin-top: 2em;
+}
+
 .footnote-definition {
     background: $secondary-container;
     border-radius: 0.8em;
