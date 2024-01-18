@@ -61,6 +61,25 @@ del {
     text-decoration-color: $error;
 }
 
+.footnote-reference {
+
+    a,
+    a:link {
+        color: $primary !important; // sorry
+        text-decoration: wavy;
+        padding-left: 0.05em;
+        font-size: 0.9em;
+    }
+
+    a::before {
+        content: "["
+    }
+
+    a::after {
+        content: "]"
+    }
+}
+
 .footnote-definition {
     background: $secondary-container;
     border-radius: 0.8em;
