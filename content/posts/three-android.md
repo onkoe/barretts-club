@@ -24,7 +24,7 @@ LineageOS isn't just a standalone operating system - though for most people, it'
 
 Some downstream distros of Lineage include:
 
-- [LineageOS with microG](https://lineage.microg.org/)
+- [LineageOS for microG](https://lineage.microg.org/)
 - [CalyxOS](https://calyxos.org/) (we'll talk about it later!)
 - [DivestOS](https://divestos.org/) and [Replicant](https://replicant.us/)
 - [/e/](https://e.foundation/e-os/)
