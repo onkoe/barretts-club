@@ -1,10 +1,79 @@
 $max_width: 42em; // arbitrary. but nice!
 
 .home {
+    padding: 2em 0; // put some space at the top of the page
+
     .box {
         // don't show the massive box on small mobile devices
         display: none;
         max-width: 8em;
+    }
+
+    .title-section {
+        @media (max-width: 768px) {
+            // on phones, center the intro text
+            text-align: center;
+        }
+    }
+
+    .posts-preview-container {
+
+        ul,
+        li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .info {
+        width: 100%;
+        box-sizing: border-box;
+
+        display: grid;
+        grid-template-columns: auto auto;
+        border-radius: 1.4em;
+
+        .left {
+            .section-header {
+                font-size: 2.4em;
+                color: $on-surface-variant;
+                font-family: 'Lora', serif;
+                font-weight: 400;
+            }
+
+            display: flex;
+            flex-direction: column;
+            grid-column: 1;
+            align-self: center;
+        }
+
+        .right {
+            grid-column: 2;
+            margin-left: auto;
+            align-self: center;
+        }
+    }
+
+    .title {
+        font-size: 2.8em;
+        font-family: 'Lora', serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0.5em 0;
+        padding-bottom: 0.3em;
+    }
+
+    .subtitle {
+        padding: 0;
+        padding-bottom: 1em;
+        margin: 0;
+        font-weight: 400;
+    }
+
+
+    .recent {
+        max-width: $max_width;
     }
 
     @media (min-width: 768px) {
@@ -12,8 +81,7 @@ $max_width: 42em; // arbitrary. but nice!
         display: grid;
 
         .title-section {
-            padding-top: 6em;
-            padding-left: 3em;
+            padding: 6em 3em 0 3em;
             grid-column: 1;
 
             .box {
@@ -22,24 +90,8 @@ $max_width: 42em; // arbitrary. but nice!
         }
 
         .recent {
-            max-width: $max_width;
-            width: $max_width;
             grid-column: 2;
         }
-    }
-
-    .title {
-        font-size: 2.4em;
-        font-family: 'Lora', serif;
-        font-weight: 400;
-        margin: 0;
-        padding: 0.5em 0;
-    }
-
-    .subtitle {
-        padding: 0;
-        margin: 0;
-        font-weight: 400;
     }
 
 }
