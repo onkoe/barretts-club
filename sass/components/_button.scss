@@ -79,10 +79,9 @@
     outline: $outline 1px solid;
 
     &:hover,
-    &:focus {
-        background-color: $on-secondary;
-        box-shadow: $box-shadow-z1;
-    }
+    &:focus {}
+
+    &:active {}
 }
 
 .extended-fab-btn {
@@ -130,13 +129,4 @@
     background-color: $surface-container-high;
     color: $primary;
     box-shadow: $box-shadow-z2;
-
-    &:hover,
-    &:focus {
-        box-shadow: $box-shadow-z1;
-    }
-
-    &:active {
-        box-shadow: none;
-    }
 }
