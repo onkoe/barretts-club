@@ -164,7 +164,7 @@ object {
     }
 
     a:hover {
-        background-color: $on-warn;
+        background-color: $warn-container; // TODO: +7% lightness
     }
 }
 
