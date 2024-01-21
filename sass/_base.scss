@@ -33,6 +33,9 @@ a {
 
 // inside a blog post
 .post {
+
+
+
     max-width: calc(min(760px, 100%));
     line-height: 1.5em;
     display: flex;
@@ -40,4 +43,9 @@ a {
     flex-direction: column;
     padding: 4em 0;
     margin: 0 auto;
+
+    code {
+        // TODO
+        color: Red;
+    }
 }
