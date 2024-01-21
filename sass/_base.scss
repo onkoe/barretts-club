@@ -15,17 +15,22 @@ a {
     text-decoration-skip-ink: none;
     text-decoration-thickness: 0.15em;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    color: $on-background;
+    color: $primary; // TODO: fix
+}
+
+a:visited,
+a:link {
+    // get rid of default anchor purple/blue behavior
+    color: inherit;
+}
+
+a:hover,
+a:focus-visible {
+    background-color: $inverse-primary;
 }
 
 // inside a blog post
 .post {
-
-    a:hover,
-    a:focus-visible {
-        background-color: $inverse-primary;
-    }
-
     max-width: calc(min(760px, 100%));
     line-height: 1.5em;
     display: flex;
