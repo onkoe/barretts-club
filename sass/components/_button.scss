@@ -31,8 +31,6 @@
     }
 }
 
-
-
 // 'pill-style' buttons
 .btn-filled {
     background-color: $primary;
@@ -105,10 +103,6 @@
 
 // a floating action button with only an icon!
 .small-fab-btn {
-    outline: none;
-    padding: 1.4rem; // i eyeballed this. be careful out there
-    border-radius: 0.8rem;
-
     object {
         display: flex;
         padding: 0;
@@ -117,16 +111,12 @@
     }
 }
 
-.small-fab-btn-disabled {
-    outline: none;
-    padding: 1.4rem;
-    border-radius: 0.8rem;
-    background: $surface-container-low;
-    color: $outline;
-}
-
 .btn-surface {
     background-color: $surface-container-high;
     color: $primary;
+    outline: none;
+    padding: 1.4rem; // i eyeballed this. be careful out there
+    border-radius: 0.8rem;
+
     box-shadow: $box-shadow-z2;
 }
