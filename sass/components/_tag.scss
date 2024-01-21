@@ -1,0 +1,43 @@
+    // the list of tags on each post
+    .post-tags-container {
+        padding: 4pt 0;
+        display: grid;
+        grid-template-columns: min-content auto;
+        column-gap: 6pt;
+        align-items: baseline;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .post-tag {
+            outline-color: $outline;
+            outline-width: 1px;
+            outline-style: solid;
+
+            display: inline-block;
+            padding: 6pt;
+            margin: 3pt 1pt;
+            border-radius: 8pt;
+
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                background: $secondary-container;
+                color: $on-secondary-container;
+            }
+        }
+
+        .snippet-tag {
+            outline-color: $warn;
+            color: $on-warn-container;
+            background-color: $warn-container;
+        }
+
+        .snippet-tag:hover,
+        .snippet-tag:active,
+        .snippet-tag:focus-visible {
+            outline-color: $warn-container;
+            background-color: $warn;
+            color: $on-warn;
+        }
+    }
