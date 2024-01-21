@@ -4,13 +4,11 @@ header {
     }
 
     .nav-container {
-        // TODO: in html, rework to use <nav> over <ul>
-
         margin: 0 auto;
         background: $surface-container-low;
         border-radius: 12px;
-        overflow: hidden; // TODO: check this - it's a tad dangerous
-        box-shadow: $box-shadow-z1; // TODO: material you
+        overflow: hidden;
+        box-shadow: $box-shadow-z1;
 
         .header-bar {
             width: 100%;
@@ -20,10 +18,6 @@ header {
             flex-wrap: wrap;
             align-items: center;
 
-
-            // TODO: the following is ripped stright from old site. edit and ensure all
-            // styles are used!
-
             // LEFT: logo
             .left-section {
                 position: absolute;
@@ -31,7 +25,7 @@ header {
                 #header-icon {
                     width: 2.5em;
                     height: 2.5em;
-                    margin-left: 0.4em;
+                    margin-left: 0.8em;
                 }
             }
 
@@ -62,8 +56,12 @@ header {
                         padding-right: 1em;
                     }
 
-                    i {
-                        line-height: 1.6em;
+                    .dono-btn {
+                        margin-right: 0.8em;
+                    }
+
+                    .theme-btn {
+                        margin-right: 0.8em;
                     }
                 }
             }
@@ -137,6 +135,12 @@ header {
 
             // hide desktop navigation completely
             .nav-list {
+                display: none;
+                height: auto;
+            }
+
+            .dono-btn,
+            .theme-btn {
                 display: none;
                 height: auto;
             }

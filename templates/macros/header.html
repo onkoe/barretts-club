@@ -1,4 +1,6 @@
 {% import "macros/header/nav_list.html" as nav_list %}
+{% import "macros/button.html" as button %}
+
 
 {% macro header() %}
     <link rel="stylesheet" href="{{
@@ -25,12 +27,12 @@
                 </div>
 
                 <div class="right-section">
-                    <input type="checkbox" id="dark-light-toggle" class="cbox">
-
                     <div class="header-buttons">
-                        <label for="dark-light-toggle" id="dark-light-toggle-button" class="header-btn">
-                            <i class="fa-solid fa-sun fa-lg"></i>
-                        </label>
+                        {{ button::button(style="surface", href="javascript:inc()",
+                            left_image="lightbulb", type="small-fab", other_classes="theme-btn") }}
+
+                        {{ button::button(label="Donations", style="outlined", 
+                            left_image="piggy-bank", href="https://github.com/onkoe", other_classes="dono-btn") }}
 
                         <label for="menu-button-checkbox" id="nav-overflow-button" class="header-btn">
                             <i class="overflow-icon fa-solid fa-bars fa-lg"></i>
