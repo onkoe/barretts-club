@@ -2,23 +2,14 @@
 
 .btn {
     margin: 0;
-    padding: 0.8em 1.46em;
-    display: inline-flex;
+    padding: 0;
+    display: inline-block;
     text-decoration: none;
     border-radius: 2rem;
     width: fit-content;
     height: fit-content;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     outline: $outline 1.5px solid;
-    justify-content: center;
-    align-items: center;
-
-    object {
-        display: flex;
-        padding: 0;
-        padding-right: 8px;
-        margin: 0;
-    }
 
     img {
         display: flex;
@@ -27,7 +18,7 @@
     }
 
     .btn-label {
-        padding: 0;
+        padding: 0.8em 1.46em;
     }
 }
 
@@ -36,50 +27,35 @@
     background-color: $primary;
     color: $on-primary;
     outline: none;
-
-    &:hover,
-    &:focus {
-        filter: brightness(92%);
-        box-shadow: $box-shadow-z2;
-    }
 }
 
+.btn-filled:hover {
+    filter: brightness(92%);
+    box-shadow: $box-shadow-z2;
+}
 
 .btn-tonal {
     background-color: $secondary-container;
     color: $on-secondary-container;
     outline: none;
     box-shadow: $box-shadow-z1;
+}
 
-    &:hover,
-    &:focus {
-        filter: brightness(108%);
-        box-shadow: $box-shadow-z2;
-    }
+.btn-tonal:hover {
+    filter: brightness(108%);
+    box-shadow: $box-shadow-z2;
 }
 
 /// a button without outlines, background color, or other features
 /// until hovered/clicked on
 .btn-text {
-    background-color: transparent;
+    background-color: none;
     color: $primary;
     outline: none;
-
-    &:hover,
-    &:focus {
-        background: var(--md-sys-color-primary-hover-008);
-    }
 }
 
-.btn-outlined {
-    background-color: transparent;
-    color: $primary;
-    outline: $outline 1px solid;
-
-    &:hover,
-    &:focus {}
-
-    &:active {}
+.btn-text:hover {
+    background: var(--md-sys-color-primary-hover-008);
 }
 
 .extended-fab-btn {
@@ -99,24 +75,4 @@
         width: 2.4rem;
         padding-right: 0.4em;
     }
-}
-
-// a floating action button with only an icon!
-.small-fab-btn {
-    object {
-        display: flex;
-        padding: 0;
-        margin: 0;
-        position: absolute;
-    }
-}
-
-.btn-surface {
-    background-color: $surface-container-high;
-    color: $primary;
-    outline: none;
-    padding: 1.4rem; // i eyeballed this. be careful out there
-    border-radius: 0.8rem;
-
-    box-shadow: $box-shadow-z2;
 }

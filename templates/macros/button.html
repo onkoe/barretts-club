@@ -1,35 +1,24 @@
-{% macro button(label="", type="default", style="default", href="#", other_classes="", left_image="", right_image="", onclick="") %}
+{% macro button(label, type="default", style="default", href="#", other_classes="", left_image="", right_image="") %}
 
 {% if type == "default" %}
     <div class="btn-wrapper">
         <a class="btn btn-{{style}}  {{ other_classes }}" href="{{ href }}">
-            {% if left_image != "" %}
-                <object class="fa-solid fa-{{left_image}}"></object>
-            {% endif %}
-
             <div class="btn-label">{{label}}</div>
         </a>
     </div>
 {% elif type == "extended-fab" %}
     <div class="btn-wrapper">
-        <a class="extended-fab-btn btn-{{style}} {{ other_classes }}" href="{{ href }}" 
-                {% if onclick != "" %} onclick={{onclick}} {% endif %}>
+        <a class="extended-fab-btn btn-{{style}} {{ other_classes }}" href="{{ href }}">
             {% if left_image != "" %}
-                <object class="fa-solid fa-{{left_image}}"></object>
+                <img src="{{get_url(path=left_image, trailing_slash=false) | safe}}" />
             {% endif %}
 
             <div class="btn-label">{{label}}</div>
 
             {% if right_image != "" %}
-                <object class="fa-solid fa-{{right_image}}"></object>
+                <img src="{{get_url(path=right_image, trailing_slash=false) | safe}}" />
             {% endif %}
 
-        </a>
-    </div>
-{% elif type == "small-fab"%}
-    <div class="btn-wrapper">
-        <a class="btn small-fab-btn btn-{{style}} {{other_classes}}" href={{href}}>
-            <object class="fa-solid fa-{{left_image}} fa-lg"></object>
         </a>
     </div>
 {% endif %}
