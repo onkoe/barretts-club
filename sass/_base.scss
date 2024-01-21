@@ -11,6 +11,13 @@ body * {
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+// accessible tabbing + screen reader navigation
+:focus-visible {
+    outline: none;
+    border: 2px dashed $error;
+    box-shadow: 0 0 0 3px rgba($error, 0.5);
+}
+
 a {
     font-weight: 600;
     text-decoration: underline;
