@@ -3,12 +3,11 @@
 {% import "macros/posts/post_tag_snippet.html" as snippet %}
 
 {# A card that holds info about a post, like on the Posts page. #}
-{% macro post_card(page) %}
+{% macro post_card(page, origin) %}
     <link rel="stylesheet" href="{{ get_url(path="post-card.css", trailing_slash=false) }}"/>
 
-
     <div class="post-card">
-        <a class="post-title" href="{{ page.permalink | safe }}">
+        <a class="post-title {{origin}}" href="{{ page.permalink | safe }}">
             {{ page.title | truncate(length=200) | safe }}
         </a>
 
