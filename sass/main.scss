@@ -1,13 +1,12 @@
 // material you seed: #205106
 
-@import "fonts";
-@import "./fontawesome/fontawesome";
-@import "./fontawesome/solid";
+@import "fonts.scss";
+@import "./fontawesome/fontawesome.scss";
+@import "./fontawesome/solid.scss";
 @import "material-you/colors.module.scss";
-@import "material-you/theme";
-@import "material-you/shadows";
-@import "material-you/shim";
-@import "base";
-@import "components";
-@import "header";
-@import "pages";
+@import "material-you/theme.scss";
+@import "material-you/shadows.scss";
+@import "material-you/shim.scss";
+@import "base.scss";
+@import "components.scss";
+@import "header.scss";
