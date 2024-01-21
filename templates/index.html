@@ -3,35 +3,37 @@
 
 {% extends "base.html" %} 
 {% block content %}
-    <div class="title-section">
-        <h1 class="title">Barrett's Club</h1>
-        <h2>
-            Hey there, welcome to my blog!
-            Feel free to check out these articles.
-        </h2>
-    </div>
-
-    <div class="sect-div recent">
-        <div class="info">
-            <div class="left">
-                <h2 class="section-header">Recent Posts</h2> 
-            </div>
-
-            <div class="right">
-                {{ button::button(label="See All Posts...", color="primary-container-text", href=get_url(path="posts", trailing_slash=false)) }}
-            </div>
+    <div class="home">
+        <div class="title-section">
+            <h1 class="title">Barrett's Club</h1>
+            <h2 class="subtitle">
+                Hey there, welcome to my blog! <br />
+                Feel free to check out these articles.
+            </h2>
         </div>
 
-        <div class="posts-preview-container">
-            <ul>
-                {% set posts_section = get_section(path="posts/_index.md") %}
-                {% for page in posts_section.pages | slice(end = 3) %}
-                <li>
-                    {{ post_card::post_card(page = page, origin = "homepage") }}
-                </li>
-                {% endfor %}
-            </ul>
-        </div>      
+        <div class="sect-div recent">
+            <div class="info">
+                <div class="left">
+                    <h2 class="section-header">Recent Posts</h2> 
+                </div>
+
+                <div class="right">
+                    {{ button::button(label="See All Posts...", color="primary-container-text", href=get_url(path="posts", trailing_slash=false)) }}
+                </div>
+            </div>
+
+            <div class="posts-preview-container">
+                <ul>
+                    {% set posts_section = get_section(path="posts/_index.md") %}
+                    {% for page in posts_section.pages | slice(end = 3) %}
+                    <li>
+                        {{ post_card::post_card(page = page, origin = "homepage") }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>      
+        </div>
     </div>
 
 {% endblock content %}
