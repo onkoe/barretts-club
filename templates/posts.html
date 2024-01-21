@@ -6,6 +6,9 @@
 {% extends 'base.html' %} 
 {% block content %} 
 
+<link rel="stylesheet" href="{{ get_url(path="posts.css",
+trailing_slash=false) }}" />
+
 <div class="section-info">
     <h1 class="title">{{ section.title | safe }}</h1>
 
@@ -18,7 +21,6 @@
     <ul>
         {% for page in paginator.pages %}
         <li>
-            {# reminder: changing this also requires changing tags/*.html #}
             {{ post_card::post_card(page = page, origin = "posts-page") }}
         </li>
         {% endfor %}

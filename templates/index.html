@@ -3,12 +3,13 @@
 
 {% extends "base.html" %} 
 {% block content %}
+    <link rel="stylesheet" href="{{ get_url(path="home_page.css",
+        trailing_slash=false) }}" />
+
     <div class="title-section">
         <h1 class="title">Barrett's Club</h1>
-        <h2>
-            Hey there, welcome to my blog!
-            Feel free to check out these articles.
-        </h2>
+
+        <h2>Welcome to the Club! 📦 👋</h2>
     </div>
 
     <div class="sect-div recent">
@@ -27,11 +28,63 @@
                 {% set posts_section = get_section(path="posts/_index.md") %}
                 {% for page in posts_section.pages | slice(end = 3) %}
                 <li>
-                    {{ post_card::post_card(page = page, origin = "homepage") }}
+                    {{ post_card::post_card(page = page) }}
                 </li>
                 {% endfor %}
             </ul>
         </div>      
     </div>
 
+    {# comment: let's finish this later
+    <div class="sect-div">
+        <div class="info recent-activity">
+            <div class="left">
+                <h2 class="section-header">Recent Activity</h2>
+            </div>
+
+            <div class="right">
+                {{ button::button(label="See Activity...", color="primary-container-text", href=get_url(path="tags", trailing_slash=false)) }}
+            </div>
+
+            <div class="activities"> 
+                
+            </div>
+        </div>
+    </div>
+    #}
+
+
+    <div class="sect-div top-tags">
+        <div class="info">
+            <div class="left">
+                <h2 class="section-header">Top Tags</h2>
+            </div>
+
+            <div class="right">
+                {{ button::button(label="See All Tags...", color="primary-container-text", href=get_url(path="tags", trailing_slash=false)) }}
+            </div>
+        </div>
+
+        <div class="tags-container"> 
+            <p class="soon">Coming Soon!</p>
+        </div>
+    </div>
+
+    <div class="sect-div longest-posts">
+        <div class="info">
+            <div class="left">
+                <h2 class="section-header">Longest Posts</h2>
+            </div>
+
+            <div class="right">
+                {{ button::button(label="See All Posts...", color="primary-container-text", href=get_url(path="posts", trailing_slash=false)) }}
+            </div>
+        </div>
+
+        <div class="tags-container"> 
+            <p class="soon">
+                Coming Soon! <br> <br> For the psychopaths in the audience. I'm talking about you, Bob!
+            </p>
+        </div>
+    </div>
 {% endblock content %}

@@ -6,6 +6,12 @@
 {% extends 'base.html' %} 
 {% block content %} 
 
+<link rel="stylesheet" href="{{ get_url(path="posts.css",
+trailing_slash=false) }}" />
+
+
+{# FIXME: there's a Zola bug on collisions between taxonomy + term... #}
+{# https://github.com/getzola/zola/issues/2338 #}
 <h1 class="title">
     All Posts with Tag: 
     <i class="tag-name">
@@ -17,7 +23,7 @@
     <ul>
         {% for page in paginator.pages %}
         <li>
-            {{ post_card::post_card(page = page, origin = "posts") }}
+            {{ post_card::post_card(page = page) }}
         </li>
         {% endfor %}
     </ul>
