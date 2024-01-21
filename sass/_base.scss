@@ -6,11 +6,6 @@ html {
     font-family: "Inter";
 }
 
-// cool fade when the theme switches
-body * {
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
 a {
     font-weight: 600;
     text-decoration: underline;
