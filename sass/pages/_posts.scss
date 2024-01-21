@@ -4,8 +4,11 @@
     .title,
     .desc {
         text-align: center;
-        margin: 0;
         padding: 0.6em 0;
+        margin: 0;
+    }
+
+    .title {
         font-family: "Lora", serif;
         font-size: 40pt;
         font-weight: 400;
@@ -13,6 +16,7 @@
 
     .desc {
         font-weight: normal;
+        padding-bottom: 0.2em;
     }
 }
 
