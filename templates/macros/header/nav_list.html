@@ -1,3 +1,5 @@
+{% import "macros/button.html" as button %} 
+
 {% macro nav_list(device="computer") %}
     {% if device == "computer" %}
         <ul class="nav-list">
@@ -15,12 +17,12 @@
                     {% if current_path %}
                         {# Check to see if a section is selected #}
                         {% if current_url | safe | slugify | replace(from="/", to="") == url | safe | slugify | replace(from="/", to="") %}
-                            <a class="nav-button current" href="{{url}}">{{s.name | safe}}</a>
+                            {{ button::button(label=s.name | safe, style="text", href=url, other_classes="current") }}
                         {% else %}
-                            <a class="nav-button" href="{{url}}">{{s.name | safe}}</a>
+                            {{ button::button(label=s.name | safe, style="text", href=url) }}
                         {% endif %}
                     {% else %}
-                        <a class="nav-button" href="{{url}}">{{s.name | safe}}</a>
+                        {{ button::button(label=s.name | safe, style="text", href=url) }}
                     {% endif %} 
                 </li>
             {% endfor %} 
