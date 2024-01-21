@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .about-title {
+        text-align: center;
+        padding: 2em;
+        margin: 0;
+        font-size: 40pt;
+        font-weight: 400;
+        font-family: "Lora", serif;
+    }
+
+    #hi {
+        text-decoration: underline $on-background 2px;
+        color: $primary;
+        font-size: 1.2em;
+    }
+
+    .about-container {
+        max-width: min(768px, 100%);
+        display: grid;
+        grid-template-columns: 30% 70%;
+
+        .left {
+            grid-column: 1;
+            align-self: center;
+            padding: 10%;
+            max-width: 12em;
+
+            object {
+                max-width: 12em;
+            }
+        }
+
+        .right {
+            grid-column: 2;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
