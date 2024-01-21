@@ -5,6 +5,7 @@
         border-radius: 0.5em;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+        box-shadow: $box-shadow-z5;
     }
 
     display: flex;
@@ -14,10 +15,10 @@
     flex-direction: column;
     padding: 4em;
 
-    h1 {
+    .lost-title {
         font-family: "inter", system-ui;
-        background-color: $warning;
-        color: $background;
+        background: $error;
+        color: $on-error;
         font-weight: 900;
         font-size: 8em;
         padding: 0;
@@ -27,6 +28,7 @@
         margin: 0.2em;
         margin-top: 0;
         border-radius: 0.4rem;
+        box-shadow: $box-shadow-z2;
     }
 
     h2 {
