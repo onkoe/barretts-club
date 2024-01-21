@@ -135,12 +135,12 @@
     outline: none;
     padding: 1.4rem; // i eyeballed this. be careful out there
     border-radius: 0.8rem;
+    text-decoration: none;
 
     i {
         display: flex;
         padding: 0;
         margin: 0;
-        position: absolute;
     }
 }
 
