@@ -9,11 +9,11 @@
     }
 
     display: flex;
-    margin: auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 4em;
+    flex-wrap: wrap;
+    padding: 4em 0;
 
     .lost-title {
         font-family: "inter", system-ui;
@@ -34,5 +34,8 @@
     h2 {
         font-size: 1.8rem;
         text-align: center;
+        text-wrap: wrap;
+        padding: 0 3em;
+        display: flex;
     }
 }
