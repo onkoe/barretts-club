@@ -2,16 +2,17 @@
 //!
 //! The list of options on the navigation bar.
 
+// applies to mobile + computer
+.current {
+    background: var(--md-sys-color-primary-hover-012);
+}
+
 .nav-list {
     display: flex;
     align-items: center;
     justify-content: center; // centered column
     height: 5em;
     margin: 0;
-
-    .current {
-        background: var(--md-sys-color-primary-hover-012);
-    }
 
     // nav list stuff
     ul {
@@ -45,19 +46,16 @@
         justify-content: center;
     }
 
-    // TODO
     .mobile-navigation {
         display: flex;
         width: 100%
     }
-
 
     // nav list stuff
     ul {
         text-align: center;
         margin: 0;
         padding-left: 0;
-
     }
 
     li {
@@ -67,19 +65,6 @@
     }
 
     a {
-        display: block;
-        padding: 1.2em 1.5em;
-        font-weight: 500;
-        text-decoration: none;
-        width: 100%;
-    }
-
-    .current {
-        text-decoration: solid;
-        text-decoration-line: underline;
-        text-decoration-thickness: 0.12em;
-        text-underline-offset: 0.3em;
-        outline: $outline;
-        outline-width: 0.1em;
+        padding: 1.2em 6em;
     }
 }
