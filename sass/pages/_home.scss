@@ -1,10 +1,30 @@
 $max_width: 42em; // arbitrary. but nice!
 
 .home {
-    .recent {
-        @media (min-width: 768px) {
+    .box {
+        // don't show the massive box on small mobile devices
+        display: none;
+        max-width: 8em;
+    }
+
+    @media (min-width: 768px) {
+        // on computers, do a fancy grid layout and display an icon
+        display: grid;
+
+        .title-section {
+            padding-top: 6em;
+            padding-left: 3em;
+            grid-column: 1;
+
+            .box {
+                display: flex;
+            }
+        }
+
+        .recent {
             max-width: $max_width;
-            width: 1.1 * $max_width;
+            width: $max_width;
+            grid-column: 2;
         }
     }
 
@@ -21,4 +41,5 @@ $max_width: 42em; // arbitrary. but nice!
         margin: 0;
         font-weight: 400;
     }
+
 }
