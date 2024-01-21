@@ -20,8 +20,6 @@ header {
 
             // LEFT: logo
             .left-section {
-                position: absolute;
-
                 #header-icon {
                     width: 2.5em;
                     height: 2.5em;
@@ -38,12 +36,13 @@ header {
             .nav-list-container {
                 grid-column: 2;
                 display: grid;
+                justify-self: center;
             }
 
             // RIGHT: menu icon (mobile only) + dark mode icon
             // no menu icon by default.
             .right-section {
-                margin-left: auto;
+                margin: 0;
                 display: grid;
                 grid-column: 3;
                 justify-self: end;
@@ -74,6 +73,7 @@ header {
 
         .nav-list {
             color: $secondary-container-text;
+            padding: 0;
         }
 
         // COMPUTER
