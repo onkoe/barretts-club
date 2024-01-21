@@ -4,7 +4,7 @@
     <div class="btn-wrapper">
         <a class="btn btn-{{style}}  {{ other_classes }}" href="{{ href }}">
             {% if left_image != "" %}
-                <object class="fa-solid fa-{{left_image}}"></object>
+                <i class="fa-solid fa-{{left_image}}"></i>
             {% endif %}
 
             <div class="btn-label">{{label}}</div>
@@ -15,13 +15,13 @@
         <a class="extended-fab-btn btn-{{style}} {{ other_classes }}" href="{{ href }}" 
                 {% if onclick != "" %} onclick={{onclick}} {% endif %}>
             {% if left_image != "" %}
-                <object class="fa-solid fa-{{left_image}}"></object>
+                <i class="fa-solid fa-{{left_image}}"></i>
             {% endif %}
 
             <div class="btn-label">{{label}}</div>
 
             {% if right_image != "" %}
-                <object class="fa-solid fa-{{right_image}}"></object>
+                <i class="fa-solid fa-{{right_image}}"></i>
             {% endif %}
 
         </a>
@@ -29,7 +29,7 @@
 {% elif type == "small-fab"%}
     <div class="btn-wrapper">
         <a class="btn small-fab-btn btn-{{style}} {{other_classes}}" href={{href}}>
-            <object class="fa-solid fa-{{left_image}} fa-lg"></object>
+            <i class="fa-solid fa-{{left_image}} fa-lg"></i>
         </a>
     </div>
 {% endif %}
