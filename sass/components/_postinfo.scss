@@ -102,16 +102,17 @@
 
     .toc-button {
         justify-self: right;
-        display: block;
+        display: inline-flex;
         min-width: 14.45em;
 
         .toc-btn-icon {
             padding-right: 0.6em;
+            align-self: center;
         }
 
         // show/hide text + icon
         #show-toc {
-            display: block;
+            display: inline-flex;
         }
 
         #hide-toc {
