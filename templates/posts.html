@@ -21,7 +21,7 @@ trailing_slash=false) }}" />
     <ul>
         {% for page in paginator.pages %}
         <li>
-            {{ post_card::post_card(page = page, origin = "posts-page") }}
+            {{ post_card::post_card(page = page) }}
         </li>
         {% endfor %}
     </ul>
