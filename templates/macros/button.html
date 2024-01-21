@@ -1,14 +1,14 @@
 {% macro button(label, type="default", style="default", href="#", other_classes="", left_image="", right_image="") %}
 
 {% if type == "default" %}
-    <div class="btn-wrapper {{ other_classes }}">
-        <a class="btn btn-{{style}}" href="{{ href }}">
+    <div class="btn-wrapper">
+        <a class="btn btn-{{style}}  {{ other_classes }}" href="{{ href }}">
             <div class="btn-label">{{label}}</div>
         </a>
     </div>
 {% elif type == "extended-fab" %}
-    <div class="btn-wrapper {{ other_classes }}">
-        <a class="extended-fab-btn btn-{{style}}" href="{{ href }}">
+    <div class="btn-wrapper">
+        <a class="extended-fab-btn btn-{{style}} {{ other_classes }}" href="{{ href }}">
             {% if left_image != "" %}
                 <img src="{{get_url(path=left_image, trailing_slash=false) | safe}}" />
             {% endif %}
