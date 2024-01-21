@@ -7,21 +7,19 @@
 
             {# date: filter folks who hate freedom 🦅 #} 
             <span class="post-date">
-                <i class="fa-solid fa-calendar-days fa-lg"></i>
                 {{ freedom_time::freedom_time(given_date = page.date) }}
             </span>
 
-            <div class="post-tags">
-                <i class="fa-solid fa-tags fa-lg"></i>
+            <p id="dt-separator">•</p>
+
+            <div class="card">
                 {{ snippet::check_tag_snippet(page = page) }}
 
-                <div class="post-tags-container">
-                    {% if page.taxonomies.tags %} 
-                        {% for tag in page.taxonomies.tags %}
-                            <a class="post-tag" href="{{get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag | truncate(length=20) | safe }}</a>
-                        {% endfor %} 
-                    {% endif %}
-                </div>
+                {% if page.taxonomies.tags %} 
+                    {% for tag in page.taxonomies.tags %}
+                        <a class="post-tag" href="{{get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag | truncate(length=20) | safe }}</a>
+                    {% endfor %} 
+                {% endif %}
             </div>
         </div>
 
@@ -49,7 +47,7 @@
             {# Custom button b/c of the `label` :p #}
             <div class="btn-wrapper-tertiary toc-button">
                 <label for="toc-cb">
-                    <a class="btn btn-tonal">
+                    <a class="extended-fab-btn">
                         <div id="show-toc">
                             <i class="fa-solid fa-eye toc-btn-icon"></i>
                             Show Table of Contents

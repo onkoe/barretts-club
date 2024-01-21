@@ -1,16 +1,10 @@
-//! Post Info
-//!
-//! The informational box that displays on a blog post.
-
 .post-title {
-    font-size: 32pt;
-    font-family: "Lora", serif;
-    font-weight: 600;
+    font-size: 2.4em;
     line-height: 1em;
 }
 
 .post-info {
-    background: $surface-container-low;
+    background: $surface-container;
     padding: 2em;
     border-radius: 0.6em;
     line-height: 1.5em;
@@ -18,21 +12,12 @@
 
 .date-and-tags {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 
     p {
         margin: auto 0.6em;
-    }
-
-    i {
-        padding-right: 0.6em;
-        align-self: center;
-    }
-
-    .post-tags {
-        margin-top: 0.2em;
-        display: inline-flex;
     }
 
     .post-tags-container {
