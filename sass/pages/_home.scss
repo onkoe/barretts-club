@@ -1,4 +1,13 @@
+$max_width: 42em; // arbitrary. but nice!
+
 .home {
+    .recent {
+        @media (min-width: 768px) {
+            max-width: $max_width;
+            width: 1.1 * $max_width;
+        }
+    }
+
     .title {
         font-size: 2.4em;
         font-family: 'Lora', serif;
