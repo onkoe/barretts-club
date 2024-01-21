@@ -34,6 +34,7 @@ $max_width: 42em; // arbitrary. but nice!
         padding: 0 2.4em; // move Recent Posts and button in a bit
 
         display: grid;
+        gap: 1em;
         grid-template-columns: auto auto;
         border-radius: 1.4em;
 
