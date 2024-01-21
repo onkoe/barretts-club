@@ -18,17 +18,6 @@ a {
     color: $primary; // TODO: fix
 }
 
-a:visited,
-a:link {
-    // get rid of default anchor purple/blue behavior
-    color: inherit;
-}
-
-a:hover,
-a:focus-visible {
-    background-color: $inverse-primary;
-}
-
 // inside a blog post
 .post {
     max-width: calc(min(760px, 100%));
