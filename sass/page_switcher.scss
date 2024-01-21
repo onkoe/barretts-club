@@ -1,0 +1,22 @@
+@import "colors.scss";
+
+.page-switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2em;
+
+    .btn-wrapper {
+        padding: 0;
+        margin: 0;
+
+        .page-btn {
+            padding: 1.2em;
+        }
+    }
+
+    .page-count {
+        margin: 0 2em;
+    }
+}

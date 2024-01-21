@@ -1,0 +1,39 @@
+@import "colors.scss";
+@import "button.scss";
+
+.lost-container {
+    #gif {
+        max-width: 15em;
+        max-height: 15em;
+        border-radius: 0.5em;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4em;
+
+    h1 {
+        font-family: "inter", system-ui;
+        background-color: $warning;
+        color: $background;
+        font-weight: 900;
+        font-size: 8em;
+        padding: 0;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+        font-style: italic;
+        margin: 0.2em;
+        margin-top: 0;
+        border-radius: 0.4rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}

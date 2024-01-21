@@ -1,0 +1,43 @@
+@import "colors.scss";
+
+h1 {
+    text-align: center;
+    padding: 2em;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+#hi {
+    text-decoration: underline $text 0.15em;
+    color: $primary-container;
+    font-size: 1.2em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contact-container {
+        #incomplete {
+            text-align: center;
+        }
+
+        max-width: min(768px, 100%);
+        width: min(768px, 100%);
+        display: flex;
+        flex-direction: column;
+
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

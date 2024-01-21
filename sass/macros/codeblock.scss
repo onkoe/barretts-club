@@ -1,0 +1,48 @@
+@import "../colors.scss";
+
+[class^="language-"] {
+    font-family: "Iosevka", monospace;
+    font-size: 12pt;
+    //background: white;
+    color: $secondary-container-text;
+
+    .z-storage,
+    .z-type {
+        color: $primary;
+        font-weight: 700;
+    }
+
+    .z-string {
+        color: $codeblock-string;
+    }
+
+    .z-operator,
+    .z-assignment,
+    .z-keyword {
+        color: $secondary;
+    }
+
+    .z-constant,
+    .z-language {
+        color: $tertiary;
+    }
+
+    .z-comment {
+        color: $outline;
+    }
+
+    .z-support {
+        color: $error-container;
+    }
+}
+
+.language-console {
+
+    font-feature-settings: "calt" 0; // get rid of weird arrow (⤳) on fish shell's "barrett@fedora ~>"
+
+    .z-text,
+    .z-plain,
+    .z-code {
+        color: $primary-container;
+    }
+}
