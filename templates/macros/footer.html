@@ -16,8 +16,6 @@
 {% endmacro render %}
 
 {% macro footer() %}
-    <link rel="stylesheet" href="{{ get_url(path="footer.css", trailing_slash=false) }}" /> 
-
     {# copyright info, if you want... see config.toml! #} 
     {% if config.extra.copyright.enable == True %} 
         {% if config.extra.copyright.use_copyleft == True %} 
