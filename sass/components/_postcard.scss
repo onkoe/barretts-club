@@ -8,6 +8,7 @@
     margin: 2em;
     padding: 2em;
     margin-top: 0;
+    overflow: hidden; // keeps buttons on the card. idk why
 
     // use up the screen on phones
     @media (max-width: 768px) {
