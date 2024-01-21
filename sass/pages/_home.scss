@@ -2,6 +2,8 @@ $max_width: 42em; // arbitrary. but nice!
 
 .home {
     padding: 2em 0; // put some space at the top of the page
+    justify-content: center;
+    gap: 6em;
 
     .box {
         // don't show the massive box on small mobile devices
@@ -29,7 +31,7 @@ $max_width: 42em; // arbitrary. but nice!
     .info {
         width: 100%;
         box-sizing: border-box;
-        padding: 0 2.4em;
+        padding: 0 2.4em; // move Recent Posts and button in a bit
 
         display: grid;
         grid-template-columns: auto auto;
@@ -82,7 +84,7 @@ $max_width: 42em; // arbitrary. but nice!
         display: grid;
 
         .title-section {
-            padding: 6em 3em 0 3em;
+            padding-top: 6em;
             grid-column: 1;
 
             .box {
