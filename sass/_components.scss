@@ -1,2 +1,8 @@
 @import "components/postcard.scss";
 @import "components/page-switcher";
+
+.info {
+    // TODO: use a macro file. 
+    // DO NOT import into the html. just `_embed.scss` into main
+    background-color: $surface-container-highest;
+}
