@@ -16,20 +16,15 @@ a {
     text-decoration-thickness: 0.15em;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     color: $on-background;
-
-    // only style links
-    &:not([class]):hover,
-    &:not([class]):focus-visible,
-    .hover:hover,
-    .hover:focus-visible {
-        background-color: $inverse-primary;
-    }
 }
 
 // inside a blog post
 .post {
 
-
+    a:hover,
+    a:focus-visible {
+        background-color: $inverse-primary;
+    }
 
     max-width: calc(min(760px, 100%));
     line-height: 1.5em;
