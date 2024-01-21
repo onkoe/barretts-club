@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .pp-container {
+        max-width: min(768px, 95%);
+
+        html {
+            line-height: 1.5em;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 1em;
+            margin: 0;
+            font-size: 40pt;
+            font-weight: 400;
+            font-family: "Lora", serif;
+        }
+
+        h2 {
+            padding: 1em 0 0 0;
+        }
+    }
+}
