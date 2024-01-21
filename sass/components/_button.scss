@@ -104,27 +104,6 @@
     }
 }
 
-.fab-surface {
-    background-color: $surface-container;
-    color: $on-surface;
-
-    &:hover,
-    &:focus {
-        filter: brightness(92%);
-        box-shadow: $box-shadow-z2;
-    }
-}
-
-.ars-btn {
-
-    &:hover,
-    &:focus {
-        color: $on-primary-container;
-        background-color: $primary-container;
-    }
-
-}
-
 // a floating action button with only an icon!
 .small-fab-btn {
     outline: none;
