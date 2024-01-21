@@ -20,29 +20,32 @@
     }
 }
 
-.post-card {
-    background-color: var(--md-sys-color-surface-container-low);
-}
-
-.preview-container ul {
-    // get rid of list formatting
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    object-fit: contain;
-}
-
-.preview-container li {
-    width: 100%;
-    max-width: 46em; // completely arbitrary but looks fine i guess lmao
-
-    @media (max-width: 768px) {
-        max-width: 90%;
+.preview-container {
+    .post-card {
+        background-color: var(--md-sys-color-surface-container-low);
     }
+
+    ul {
+        // get rid of list formatting
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        object-fit: contain;
+    }
+
+    li {
+        width: 100%;
+        max-width: 46em; // completely arbitrary but looks fine i guess lmao
+
+        @media (max-width: 768px) {
+            max-width: 90%;
+        }
+    }
+
 }
