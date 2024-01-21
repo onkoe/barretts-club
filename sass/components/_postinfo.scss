@@ -56,12 +56,8 @@
 
         .snippet-tag {
             outline-color: $warn;
-            color: $on-warn-container;
+            color: $warn-container-text;
             background-color: $warn-container;
-            display: inline-block;
-            padding: 6pt;
-            margin: 3pt 1pt;
-            border-radius: 8pt;
         }
 
         .snippet-tag:hover,
