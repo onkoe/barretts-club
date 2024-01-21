@@ -38,24 +38,11 @@
     background-color: $secondary-container;
     color: $on-secondary-container;
     outline: none;
-    box-shadow: $box-shadow-z1;
 }
 
 .btn-tonal:hover {
     filter: brightness(108%);
     box-shadow: $box-shadow-z2;
-}
-
-/// a button without outlines, background color, or other features
-/// until hovered/clicked on
-.btn-text {
-    background-color: none;
-    color: $primary;
-    outline: none;
-}
-
-.btn-text:hover {
-    background: var(--m-3-state-layers-dark-primary-opacity-012, rgba(150, 213, 166, 0.12));
 }
 
 .extended-fab-btn {
