@@ -1,0 +1,76 @@
+// TODO: button fix
+
+.post-card {
+    background-color: $surface-container-highest;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px; // TODO
+    color: $on-surface-variant;
+    border-radius: 12pt;
+    margin: 2em;
+    padding: 2em;
+
+    // use up the screen on phones
+    @media (max-width: 768px) {
+        max-width: 100%;
+    }
+
+    .post-date {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+
+        // cal icon
+        i {
+            margin-right: 8pt;
+        }
+    }
+
+    .post-title {
+        font-size: 1.8em;
+        font-weight: 900;
+        text-decoration: none;
+    }
+
+    // the list of tags on each post
+    .post-tags-container {
+        padding: 4pt 0;
+        display: grid;
+        grid-template-columns: min-content auto;
+        column-gap: 6pt;
+        align-items: baseline;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .post-tag {
+            outline-color: $outline;
+            outline-width: 0.1em;
+            outline-style: solid;
+
+            display: inline-block;
+            padding: 6pt;
+            margin: 3pt 1pt;
+            border-radius: 8pt;
+
+            text-decoration: none;
+        }
+
+        .snippet-tag {
+            outline-color: $warn;
+            color: $warn-container-text;
+            background-color: $warn-container;
+        }
+
+        .snippet-tag:hover,
+        .snippet-tag:active,
+        .snippet-tag:focus-visible {
+            outline-color: $warn-container;
+            background-color: $warn;
+            color: $warn-text;
+        }
+    }
+
+    .btn {
+        float: right;
+    }
+}
