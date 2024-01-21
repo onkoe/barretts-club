@@ -4,8 +4,6 @@
 
 {# A card that holds info about a post, like on the Posts page. #}
 {% macro post_card(page, origin) %}
-    <link rel="stylesheet" href="{{ get_url(path="post-card.css", trailing_slash=false) }}"/>
-
     <div class="post-card">
         <a class="post-title {{origin}}" href="{{ page.permalink | safe }}">
             {{ page.title | truncate(length=200) | safe }}

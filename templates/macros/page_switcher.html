@@ -3,11 +3,6 @@
 {% macro page_switcher() %}
 
     {% if paginator %}
-
-        {# Add button stylesheet to mooch off of 🤩 #}
-        <link rel="stylesheet" href="{{ get_url(path="button.css", trailing_slash=false) }}"/>
-        <link rel="stylesheet" href="{{ get_url(path="page_switcher.css", trailing_slash=false) }}"/>
-
         <div class="page-switcher">
             {% if paginator.previous %}
                 {{ page_switcher::page_button(type="left") }}

@@ -1,11 +1,7 @@
 {% import "macros/header/nav_list.html" as nav_list %}
 {% import "macros/button.html" as button %}
 
-
 {% macro header() %}
-    <link rel="stylesheet" href="{{
-    get_url(path="header.css", trailing_slash=false) }}" />
-
     <header class="header">
 
         <input type="checkbox" id="menu-button-checkbox" class="cbox">
