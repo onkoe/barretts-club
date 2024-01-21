@@ -1,5 +1,9 @@
 @use "sass:color";
 
+.btn-wrapper {
+    display: flex;
+}
+
 .btn {
     margin: 0;
     padding: 0.8em 1.46em;
