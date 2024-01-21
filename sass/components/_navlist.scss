@@ -10,7 +10,7 @@
     margin: 0;
 
     .current {
-        background: var(--md-sys-color-primary-hover-012);
+        background: $secondary-container;
     }
 
     // nav list stuff
@@ -22,8 +22,8 @@
 
     li {
         display: inline-flex;
+        padding-left: 0em;
         margin: 0em;
-        padding: 0em 0.2em;
     }
 
     a {
