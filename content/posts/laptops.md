@@ -27,97 +27,136 @@ AMD adaptations existed in the past, particularly before the coronavirus.
 
 #### [MALIBAL Aon S1](https://www.malibal.com/shop/laptops/aon-s1/)
 
-- Battery: Perfect - 99 Wh.
-- Display: Perfect - It's got a 16:10 aspect ratio at 1800p. 400 nits.
-- Panel Size: Perfect - 14 inches.
-- Processor: Intel Core i7 13700H WITH required NVIDIA RTX 3050. It's probably not great for Linux.
-- Linux Support: Fully supported.
-
 My main issues with this machine come from its internals. In particular, the required RTX card makes it a difficult sell.
 
-#### [SLIMBOOK Executive 14"](https://slimbook.es/en/executive-en)
+<ul>
+    <li> {{spec_color(c="y", text="Battery")}}: 99 Wh. </li>
+        <ul><li>It's only okay due to its required RTX 3050. </li></ul>
+    <li> {{spec_color(c="g", text="Display")}}: It's got a 16:10 aspect ratio at 1800p. 400 nits. </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: 14 inches. </li>
+    <li> {{spec_color(c="y", text="Processor")}}: Intel Core i7 13700H. 35W TDP. </li>
+    <li> {{spec_color(c="y", text="Linux support")}}: Fully supported. </li>
+        <ul>
+            <li>It does include an NVIDIA card. Look out if you're worried about that!</li>
+        </ul>
+    <li> {{spec_color(c="g", text="Note")}}: Includes an ANSI keyboard option. However, that's the *only* option! International users beware. </li>
 
-- Battery: Perfect! 99 Wh!
-- Display: Perfect! 16:10 at 400 nits. The resolution is at 1800p.
-- Panel size: Perfect! 14 inches.
-- Processor: Not ideal. Uses an Intel chip - and an older i7 12700H at that. No RTX card is required, though!
-- Linux support: YES!
+</ul>
+
+#### [SLIMBOOK Executive 14 (2023)](https://slimbook.es/en/executive-en)
 
 I would love an AMD version of this machine in particular! The open-source community has a deep relationship with SLIMBOOK.
 
-#### [SCHENKER Vision 15 (E22)](https://www.schenker-tech.de/en/schenker-vision-14-e22/)
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 99 Wh! </li>
+    <li> {{spec_color(c="g", text="Display")}}: 16:10 at 400 nits. The resolution is at 1800p. </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: 14 inches. </li>
+    <li> {{spec_color(c="r", text="Processor")}}: 13000H. 35W TDP. </li>
+    <li> {{spec_color(c="g", text="Linux support")}}: Yup! </li>
+    <li> {{spec_color(c="g", text="Note")}}: offers ANSI keyboard support! 🎉 </li>
+</ul>
 
-- Battery: Perfect! 99 Wh
-- Display: Perfect! 16:10 at 380 nits with a resolution of 1800p.
-- Panel size: Perfect! 14 inches.
-- Processor: Not ideal. Uses that i7-13700H.
-- Linux support: Unknown.
+#### [SCHENKER Vision 14 (M23, 2023)]
 
-This machine is SCHENKER's generic version of the ID4H1. It has no notable differences from the others. You have to get it from a site called `bestware.com`. I also don't see an ANSI keyboard option. :p
+This machine is SCHENKER's replacement for the E22. Sadly, it still lacks an ANSI keyboard offering!
 
-SCHENKER left Linux support unmentioned on their website. That may be worth considering for manufacturer support.
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 99 Wh! </li>
+    <li> {{spec_color(c="g", text="Display")}}: 16:10. 380 nits. 1800p90. </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: 14 inches. </li>
+    <li> {{spec_color(c="y", text="Processor")}}: 13700H (35W). </li>
+    <li> {{spec_color(c="g", text="Linux support")}}: Linux unmentioned. Parts seem to be compatible, though! </li>
+    <li> {{spec_color(c="g", text="Note")}}: no ANSI keyboard options! </li>
+</ul>
 
-#### [TUXEDO InfinityBook Pro 14 (Gen 8)](https://www.tuxedocomputers.com/en/TUXEDO-InfinityBook-Pro-14-Gen8.tuxedo)
-
-- Battery: Perfect! 99 Wh!
-- Display: Perfect! 16:10 at 1800p, with 400 nits of power!
-- Panel size: Perfect! 14 inches!
-- Processor: Not ideal. It also uses one of those darn Intel chips. (13700H)
-- Linux support: YES!
+#### [TUXEDO InfinityBook Pro 14 (Gen 8, 2023)](https://www.tuxedocomputers.com/en/TUXEDO-InfinityBook-Pro-14-Gen8.tuxedo)
 
 So far, this is my favorite machine. A Ryzen version would be the perfect laptop, in my view. The Coreboot support is incredible!
 
-However, the company does not offer ANSI (standard US) keyboard options. Bit annoying...
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 99 Wh! </li>
+    <li> {{spec_color(c="g", text="Display")}}: 16:10 at 1800p, with 400 nits of power! </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: 14 inches. </li>
+    <li> {{spec_color(c="y", text="Processor")}}: 13700H is more than I need with its 35W TDP. </li>
+    <li> {{spec_color(c="g", text="Linux support")}}: Officially supported! </li>
+    <li> {{spec_color(c="y", text="Note")}}: No ANSI keyboard options. </li>
+</ul>
 
-#### [SKIKK Green 5](https://www.skikk.eu/en/laptops/green)
-
-- Battery: Perfect, at 99Wh!
-- Display: Perfect! 16:10, 1800p, 400 nits.
-- Panel Size: Perfect - 14 inches.
-- Processor: 13700H 😶
-- Linux support: Unknown.
+#### [SKIKK Green 5 (GREEN5, 2023)](https://www.skikk.eu/en/laptops/green)
 
 This laptop is another generic example of the previous machines. However, they plant a tree when you buy a computer, so that's pretty cool. They also give you a choice of thermal paste during assembly - that's unique! I'd like to see a Ryzen processor and an ANSI keyboard for this to become the "prime option."
 
-### [Star Labs StarFighter (16")](https://us.starlabs.systems/pages/starfighter)
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 99 Wh! </li>
+    <li> {{spec_color(c="g", text="Display")}}: 16:10 aspect ratio at 1800p90. 400 nits. </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: 14 inches. </li>
+    <li> {{spec_color(c="y", text="Processor")}}: The 13700H is a bit too powerful (35W TDP). </li>
+    <li> {{spec_color(c="y", text="Linux support")}}: I wasn't able to find information about this machine's Linux capabilities. If you own it - or know someone who does - please [let me know](mailto:contact@barretts.club)! </li>
+        <ul><li>The product page states that Skikk does "not provide support on Linux."</li></ul>
+    <li> {{spec_color(c="y", text="Note")}}: Americans will be displeased by the lack of ANSI keyboard options. </li>
+</ul>
 
-- Battery: Great - 85 Wh.
-- Display: Good, 16:10 at either UHD+ (2400p60) or 1600p165. Both panels run at around 600 nits.
-- Panel Size: Not preferable - 16 inches is a bit too big for me.
-- Processor: Wide range! There's a 15W i3-1315U (not an option due to 16GB memory limits), 15W i7-1355U, 45W i9-13800H, and 45W Ryzen 7 7840HS.
-    - Of these options, I'd opt for the 1355U - a great Intel chip! :)
-    - [This website](https://laptoping.com/cpus/product/intel-core-i7-1355u/) explains the 1355U's basics. I really would LOVE a Ryzen 7 7730U instead, though!
-- Linux Support: DEFINITELY!
+### [Star Labs StarFighter (Mk I, 2023)](https://us.starlabs.systems/pages/starfighter)
 
-Star Labs also has a lot of goodwill from the open-source community. Their platform is entirely in-house, and I've heard great things about their machines! In case I can't find a 14" replacement for my current machine, I'll keep my eye on this one.
+Star Labs also has a lot of goodwill from the open-source community. Their platform is entirely in-house, and I've heard great things about their machines!
 
-### [Apple MacBook Pro 14" (2021)](https://www.apple.com/shop/buy-mac/macbook-pro/14-inch)
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 85 Wh. </li>
+    <li> {{spec_color(c="g", text="Display")}}: Excellent panels, with an aspect ratio of 16:10 at either UHD+ (2400p60) or 1600p165. Both panels run at around 600 nits! </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: 16 inches. </li>
+        <ul><li>Despite its panel size, the machine weighs just 3.1 lbs, letting it pass with a green light!</li></ul>
+    <li> {{spec_color(c="g", text="Processor")}}: There's a wide range of processors! These include the 15W i3-1315U (not an option due to 16GB memory limits), 15W i7-1355U, 45W i9-13800H, and 45W Ryzen 7 7840HS.</li>
+        <ul>
+            <li>Of these options, I'd opt for the 1355U - a great Intel chip!</li>
+            <li>[This website](https://laptoping.com/cpus/product/intel-core-i7-1355u/) explains the 1355U's basics. I really would LOVE a Ryzen 7 7730U instead, though!</li>
+        </ul>
+    <li> {{spec_color(c="g", text="Linux support")}}: Fully supported by the manufacturer! No quirks are necessary. 😄 </li>
+</ul>
 
-- Battery: Good - 70 Wh.
-- Display: Almost perfect! 500 nits, over 1600p, and a great aspect ratio of 16:10! The notch can get in the way of some applications.
-- Panel size: Perfect! 14.2 inches.
-- Processor: Perfect! The M1 Pro can run almost anything!
-- Linux support: On-going work. Speakers don't work, graphics are mostly finished, and battery life is still a bit of a battle sometimes.
+### [Apple MacBook Pro 14" (M1, 2021)](https://www.apple.com/shop/buy-mac/macbook-pro/14-inch)
 
-When [Asahi Linux](https://github.com/AsahiLinux/docs/wiki/Feature-Support) gets some of these Linux features completed, the MBP will be a great machine!
+I already own this machine! Unfortunately, its Linux support isn't quite there yet. The Asahi Linux project [is working on it](https://github.com/AsahiLinux/docs/wiki/Feature-Support), though!
 
-### [SCHENKER VIA 15 Pro](https://www.schenker-tech.de/en/schenker-via-15-pro-m22/)
+<ul>
+    <li> {{spec_color(c="y", text="Battery")}}: Only 70 Wh, but its mobile processor is efficient! </li>
+    <li> {{spec_color(c="y", text="Display")}}: Almost perfect! It's 500 nits, over 1600p, and has an aspect ratio of 16:10! </li>
+        <ul><li>However, the notch can get in the way of some applications.</li></ul>
+    <li> {{spec_color(c="g", text="Panel size")}}: 14.2 inches. </li>
+    <li> {{spec_color(c="g", text="Processor")}}: The M1 Pro (and later releases) is powerful, though its 16kb page size can confuse (read: `SEGFAULT`) some older applications. </li>
+    <li> {{spec_color(c="y", text="Linux support")}}: On-going work, primarily through the Asahi Linux project. </li>
+        <ul>
+            <li>Speakers now work, though not quite at their maximum volume yet!</li>
+            <li>Graphics drivers are incredible and are now able to [use OpenGL ES 3.1](https://asahilinux.org/2024/01/fedora-asahi-new/)! OpenGL 3.3 and ES 3.2 are still in progress. </li>
+            <li>Battery life isn't fantastic in my experience. I end up getting around ~3-4 hours with the newest drivers (as of posting).</li>
+        </ul>
+</ul>
 
-- Battery: Perfect! 91 Wh.
-- Display: Not ideal. 16:9 at 1440p. 300 nits is too dark in some outdoor settings.
-- Panel size: Not ideal. 15 inches.
-- Processor: Perfect! The 5700U is very efficient!
-- Linux support: Yes!
+### [SCHENKER VIA 15 Pro (M22, 2022)](https://www.schenker-tech.de/en/schenker-via-15-pro-m22/)
 
-While it's still 15 inches, this machine would be great with a better display.
+I'd love this machine with a better display.
 
-### [Microsoft Surface Laptop Studio](https://www.microsoft.com/en-us/d/surface-laptop-studio/8srdf62swkpf)
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 91 Wh! </li>
+    <li> {{spec_color(c="r", text="Display")}}: Not ideal. It's 16:9 at 1440p, and 300 nits is too dark in some outdoor settings. </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: 15 inches. </li>
+        <ul><li>At 3.2 lbs, though, this machine is still lighter than my 14" MBP!</li></ul>
+    <li> {{spec_color(c="g", text="Processor")}}: Includes a 5700U, which is plenty efficient! </li>
+    <li> {{spec_color(c="g", text="Linux support")}}: Not officially supported, but the online consensus is that it works fine. </li>
+</ul>
 
-- Battery: Not ideal. 58 Wh.
-- Display: Perfect! 3:2 at 1600p, with around 500 nits.
-- Panel size: Perfect! 14.4 inches.
-- Processor: Not ideal. The i5-11300H and i7-11370H are both quad-core processors. Power usage is nice, though!
-- Linux support: Mostly works with lots of setup. Requires the use of [linux-surface](https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features) for any kind of good experience.
+### [Microsoft Surface Laptop Studio (A1Y-00001, 2021)](https://www.microsoft.com/en-us/d/surface-laptop-studio/8srdf62swkpf)
+
+I used this for a few weeks and got a good feel for its Linux support. Take a look below!
+
+<ul>
+    <li> {{spec_color(c="r", text="Battery")}}: Not ideal - 58 Wh. </li>
+    <li> {{spec_color(c="g", text="Display")}}: 3:2 at 1600p, with around 500 nits. </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: They've definitely found the sweet spot! 14.4 inches. </li>
+    <li> {{spec_color(c="r", text="Processor")}}: Not ideal. The i5-11300H and i7-11370H are both quad-core processors, showing their age. </li>
+        <ul><li>Power usage is nice on these older chips, though!</li></ul>
+    <li> {{spec_color(c="y", text="Linux support")}}: Mostly works with lots of setup. </li>
+        <ul><li>Practically everyone uses [Surface Linux](https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix) to avoid time-consuming manual setup.</li></ul>
+</ul>
 
 This machine has a great design, but some parts of the device are outdated or locked down. An updated version using common parts would be great!
 
@@ -133,39 +172,57 @@ I adore this machine in almost every way, but its battery is too small.
 
 ### [Framework Laptop 16" (2023)](https://frame.work/laptop-16)
 
-- Battery: Great - 85 Wh!
-- Display: Perfect! 1600p at 16:10, running at 500 nits.
-- Panel size: Too big - 16 inches.
-- Processor: Uses either the Ryzen 7 7840HS or the Ryzen 9 7940HS. Both are decent options but sit with a TDP of 45W, which is a bit high.
-    - There is also a discrete GPU option with the RX 7700S. More Linux laptops with AMD GPUs, please!!! 🥰
-- Linux support: Yes, these machines are effectively made for Linux!
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 85 Wh. </li>
+    <li> {{spec_color(c="g", text="Display")}}: Perfect! 1600p at 16:10, running at 500 nits. </li>
+    <li> {{spec_color(c="r", text="Panel size")}}: Too big - 16 inches. </li>
+        <ul><li> Pretty hefty, too: it's 4.63 lbs with integrated graphics and 6.39 lbs with a dedicated card! 😱 </li></ul>
+        <ul><li>Modularity is great, but you often pay a price. In this case, making the laptop lighter is genuinely difficult.</li></ul>
+    <li> {{spec_color(c="y", text="Processor")}}: Uses either the Ryzen 7 7840HS or the Ryzen 9 7940HS. Both are decent options but sit with a TDP of 45W, which is a bit high. </li>
+        <ul><li>There is also a discrete GPU option with the RX 7700S. More Linux laptops with AMD GPUs, please!!! 🥰</li></ul>
+    <li> {{spec_color(c="g", text="Linux support")}}: These machines are effectively made for Linux! So... yes! </li>
+</ul>
 
-I'd love one of these machines with a low-power Ryzen, such as the 7840U. Shaving some weight off would be nice - it's over 4 lbs.
+I'd love one of these machines with a low-power Ryzen, such as the 7840U. Shaving some weight off would be nice, too!
 
-### [ASUS Vivobook S 14X OLED](https://www.asus.com/laptops/for-home/vivobook/vivobook-s-14x-oled-m5402-amd-ryzen-6000-series/)
+### [ASUS Vivobook S 14X OLED (M5402RA, 2022)](https://www.asus.com/laptops/for-home/vivobook/vivobook-s-14x-oled-m5402-amd-ryzen-6000-series/)
 
-- Battery: Good! 70Wh.
-- Display: Perfect! 1800p at 16:10, running at 600 nits (!!!)
-- Panel size: Perfect! 14.5 inches.
-Processor: Great, but the beefier 6800H/HS, and especially the 6900HX, are way above anything I need. They may also take more power when running above idle than other efficient chips.
-- Linux support: Yes! Or, at the very least, the M5402RAs running [here](https://linux-hardware.org/?view=computers&year=2022&type=Notebook&vendor=ASUSTek+Computer&model_like=VivoBook_ASUSLaptop&page=1) seem to be plenty happy...
+Processor:
+
+<ul>
+    <li> {{spec_color(c="y", text="Battery")}}: 70 Wh. </li>
+    <li> {{spec_color(c="g", text="Display")}}: Perfect! 1800p at 16:10, running at 600 nits (!!!) </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: 14.5 inches. </li>
+    <li> {{spec_color(c="y", text="Processor")}}: Great, but the beefier 6800H/HS, and especially the 6900HX, are way above anything I need. They may also take more power when running above idle than other efficient chips. </li>
+    <li> {{spec_color(c="y", text="Linux support")}}: Ships with some shaky hardware. </li>
+        <ul><li>Needs [a few tweaks](https://wiki.archlinux.org/title/ASUS_M5402), but they're nothing too crazy.</li></ul>
+</ul>
 
 I like this machine but want a version with a less beefy CPU.
 
-### [ASUS Zenbook 14 OLED (UM3402)](https://www.asus.com/us/laptops/for-home/zenbook/zenbook-14-oled-um3402/where-to-buy/)
+### [ASUS Zenbook 14 OLED (UM3402, 2023)](https://www.asus.com/us/laptops/for-home/zenbook/zenbook-14-oled-um3402/where-to-buy/)
 
-My friend got one of these, so you get a mini review!
+My friend got one of these, so here's a mini-review!
 
-- Display: It's a 16:10 panel at a resolution of 1800p90 - that's pretty good. It outputs 550 nits, which is excellent!
-    - Unfortunately, the panel has these weird diagonal lines across the entire screen. It's particularly noticeable in darker colors, like deep purple or blue.
-    - However, the color is GOOD - it looks better than my MBP 14" M1 Pro.
-- Panel Size: Perfect - it's 14 inches.
-- Processor: Pick between a Ryzen 5 7530U and a Ryzen 7 7730U - both will perform great!
-    - WARNING: Limited to 16GB memory **max**!
-- Linux Support: Needs some tweaks.
-    - Using anything before kernel 6.5, your wireless drivers will act up often.
-    - Some distros require an ACPI configuration file to get sound working. [Someone described the fixes needed here](https://github.com/farfaaa/asus_zenbook_UM3402YA#sound-fix)!
-    - The number pad needs a driver to be enabled, but I don't think I'd want that.
+- Processor:
+
+<ul>
+    <li> {{spec_color(c="y", text="Battery")}}: 75 Wh. </li>
+    <li> {{spec_color(c="g", text="Display")}}: It's a 16:10 panel at a resolution of 1800p90 - that's pretty good. It outputs 550 nits, which is excellent! </li>
+        <ul>
+            <li>Unfortunately, the panel has these weird diagonal lines across the screen. It's particularly noticeable in darker colors, like deep purple or blue.</li>
+            <li>However, the color is NICE - it looks better than my MBP 14" M1 Pro.</li>
+        </ul>
+    <li> {{spec_color(c="g", text="Panel size")}}: 14 inches. </li>
+    <li> {{spec_color(c="g", text="Processor")}}: Pick between a Ryzen 5 7530U and a Ryzen 7 7730U - both will perform great! </li>
+        <ul><li>Heads up: this system only supports up to 16 GiB of memory - and it's soldered!</li></ul>
+    <li> {{spec_color(c="r", text="Linux support")}}: Ships with some 'shaky' hardware. </li>
+        <ul>
+            <li>Using anything before kernel 6.5, your wireless drivers will act up often.</li>
+            <li>Some distros require an ACPI configuration file to get sound working. [Someone described the fixes needed here](https://github.com/farfaaa/asus_zenbook_UM3402YA#sound-fix)!</li>
+            <li>The touchpad's fake number pad needs a driver to be enabled, but some users are happy to see it gone... 😅</li>
+        </ul>
+</ul>
 
 ### [LG Gram 17" (17Z90R-K.ADS9U1, 2023)](https://files.bbystatic.com/yRSJPxodWR42ufQ7kzs6xQ%3D%3D/Specification%2BSheet)
 
@@ -173,7 +230,7 @@ Woah, what a name! This LG Gram model is both huge and tiny. I'm considering pic
 
 <ul>
     <li> {{spec_color(c="y", text="Battery")}}: 80 Wh </li>
-    <li> {{spec_color(c="g", text="Display")}}: 1600p at 350 nits! </li>
+    <li> {{spec_color(c="g", text="Display")}}: 1600p at 350 nits, with a nice aspect ratio of 16:10! </li>
     <li> {{spec_color(c="g", text="Panel size")}}: 17" (huge)! </li>
         <ul><li>However, it weighs 3 lb. There's not much of a weight trade-off here!</li></ul>
     <li> {{spec_color(c="y", text="Processor")}}: Intel's i7-1360P looks great, though its TDP is still a tad above competing Ryzen CPUs. </li>
@@ -199,13 +256,14 @@ I'd pick this machine up if it weren't so heavy. Even so, it's pretty alluring. 
     <li> {{spec_color(c="y", text="Display")}}: 1600p at 300 nits. </li>
     <li> {{spec_color(c="y", text="Panel size")}}: 16 inches. </li>
         <ul><li>It's also 4.69 lb - a bit much...</li></ul>
-    <li> {{spec_color(c="g", text="Processor")}}: The i7-13700H more than I need, but since it's 13th gen, it's less concerning. Its TDP of 35W matches competing Ryzens. </li>
+    <li> {{spec_color(c="y", text="Processor")}}: The i7-13700H is more than I need, but since it's a 13th gen, I'm hardly concerned. Also, its TDP of 35W matches competing Ryzens! </li>
+        <ul><li>I'd still like to see a lower-power chip.</li></ul>
     <li> {{spec_color(c="g", text="Linux support")}}: Many users online [report](https://old.reddit.com/r/linuxhardware/comments/137ddzz/dell_inspiron_16_plus_7630/k45m2l1/) that it works without a hassle! </li>
 </ul>
 
 ### [Lenovo ThinkPad P16s Gen 2 (AMD/Intel, 21K9001NUS/21HK0020US, 2023)](https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadp/thinkpad-p16s-gen-2-(16-inch-amd)-mobile-workstation/21k9001nus#reviews)
 
-I'm pretty blown away by these little machines! If nothing else, they're in the running. Take a look at [their spec sheet here](https://download.lenovo.com/pccbbs/mobiles_pdf/t14_gen4_p14s_gen4_t16_gen2_p16s_gen2_ug_en.pdf)!
+I'm pretty blown away by these little machines! If nothing else, they're in the running. You can take a look at [their spec sheet here](https://download.lenovo.com/pccbbs/mobiles_pdf/t14_gen4_p14s_gen4_t16_gen2_p16s_gen2_ug_en.pdf)!
 
 <ul>
     <li> {{spec_color(c="g", text="Battery")}}: 86 Wh. </li>
@@ -234,6 +292,21 @@ Still, it has some excellent specs and fits the list reasonably well!
         <ul><li>However, at 3.3 lbs, the laptop is plenty portable.</li></ul>
     <li> {{spec_color(c="g", text="Processor")}}: The 5700U is perfect for this use case! </li>
     <li> {{spec_color(c="g", text="Linux support")}}: Given that it's SLIMBOOK... yup! 😄 </li>
+</ul>
+
+### [SCHENKER Vision 14 (E22, 2022)](https://www.schenker-tech.de/en/schenker-vision-14-e22/)
+
+This machine is SCHENKER's generic version of the ID4H1. It has no notable differences from the others. You have to get it from a site called `bestware.com`. I also don't see an ANSI keyboard option. :p
+
+SCHENKER left Linux support unmentioned on their website. That may be worth considering for manufacturer support.
+
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 99 Wh! </li>
+    <li> {{spec_color(c="g", text="Display")}}: 16:10 at 380 nits with a resolution of 1800p. </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: 14 inches. </li>
+    <li> {{spec_color(c="y", text="Processor")}}: 13000H. 35W TDP. 😖 </li>
+    <li> {{spec_color(c="y", text="Linux support")}}: Unknown! Please [let me know](mailto:contact@barretts.club) if you have any information! </li>
+    <li> {{spec_color(c="y", text="Note")}}: Lacks ANSI keyboard options. </li>
 </ul>
 
 ## Conclusion
