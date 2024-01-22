@@ -2,7 +2,7 @@
 
 {% if type == "default" %}
     <div class="btn-wrapper">
-        <a class="btn btn-{{style}}  {{ other_classes }}" href="{{ href }}">
+        <a class="btn btn-{{style}} {{other_classes}}" href="{{ href }}" draggable="false">
             {% if left_image != "" %}
                 <i class="fa-solid fa-{{left_image}}"></i>
             {% endif %}
@@ -11,8 +11,8 @@
         </a>
     </div>
 {% elif type == "extended-fab" %}
-    <div class="btn-wrapper">
-        <a class="extended-fab-btn btn-{{style}} {{ other_classes }}" href="{{ href }}" 
+    <div class="btn-wrapper" >
+        <a class="extended-fab-btn btn-{{style}} {{ other_classes }}" href="{{ href }} draggable="false""  
                 {% if onclick != "" %} onclick={{onclick}} {% endif %}>
             {% if left_image != "" %}
                 <i class="fa-solid fa-{{left_image}}"></i>
@@ -27,8 +27,8 @@
         </a>
     </div>
 {% elif type == "small-fab"%}
-    <div class="btn-wrapper">
-        <a class="btn small-fab-btn btn-{{style}} {{other_classes}}" href={{href}}>
+    <div class="btn-wrapper" >
+        <a class="btn small-fab-btn btn-{{style}} {{other_classes}}" href={{href}} draggable="false">
             <i class="fa-solid fa-{{left_image}} fa-lg"></i>
         </a>
     </div>
