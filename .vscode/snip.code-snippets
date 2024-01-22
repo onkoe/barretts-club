@@ -6,7 +6,29 @@
             "{{ cache_image(alt=\"${1:alt text}\", link=\"/images/${2:project name/image.webp}\", filetype=\"webp\") }}"
         ],
         "description": "Make an image that uses wsrv.nl caching"
-    }
+    },
+    "Create a new laptop": {
+        "scope": "markdown",
+        "prefix": "laptop-rating",
+        "body": [
+        "<ul>",
+        "    <li> {{spec_color(c=\"${1:rating}\", text=\"Battery\")}}: ${2:info} </li>",
+        "    <li> {{spec_color(c=\"${3:rating}\", text=\"Display\")}}: ${4:info} </li>",
+        "    <li> {{spec_color(c=\"${5:rating}\", text=\"Panel size\")}}: ${6:info} </li>",
+        "    <li> {{spec_color(c=\"${7:rating}\", text=\"Processor\")}}: ${8:info} </li>",
+        "    <li> {{spec_color(c=\"${9:rating}\", text=\"Linux support\")}}: ${10:info} </li>",
+        "</ul>"
+        ],
+        "description": "Creates a new laptop listing for laptops.md."
+    },
+    "Add a HTML sublist (for laptops)": {
+        "scope": "markdown",
+        "prefix": "laptop-sublist",
+        "body": [
+            "<ul><li>${1:text}</li></ul>"
+        ],
+        "description": "Creates a new laptop sublist for laptops.md."
+    },
     // Place your barretts-club workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
     // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
     // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
