@@ -9,7 +9,7 @@
 
     {% if x.icon %}
         {# it's like this because there's an ugly space after the icon otherwise :p #}
-        <a class="footer-icon" href="{{url}}"><i class="{{x.icon}}"></i></a>
+        <a class="footer-icon" href="{{url}}" aria-label="{{x.name}}"><i class="{{x.icon}}"></i></a>
     {% else %}
         <a href="{{url}}">{{x.name | safe}}</a>
     {% endif %}
