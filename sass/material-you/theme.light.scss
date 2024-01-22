@@ -46,7 +46,20 @@
     --md-sys-color-surface-container-highest: var(--md-sys-color-surface-container-highest-light);
 
     // button stuff
+    // ...filled
+    --md-custom-color-btn-filled-hovered: var(--md-custom-color-btn-filled-hovered-light);
+    --md-custom-color-btn-filled-pressed: var(--md-custom-color-btn-filled-pressed-light);
+    --md-custom-color-btn-filled-disabled: var(--md-custom-color-btn-outlined-disabled-light);
     // ...outlined
     --md-custom-color-btn-outlined-hovered: var(--md-custom-color-btn-outlined-hovered-light);
     --md-custom-color-btn-outlined-pressed: var(--md-custom-color-btn-outlined-pressed-light);
+    --md-custom-color-btn-outlined-disabled: var(--md-custom-color-btn-outlined-disabled-light);
+    // ...elevated
+    --md-custom-color-btn-elevated-hovered: var(--md-custom-color-btn-elevated-hovered-light);
+    --md-custom-color-btn-elevated-pressed: var(--md-custom-color-btn-elevated-pressed-light);
+    --md-custom-color-btn-elevated-disabled: var(--md-custom-color-btn-elevated-disabled-light);
+    // ...tonal
+    --md-custom-color-btn-tonal-hovered: var(--md-custom-color-btn-tonal-hovered-light);
+    --md-custom-color-btn-tonal-pressed: var(--md-custom-color-btn-tonal-pressed-light);
+    --md-custom-color-btn-tonal-disabled: var(--md-custom-color-btn-tonal-disabled-light);
 }

@@ -1,5 +1,3 @@
-@use "sass:color";
-
 .btn-wrapper {
     display: flex;
 }
@@ -10,26 +8,16 @@
     display: inline-flex;
     text-decoration: none;
     border-radius: 2rem;
-    width: fit-content;
-    height: fit-content;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    outline: $outline 1.5px solid;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     user-select: none;
 
-    i {
+    i,
+    img {
         display: flex;
         padding: 0;
         padding-right: 8px;
         margin: 0;
-    }
-
-    img {
-        display: flex;
-        justify-content: center;
-        justify-self: center;
     }
 
     .btn-label {
@@ -37,32 +25,47 @@
     }
 }
 
-
-
 // 'pill-style' buttons
 .btn-filled {
     background-color: $primary;
     color: $on-primary;
-    outline: none;
 
-    &:hover,
+    &:hover {
+        background-color: var(--md-custom-color-btn-filled-hovered);
+        box-shadow: $box-shadow-z1;
+    }
+
+    &:active,
     &:focus {
-        filter: brightness(92%);
-        box-shadow: $box-shadow-z2;
+        background-color: var(--md-custom-color-btn-filled-pressed);
+    }
+
+    .btn-disabled {
+        color: $on-surface;
+        background-color: var(--md-custom-color-btn-filled-disabled);
     }
 }
 
+.btn-outlined {
+    background-color: transparent;
+    color: $primary;
+    outline: $outline 1pt solid;
 
-.btn-tonal {
-    background-color: $secondary-container;
-    color: $on-secondary-container;
-    outline: none;
-    box-shadow: $box-shadow-z1;
+    &:hover {
+        background-color: var(--md-custom-color-btn-outlined-hovered);
+    }
 
-    &:hover,
+    &:active,
     &:focus {
-        filter: brightness(108%);
-        box-shadow: $box-shadow-z2;
+        background-color: var(--md-custom-color-btn-outlined-pressed);
+    }
+
+    &:focus {
+        outline: $primary 1pt solid;
+    }
+
+    .btn-disabled {
+        background-color: var(--md-custom-color-btn-outlined-disabled);
     }
 }
 
@@ -71,30 +74,60 @@
 .btn-text {
     background-color: transparent;
     color: $primary;
-    outline: none;
 
-    &:hover,
-    &:focus {
-        background: var(--md-custom-color-btn-text-hovered);
+    &:hover {
+        background-color: var(--md-custom-color-btn-text-hovered);
     }
 
-    &:active {
-        background: var(--md-custom-color-btn-text-pressed);
+    &:active,
+    &:focus {
+        background-color: var(--md-custom-color-btn-text-pressed);
+    }
+
+    .btn-disabled {
+        color: var(--md-custom-color-btn-text-disabled);
     }
 }
 
-.btn-outlined {
-    background-color: transparent;
+.btn-elevated {
+    background-color: $surface-container-low;
     color: $primary;
-    outline: $outline 1px solid;
+    box-shadow: $box-shadow-z1;
 
-    &:hover,
-    &:focus {
-        background-color: var(--md-custom-color-btn-outlined-hovered);
+    &:hover {
+        background-color: var(--md-custom-color-btn-elevated-hovered);
+        box-shadow: $box-shadow-z2;
     }
 
-    &:active {
-        background-color: var(--md-custom-color-btn-outlined-pressed);
+    &:active,
+    &:focus {
+        background-color: var(--md-custom-color-btn-elevated-pressed);
+    }
+
+    .btn-disabled {
+        color: $on-surface;
+        background-color: var(--md-custom-color-btn-elevated-disabled);
+        box-shadow: none;
+    }
+}
+
+.btn-tonal {
+    background-color: $secondary-container;
+    color: $on-secondary-container;
+
+    &:hover {
+        background-color: var(--md-custom-color-btn-tonal-hovered);
+        box-shadow: $box-shadow-z1;
+    }
+
+    &:active,
+    &:focus {
+        background-color: var(--md-custom-color-btn-tonal-pressed);
+    }
+
+    .btn-disabled {
+        color: $on-surface;
+        background-color: var(--md-custom-color-btn-tonal-disabled);
     }
 }
 

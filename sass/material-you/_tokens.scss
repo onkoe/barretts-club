@@ -103,7 +103,7 @@
   --md-ref-palette-error99: #fffbff;
   --md-ref-palette-error100: #ffffff;
   /* light */
-  --md-sys-color-primary-light: #446732;
+  --md-sys-color-primary-light: #2E6A44;
   --md-sys-color-primary-light-hover-012: rgba(56, 106, 31, 0.12);
   --md-sys-color-primary-light-hover-008: rgba(56, 106, 31, 0.08);
   --md-sys-color-on-primary-light: #ffffff;
@@ -113,8 +113,8 @@
   --md-sys-color-on-primary-container-light: #072100;
   --md-sys-color-secondary-light: #55624c;
   --md-sys-color-on-secondary-light: #ffffff;
-  --md-sys-color-secondary-container-light: #d9e7cb;
-  --md-sys-color-on-secondary-container-light: #131f0d;
+  --md-sys-color-secondary-container-light: #D2E8D4;
+  --md-sys-color-on-secondary-container-light: #0D1F13;
   --md-sys-color-tertiary-light: #386666;
   --md-sys-color-on-tertiary-light: #ffffff;
   --md-sys-color-tertiary-container-light: #bbebec;
@@ -145,18 +145,18 @@
   --md-sys-color-surface-container-high-light: rgb(231 233 223);
   --md-sys-color-surface-container-highest-light: rgb(225 228 217);
   /* dark */
-  --md-sys-color-primary-dark: #AAD291;
+  --md-sys-color-primary-dark: #96D5A6;
   --md-sys-color-primary-dark-hover-012: rgba(157, 214, 125, 0.12);
   --md-sys-color-primary-dark-hover-008: rgba(157, 214, 125, 0.08);
-  --md-sys-color-on-primary-dark: #173807;
-  --md-sys-color-on-primary-dark-hover-012: rgba(17, 56, 0, 0.12);
+  --md-sys-color-on-primary-dark: #00391C;
+  --md-sys-color-on-primary-dark-hover-012: rgba(12, 12, 11, 0.12);
   --md-sys-color-on-primary-dark-hover-008: rgba(17, 56, 0, 0.08);
   --md-sys-color-primary-container-dark: #205106;
   --md-sys-color-on-primary-container-dark: #C5EFAB;
   --md-sys-color-secondary-dark: #BDCBB0;
   --md-sys-color-on-secondary-dark: #283420;
-  --md-sys-color-secondary-container-dark: #3E4A35;
-  --md-sys-color-on-secondary-container-dark: #D9E7CB;
+  --md-sys-color-secondary-container-dark: #384B3C;
+  --md-sys-color-on-secondary-container-dark: #D2E8D4;
   --md-sys-color-tertiary-dark: #A0CFCF;
   --md-sys-color-on-tertiary-dark: #003738;
   --md-sys-color-tertiary-container-dark: #1E4E4E;
@@ -197,14 +197,39 @@
   --md-custom-color-on-warn-container-light: #251a00;
   --md-custom-color-on-warn-container-dark: #ffdf9c;
   // ok heres some button ones
+  // ...filled
+  --md-custom-color-btn-filled-hovered-light: #3F7653;
+  --md-custom-color-btn-filled-hovered-dark: #8EC6A2;
+  --md-custom-color-btn-filled-pressed-light: #477C5A;
+  --md-custom-color-btn-filled-pressed-dark: #8BBFA0;
+  --md-custom-color-btn-filled-disabled-light: #191D161F;
+  --md-custom-color-btn-filled-disabled-dark: #E1E4D91F;
   // ...outlined
-  --md-custom-color-btn-outlined-hovered-light: rgba(68, 103, 50, 0.08);
-  --md-custom-color-btn-outlined-hovered-dark: rgba(150, 213, 166, 0.08);
-  --md-custom-color-btn-outlined-pressed-light: rgba(68, 103, 50, 0.12);
-  --md-custom-color-btn-outlined-pressed-dark: rgba(150, 213, 166, 0.12);
+  --md-custom-color-btn-outlined-hovered-light: #2E6A4414;
+  --md-custom-color-btn-outlined-hovered-dark: #96D5A614;
+  --md-custom-color-btn-outlined-pressed-light: #2E6A441F;
+  --md-custom-color-btn-outlined-pressed-dark: #96D5A61F;
+  --md-custom-color-btn-outlined-disabled-light: #191D161F;
+  --md-custom-color-btn-outlined-disabled-dark: #E1E4D91F;
   // ...text
   --md-custom-color-btn-text-hovered: var(--md-custom-color-btn-outlined-hovered);
   --md-custom-color-btn-text-pressed: var(--md-custom-color-btn-outlined-pressed);
+  --md-custom-color-btn-text-disabled: var(--md-custom-color-btn-outlined-disabled);
+  // ...elevated
+  --md-custom-color-btn-elevated-hovered-light: #E0EADF;
+  --md-custom-color-btn-elevated-hovered-dark: #222C23;
+  --md-custom-color-btn-elevated-pressed-light: #D9E4D9;
+  --md-custom-color-btn-elevated-pressed-dark: #273329;
+  --md-custom-color-btn-elevated-disabled-light: #191D161F;
+  --md-custom-color-btn-elevated-disabled-dark: #E1E4D91F;
+  // ...tonal
+  --md-custom-color-btn-tonal-hovered-light: #C4D7C6;
+  --md-custom-color-btn-tonal-hovered-dark: #46574B;
+  --md-custom-color-btn-tonal-pressed-light: #BCCFC0;
+  --md-custom-color-btn-tonal-pressed-dark: #4D5D53;
+  --md-custom-color-btn-tonal-disabled-light: #191D161F;
+  --md-custom-color-btn-tonal-disabled-dark: #E1E4D91F;
+
   /* display - large */
   --md-sys-typescale-display-large-font-family-name: Inter;
   --md-sys-typescale-display-large-font-family-style: Regular;
