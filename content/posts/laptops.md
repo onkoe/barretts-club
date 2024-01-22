@@ -10,7 +10,7 @@ tags = ["laptops", "linux", "macos", "windows"]
 When it comes to laptops, there are a lot of options. For me, a good laptop has:
 
 - Good battery (80 Wh or higher)
-- A 3:2/16:10 display with 350+ nits and a resolution of 1600p or higher
+- A 3:2/16:10 display with 350+ nits and a resolution of 1600p90 or higher
 - 14-inch panel
 - A power-efficient (Ryzen/ARM/Intel 13th-gen) processor
 - The ability to run Linux natively
@@ -32,7 +32,7 @@ My main issues with this machine come from its internals. In particular, the req
 <ul>
     <li> {{spec_color(c="y", text="Battery")}}: 99 Wh. </li>
         <ul><li>It's only okay due to its required RTX 3050. </li></ul>
-    <li> {{spec_color(c="g", text="Display")}}: It's got a 16:10 aspect ratio at 1800p. 400 nits. </li>
+    <li> {{spec_color(c="g", text="Display")}}: It's got a 16:10 aspect ratio at 1800p90. 400 nits. </li>
     <li> {{spec_color(c="g", text="Panel size")}}: 14 inches. </li>
     <li> {{spec_color(c="y", text="Processor")}}: Intel Core i7 13700H. 35W TDP. </li>
     <li> {{spec_color(c="y", text="Linux support")}}: Fully supported. </li>
@@ -49,7 +49,7 @@ I would love an AMD version of this machine in particular! The open-source commu
 
 <ul>
     <li> {{spec_color(c="g", text="Battery")}}: 99 Wh! </li>
-    <li> {{spec_color(c="g", text="Display")}}: 16:10 at 400 nits. The resolution is at 1800p. </li>
+    <li> {{spec_color(c="g", text="Display")}}: 16:10 at 400 nits. The resolution is 1800p90. </li>
     <li> {{spec_color(c="g", text="Panel size")}}: 14 inches. </li>
     <li> {{spec_color(c="r", text="Processor")}}: 13000H. 35W TDP. </li>
     <li> {{spec_color(c="g", text="Linux support")}}: Yup! </li>
@@ -71,11 +71,11 @@ This machine is SCHENKER's replacement for the E22. Sadly, it still lacks an ANS
 
 #### [TUXEDO InfinityBook Pro 14 (Gen 8, 2023)](https://www.tuxedocomputers.com/en/TUXEDO-InfinityBook-Pro-14-Gen8.tuxedo)
 
-So far, this is my favorite machine. A Ryzen version would be the perfect laptop, in my view. The Coreboot support is incredible!
+So far, this is my favorite of all these platformed machines. A Ryzen version would be the perfect laptop, in my view. The Coreboot support is also notable!
 
 <ul>
     <li> {{spec_color(c="g", text="Battery")}}: 99 Wh! </li>
-    <li> {{spec_color(c="g", text="Display")}}: 16:10 at 1800p, with 400 nits of power! </li>
+    <li> {{spec_color(c="g", text="Display")}}: 16:10 at 1800p90, with 400 nits of power! </li>
     <li> {{spec_color(c="g", text="Panel size")}}: 14 inches. </li>
     <li> {{spec_color(c="y", text="Processor")}}: 13700H is more than I need with its 35W TDP. </li>
     <li> {{spec_color(c="g", text="Linux support")}}: Officially supported! </li>
@@ -119,7 +119,7 @@ I already own this machine! Unfortunately, its Linux support isn't quite there y
 
 <ul>
     <li> {{spec_color(c="y", text="Battery")}}: Only 70 Wh, but its mobile processor is efficient! </li>
-    <li> {{spec_color(c="y", text="Display")}}: Almost perfect! It's 500 nits, over 1600p, and has an aspect ratio of 16:10! </li>
+    <li> {{spec_color(c="y", text="Display")}}: Almost perfect! It's 500 nits, over 1600p120, and has an aspect ratio of 16:10! </li>
         <ul><li>However, the notch can get in the way of some applications.</li></ul>
     <li> {{spec_color(c="g", text="Panel size")}}: 14.2 inches. </li>
     <li> {{spec_color(c="g", text="Processor")}}: The M1 Pro (and later releases) is powerful, though its 16kb page size can confuse (read: `SEGFAULT`) some older applications. </li>
@@ -137,7 +137,7 @@ I'd love this machine with a better display.
 
 <ul>
     <li> {{spec_color(c="g", text="Battery")}}: 91 Wh! </li>
-    <li> {{spec_color(c="r", text="Display")}}: Not ideal. It's 16:9 at 1440p, and 300 nits is too dark in some outdoor settings. </li>
+    <li> {{spec_color(c="r", text="Display")}}: Not ideal. It's 16:9 at 1440p165, and 300 nits is too dark in some outdoor settings. </li>
     <li> {{spec_color(c="g", text="Panel size")}}: 15 inches. </li>
         <ul><li>At 3.2 lbs, though, this machine is still lighter than my 14" MBP!</li></ul>
     <li> {{spec_color(c="g", text="Processor")}}: Includes a 5700U, which is plenty efficient! </li>
@@ -150,7 +150,7 @@ I used this for a few weeks and got a good feel for its Linux support. Take a lo
 
 <ul>
     <li> {{spec_color(c="r", text="Battery")}}: Not ideal - 58 Wh. </li>
-    <li> {{spec_color(c="g", text="Display")}}: 3:2 at 1600p, with around 500 nits. </li>
+    <li> {{spec_color(c="g", text="Display")}}: 3:2 at 1600p120, running at around 500 nits. </li>
     <li> {{spec_color(c="g", text="Panel size")}}: They've definitely found the sweet spot! 14.4 inches. </li>
     <li> {{spec_color(c="r", text="Processor")}}: Not ideal. The i5-11300H and i7-11370H are both quad-core processors, showing their age. </li>
         <ul><li>Power usage is nice on these older chips, though!</li></ul>
@@ -174,7 +174,7 @@ I adore this machine in almost every way, but its battery is too small.
 
 <ul>
     <li> {{spec_color(c="g", text="Battery")}}: 85 Wh. </li>
-    <li> {{spec_color(c="g", text="Display")}}: Perfect! 1600p at 16:10, running at 500 nits. </li>
+    <li> {{spec_color(c="y", text="Display")}}: Perfect - if not for the refresh rate. 1600p60 at 16:10, running at 500 nits. </li>
     <li> {{spec_color(c="r", text="Panel size")}}: Too big - 16 inches. </li>
         <ul><li> Pretty hefty, too: it's 4.63 lbs with integrated graphics and 6.39 lbs with a dedicated card! 😱 </li></ul>
         <ul><li>Modularity is great, but you often pay a price. In this case, making the laptop lighter is genuinely difficult.</li></ul>
@@ -187,11 +187,9 @@ I'd love one of these machines with a low-power Ryzen, such as the 7840U. Shavin
 
 ### [ASUS Vivobook S 14X OLED (M5402RA, 2022)](https://www.asus.com/laptops/for-home/vivobook/vivobook-s-14x-oled-m5402-amd-ryzen-6000-series/)
 
-Processor:
-
 <ul>
     <li> {{spec_color(c="y", text="Battery")}}: 70 Wh. </li>
-    <li> {{spec_color(c="g", text="Display")}}: Perfect! 1800p at 16:10, running at 600 nits (!!!) </li>
+    <li> {{spec_color(c="g", text="Display")}}: Perfect! 1800p120 at 16:10, running at 600 nits (!!!) </li>
     <li> {{spec_color(c="g", text="Panel size")}}: 14.5 inches. </li>
     <li> {{spec_color(c="y", text="Processor")}}: Great, but the beefier 6800H/HS, and especially the 6900HX, are way above anything I need. They may also take more power when running above idle than other efficient chips. </li>
     <li> {{spec_color(c="y", text="Linux support")}}: Ships with some shaky hardware. </li>
@@ -224,13 +222,15 @@ My friend got one of these, so here's a mini-review!
         </ul>
 </ul>
 
-### [LG Gram 17" (17Z90R-K.ADS9U1, 2023)](https://files.bbystatic.com/yRSJPxodWR42ufQ7kzs6xQ%3D%3D/Specification%2BSheet)
+### [LG Gram 17" (17Z90R-K.ADS9U1, 2023)](https://www.lg.com/us/laptops/lg-17z90r-k.ads9u1-gram-laptop)
 
 Woah, what a name! This LG Gram model is both huge and tiny. I'm considering picking one up due to its specs and battery, though I'm still waiting on more Linux-friendly hardware.
 
+You can take a look at [its spec sheet here]((https://files.bbystatic.com/yRSJPxodWR42ufQ7kzs6xQ%3D%3D/Specification%2BSheet))!
+
 <ul>
     <li> {{spec_color(c="y", text="Battery")}}: 80 Wh </li>
-    <li> {{spec_color(c="g", text="Display")}}: 1600p at 350 nits, with a nice aspect ratio of 16:10! </li>
+    <li> {{spec_color(c="y", text="Display")}}: 1600p60 at 350 nits, with a nice aspect ratio of 16:10! </li>
     <li> {{spec_color(c="g", text="Panel size")}}: 17" (huge)! </li>
         <ul><li>However, it weighs 3 lb. There's not much of a weight trade-off here!</li></ul>
     <li> {{spec_color(c="y", text="Processor")}}: Intel's i7-1360P looks great, though its TDP is still a tad above competing Ryzen CPUs. </li>
@@ -253,7 +253,7 @@ I'd pick this machine up if it weren't so heavy. Even so, it's pretty alluring. 
 
 <ul>
     <li> {{spec_color(c="g", text="Battery")}}: 86 Wh. </li>
-    <li> {{spec_color(c="y", text="Display")}}: 1600p at 300 nits. </li>
+    <li> {{spec_color(c="y", text="Display")}}: 1600p60 at 300 nits. </li>
     <li> {{spec_color(c="y", text="Panel size")}}: 16 inches. </li>
         <ul><li>It's also 4.69 lb - a bit much...</li></ul>
     <li> {{spec_color(c="y", text="Processor")}}: The i7-13700H is more than I need, but since it's a 13th gen, I'm hardly concerned. Also, its TDP of 35W matches competing Ryzens! </li>
@@ -267,7 +267,8 @@ I'm pretty blown away by these little machines! If nothing else, they're in the 
 
 <ul>
     <li> {{spec_color(c="g", text="Battery")}}: 86 Wh. </li>
-    <li> {{spec_color(c="g", text="Display")}}: 2400p at 400 nits, with HDR 500 support! </li>
+    <li> {{spec_color(c="g", text="Display")}}: 2400p60 at 400 nits, with HDR 500 support! </li>
+        <ul><li>I can hardly fault Lenovo for choosing 60 Hz with a 5k display. I'm leaving it green, but keep it in mind!</li></ul>
     <li> {{spec_color(c="g", text="Panel size")}}: 16 inches. </li>
         <ul><li>Pretty lightweight at 3.76 lbs!</li></ul>
     <li> {{spec_color(c="g", text="Processor")}}: Comes with the speedy, reliable 7840U. Alternatively, you can get one with an i7-1360P. That's also a great choice! </li>
@@ -287,7 +288,7 @@ Still, it has some excellent specs and fits the list reasonably well!
 
 <ul>
     <li> {{spec_color(c="g", text="Battery")}}: 97 Wh! </li>
-    <li> {{spec_color(c="y", text="Display")}}: A bit lower-spec'd. 1440p at 350 nits. </li>
+    <li> {{spec_color(c="y", text="Display")}}: A bit lower-spec'd. 1440p165 at 350 nits. </li>
     <li> {{spec_color(c="g", text="Panel size")}}: 15 inches. </li>
         <ul><li>However, at 3.3 lbs, the laptop is plenty portable.</li></ul>
     <li> {{spec_color(c="g", text="Processor")}}: The 5700U is perfect for this use case! </li>
@@ -302,7 +303,7 @@ SCHENKER left Linux support unmentioned on their website. That may be worth cons
 
 <ul>
     <li> {{spec_color(c="g", text="Battery")}}: 99 Wh! </li>
-    <li> {{spec_color(c="g", text="Display")}}: 16:10 at 380 nits with a resolution of 1800p. </li>
+    <li> {{spec_color(c="g", text="Display")}}: 16:10 at 380 nits with a resolution of 1800p90. </li>
     <li> {{spec_color(c="g", text="Panel size")}}: 14 inches. </li>
     <li> {{spec_color(c="y", text="Processor")}}: 13000H. 35W TDP. 😖 </li>
     <li> {{spec_color(c="y", text="Linux support")}}: Unknown! Please [let me know](mailto:contact@barretts.club) if you have any information! </li>
