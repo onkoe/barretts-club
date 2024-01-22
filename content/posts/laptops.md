@@ -2,7 +2,7 @@
 title = "The Laptop List"
 description = "This is a continually-updated list of laptops that I like!"
 date = 2023-01-15
-updated = 2024-01-19
+updated = 2024-01-22
 [taxonomies]
 tags = ["laptops", "linux", "macos", "windows"]
 +++
