@@ -196,14 +196,15 @@
 .btn-surface {
     background-color: $surface-container-high;
     color: $primary;
-    box-shadow: $box-shadow-z2;
+    box-shadow: $box-shadow-z1;
+    outline: none;
 
     &:hover,
     &:focus {
-        box-shadow: $box-shadow-z1;
+        box-shadow: $box-shadow-z2;
     }
 
     &:active {
-        box-shadow: none;
+        // TODO
     }
 }
