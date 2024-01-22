@@ -37,6 +37,13 @@ blockquote {
     padding-left: 1em;
 }
 
+ul,
+li {
+    p {
+        margin: 3pt;
+    }
+}
+
 // begin table nonsense
 
 table {

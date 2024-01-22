@@ -12,7 +12,7 @@ When it comes to laptops, there are a lot of options. For me, a good laptop has:
 - Good battery (80 Wh or higher)
 - A 3:2/16:10 display with 350+ nits and a resolution of 1600p or higher
 - 14-inch panel
-- A power-efficient (Ryzen/ARM) processor
+- A power-efficient (Ryzen/ARM/Intel 13th-gen) processor
 - The ability to run Linux natively
 
 Sadly, I haven't found any laptops with all of these specs. Here are my current choices:
@@ -165,7 +165,59 @@ My friend got one of these, so you get a mini review!
 - Linux Support: Needs some tweaks.
     - Using anything before kernel 6.5, your wireless drivers will act up often.
     - Some distros require an ACPI configuration file to get sound working. [Someone described the fixes needed here](https://github.com/farfaaa/asus_zenbook_UM3402YA#sound-fix)!
-    - The numpad needs a driver to be enabled, but I don't think I'd want that.
+    - The number pad needs a driver to be enabled, but I don't think I'd want that.
+
+### [LG Gram 17" (17Z90R-K.ADS9U1, 2023)](https://files.bbystatic.com/yRSJPxodWR42ufQ7kzs6xQ%3D%3D/Specification%2BSheet)
+
+Woah, what a name! This LG Gram model is both huge and tiny. I'm considering picking one up due to its specs and battery, though I'm still waiting on more Linux-friendly hardware.
+
+<ul>
+    <li> {{spec_color(c="y", text="Battery")}}: 80 Wh </li>
+    <li> {{spec_color(c="g", text="Display")}}: 1600p at 350 nits! </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: 17" (huge)! </li>
+        <ul><li>However, it weighs 3 lb. There's not much of a weight trade-off here!</li></ul>
+    <li> {{spec_color(c="y", text="Processor")}}: Intel's i7-1360P looks great, though its TDP is still a tad above competing Ryzen CPUs. </li>
+        <ul><li>For example, the 7840U beats it in almost every way - and still uses less power!</li></ul>
+    <li> {{spec_color(c="r", text="Linux support")}}: Ships with unsupported hardware. </li>
+        <ul>
+            <li>The speakers don't seem to work due to the Realtek ALC298 codec chip [lacking Linux support from Realtek](https://bugs.launchpad.net/ubuntu/+source/alsa-driver/+bug/2011385).</li>
+            <li>
+                There does appear to be [a janky workaround](https://forums.fedoraforum.org/showthread.php?331130-Fixing-ALC298-audio-(no-sound-from-speakers)), though I don't know how much
+                I can recommend it personally. That linked repo's README warns of ["funny smells"](https://github.com/joshuagrisham/galaxy-book2-pro-linux/tree/main#sound) - that's a no from me..!
+            </li>
+        </ul>
+</ul>
+
+The [`16Z90R-K.ADB9U1`](https://linux-hardware.org/?probe=d3a9e05559) and [`14Z90RS-K.ADW9U1`](https://forums.debian.net/viewtopic.php?t=154677) are much the same! I hope to see LG dropping this cursed audio chip in the future.
+
+### [Dell Inspiron 16 Plus 7630 (Iris, P125F004, 2023)](https://www.dell.com/en-us/shop/dell-laptops/inspiron-16-plus-laptop/spd/inspiron-16-7630-laptop/useichbts7630glcx)
+
+I'd pick this machine up if it weren't so heavy. Even so, it's pretty alluring. See [its specification sheet here](https://dl.dell.com/content/manual26258980-inspiron-16-plus-7630-owner-s-manual-nvidia-geforce-rtx-3050-4050-and-intel-graphics.pdf?language=en-us).
+
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 86 Wh. </li>
+    <li> {{spec_color(c="y", text="Display")}}: 1600p at 300 nits. </li>
+    <li> {{spec_color(c="y", text="Panel size")}}: 16 inches. </li>
+        <ul><li>It's also 4.69 lb - a bit much...</li></ul>
+    <li> {{spec_color(c="g", text="Processor")}}: The i7-13700H more than I need, but since it's 13th gen, it's less concerning. Its TDP of 35W matches competing Ryzens. </li>
+    <li> {{spec_color(c="g", text="Linux support")}}: Many users online [report](https://old.reddit.com/r/linuxhardware/comments/137ddzz/dell_inspiron_16_plus_7630/k45m2l1/) that it works without a hassle! </li>
+</ul>
+
+### [Lenovo ThinkPad P16s Gen 2 (AMD/Intel, 21K9001NUS/21HK0020US, 2023)](https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadp/thinkpad-p16s-gen-2-(16-inch-amd)-mobile-workstation/21k9001nus#reviews)
+
+I'm pretty blown away by these little machines! If nothing else, they're in the running. Take a look at [their spec sheet here](https://download.lenovo.com/pccbbs/mobiles_pdf/t14_gen4_p14s_gen4_t16_gen2_p16s_gen2_ug_en.pdf)!
+
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 86 Wh. </li>
+    <li> {{spec_color(c="g", text="Display")}}: 2400p at 400 nits, with HDR 500 support! </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: 16 inches. </li>
+        <ul><li>Pretty lightweight at 3.76 lbs!</li></ul>
+    <li> {{spec_color(c="g", text="Processor")}}: Comes with the speedy, reliable 7840U. Alternatively, you can get one with an i7-1360P. That's also a great choice! </li>
+    <li>
+        {{spec_color(c="g", text="Linux support")}}: While it's technically not 'officially' supported, Lenovo puts great care into choosing FOSS-friendly parts,
+        [making Linux work flawlessly](https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadp/thinkpad-p16s-gen-2-(16-inch-amd)-mobile-workstation/21k9001nus#reviews)!
+    </li>
+</ul>
 
 ## Discontinued Machines
 
