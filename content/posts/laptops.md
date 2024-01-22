@@ -15,13 +15,13 @@ When it comes to laptops, there are a lot of options. For me, a good laptop has:
 - A power-efficient (Ryzen/ARM/Intel 13th-gen) processor
 - The ability to run Linux natively
 
-Sadly, I haven't found any laptops with all of these specs. Here are my current choices:
+It can be challenging to find laptops with these specs. Here's a list of those I've discovered in the vast sea of (primarily) low-battery machines!
 
 ## Laptops
 
 ### Based on Tong-Fang's ID4H1
 
-Several laptops on this list are based on some fancy Tong-Fang platform. They're all Intel but have specific adaptations according to the audience.
+Several laptops on this list base themselves on a fancy Tong-Fang platform. Though some have specific adaptations for their intended audience, they're all Intel.
 
 AMD adaptations existed in the past, particularly before the coronavirus.
 
@@ -221,18 +221,21 @@ I'm pretty blown away by these little machines! If nothing else, they're in the 
 
 ## Discontinued Machines
 
-### [SLIMBOOK ProX 15"](https://slimbook.com/en/prox)
+### [SLIMBOOK ProX 15" (2022)](https://slimbook.com/en/prox)
 
 Unfortunately, this laptop has been left "out of stock with no availability date. In other words, SLIMBOOK has discontinued it!
 
 Still, it has some excellent specs and fits the list reasonably well!
 
-- Battery: Perfect - 97Wh!
-- Display: A bit lower-spec'd. 1440p at 350 nits.
-- Panel size: Not optimal - 15" is a tad too big.
-- Processor: The 5700U is perfect for this use case!
-- Linux support: Given that it's SLIMBOOK... yup! 😄
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 97 Wh! </li>
+    <li> {{spec_color(c="y", text="Display")}}: A bit lower-spec'd. 1440p at 350 nits. </li>
+    <li> {{spec_color(c="g", text="Panel size")}}: 15 inches. </li>
+        <ul><li>However, at 3.3 lbs, the laptop is plenty portable.</li></ul>
+    <li> {{spec_color(c="g", text="Processor")}}: The 5700U is perfect for this use case! </li>
+    <li> {{spec_color(c="g", text="Linux support")}}: Given that it's SLIMBOOK... yup! 😄 </li>
+</ul>
 
 ## Conclusion
 
-Do you see a laptop that fits these specs and isn't on the list? Let me know! :)
+Do you see a laptop that fits these specs and isn't on the list? Let me know [via email](mailto:contact@barretts.club) or [with a GitHub issue](https://github.com/onkoe/barretts-club/issues/new)! :)
