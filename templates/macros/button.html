@@ -13,7 +13,7 @@
 {% elif type == "extended-fab" %}
     <div class="btn-wrapper" >
         <a class="extended-fab-btn btn-{{style}} {{ other_classes }}" href="{{ href }} draggable="false""  
-                {% if onclick != "" %} onclick={{onclick}} {% endif %}>
+                {% if onclick != "" %} onclick="{{onclick}}" {% endif %}>
             {% if left_image != "" %}
                 <i class="fa-solid fa-{{left_image}}"></i>
             {% endif %}
