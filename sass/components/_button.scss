@@ -74,7 +74,11 @@
 
     &:hover,
     &:focus {
-        background: var(--md-sys-color-primary-hover-008);
+        background: var(--md-custom-color-btn-text-hovered);
+    }
+
+    &:active {
+        background: var(--md-custom-color-btn-text-pressed);
     }
 }
 
@@ -85,8 +89,11 @@
 
     &:hover,
     &:focus {
-        background-color: $on-secondary;
-        box-shadow: $box-shadow-z1;
+        background-color: var(--md-custom-color-btn-outlined-hovered);
+    }
+
+    &:active {
+        background-color: var(--md-custom-color-btn-outlined-pressed);
     }
 }
 

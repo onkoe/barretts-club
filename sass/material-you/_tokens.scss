@@ -196,6 +196,15 @@
   --md-custom-color-warn-container-dark: #5b4300;
   --md-custom-color-on-warn-container-light: #251a00;
   --md-custom-color-on-warn-container-dark: #ffdf9c;
+  // ok heres some button ones
+  // ...outlined
+  --md-custom-color-btn-outlined-hovered-light: rgba(68, 103, 50, 0.08);
+  --md-custom-color-btn-outlined-hovered-dark: rgba(150, 213, 166, 0.08);
+  --md-custom-color-btn-outlined-pressed-light: rgba(68, 103, 50, 0.12);
+  --md-custom-color-btn-outlined-pressed-dark: rgba(150, 213, 166, 0.12);
+  // ...text
+  --md-custom-color-btn-text-hovered: var(--md-custom-color-btn-outlined-hovered);
+  --md-custom-color-btn-text-pressed: var(--md-custom-color-btn-outlined-pressed);
   /* display - large */
   --md-sys-typescale-display-large-font-family-name: Inter;
   --md-sys-typescale-display-large-font-family-style: Regular;
