@@ -14,7 +14,7 @@
         "<ul>",
         "    <li> {{spec_color(c=\"${1:rating}\", text=\"Battery\")}}: ${2:info} </li>",
         "    <li> {{spec_color(c=\"${3:rating}\", text=\"Display\")}}: ${4:info} </li>",
-        "    <li> {{spec_color(c=\"${5:rating}\", text=\"Panel size\")}}: ${6:info} </li>",
+        "    <li> {{spec_color(c=\"${5:rating}\", text=\"Panel Size/Weight\")}}: ${6:info} </li>",
         "    <li> {{spec_color(c=\"${7:rating}\", text=\"Processor\")}}: ${8:info} </li>",
         "    <li> {{spec_color(c=\"${9:rating}\", text=\"Linux support\")}}: ${10:info} </li>",
         "</ul>"

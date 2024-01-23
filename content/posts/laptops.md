@@ -51,7 +51,7 @@ I would love an AMD version of this machine in particular! The open-source commu
     <li> {{spec_color(c="g", text="Battery")}}: 99 Wh! </li>
     <li> {{spec_color(c="g", text="Display")}}: 16:10 at 400 nits. The resolution is 1800p90. </li>
     <li> {{spec_color(c="g", text="Panel Size/Weight")}}: 14 inches. 2.8 lbs. </li>
-    <li> {{spec_color(c="r", text="Processor")}}: 13000H. 35W TDP. </li>
+    <li> {{spec_color(c="y", text="Processor")}}: 13000H. 35W TDP. </li>
     <li> {{spec_color(c="g", text="Linux Support")}}: Yup! </li>
     <li> {{spec_color(c="g", text="Note")}}: offers ANSI keyboard support! 🎉 </li>
 </ul>
@@ -94,6 +94,24 @@ This laptop is another generic example of the previous machines. However, they p
     <li> {{spec_color(c="y", text="Linux Support")}}: I wasn't able to find information about this machine's Linux capabilities. If you own it - or know someone who does - please [let me know](mailto:contact@barretts.club)! </li>
         <ul><li>The product page states that Skikk does "not provide support on Linux."</li></ul>
     <li> {{spec_color(c="y", text="Note")}}: Americans will be displeased by the lack of ANSI keyboard options. </li>
+</ul>
+
+#### [Monster Notebook Huma H4 (v4.2.5, 2023)](https://www.monsternotebook.com.tr/huma/monster-huma-h4-v4-2-5-gumus/)
+
+These are exciting machines mainly due to Monster's guarantees: you may return your machine at any time if a game doesn't run, and the company currently offers lifetime maintenance and warranty to its buyers!
+
+It also announced plans to [expand to the United States](https://www.pcmag.com/news/turkeys-monster-notebook-looks-to-do-battle-with-us-laptop-makers) soon! This laptop isn't perfect for my standards, but its lower-power chip and support match up.
+
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 99 Wh! </li>
+    <li> {{spec_color(c="g", text="Display")}}: 16:10 aspect ratio with a resolution of 1800p90.  </li>
+    <li> {{spec_color(c="g", text="Panel Size/Weight")}}: 14 inches. 2.7 lbs. </li>
+    <li> {{spec_color(c="g", text="Processor")}}: The i7-1360P is way more efficient than the other Tang-Fong-based machines on this list. This little chip should save a lot of energy! </li>
+    <li> {{spec_color(c="y", text="Linux Support")}}: No information is currently available. [Please let me know](mailto:contact@barretts.club) if you have this machine! </li>
+        <ul>
+            <li> {{spec_color(c="r", text="Warning")}}: This machine uses Nahimic Audio, which comes with the risk of encountering the Realtek ALC3306 or similar chips. Please [contact me](mailto:contact@barretts.club) if you're aware of any audio compatibility issues. </li>
+            <li> {{spec_color(c="r", text="Warning")}}: Two HUMA H4 V5.2 computers reported that the Realtek ALC269VB was in use. These chips can require [some quirks/configurations](https://unix.stackexchange.com/questions/766434/bluetooth-and-sound-not-working) to get running correctly. </li>
+        </ul>
 </ul>
 
 ### [Star Labs StarFighter (Mk I, 2023)](https://us.starlabs.systems/pages/starfighter)
