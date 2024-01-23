@@ -180,13 +180,15 @@ This machine has a great design, but some parts of the device are outdated or lo
 
 ### [Framework Laptop 13.5" (2023)](https://frame.work/products/laptop-diy-13-gen-amd)
 
-- Battery: Not ideal. 55 or 61wh options only.
-- Display: Perfect! 1504p at 3:2, running at over 400 nits.
-- Panel Size/Weight: Perfect! 13.5 inches. 2.87 lbs.
-- Processor: Perfect! Modern Ryzen processors are efficient and powerful.
-- Linux Support: Yes, officially supported!
-
 I adore this machine in almost every way, but its battery is too small.
+
+<ul>
+    <li> {{spec_color(c="r", text="Battery")}}: 55 or 61wh options only. </li>
+    <li> {{spec_color(c="y", text="Display")}}: 1504p60 at 3:2, running at 400+ nits. </li>
+    <li> {{spec_color(c="g", text="Panel Size/Weight")}}: 13.5 inches. 2.87 lbs. </li>
+    <li> {{spec_color(c="g", text="Processor")}}: The Ryzen 5 7640U and 7 7840U are both great chips! </li>
+    <li> {{spec_color(c="g", text="Linux support")}}: Officially supported! </li>
+</ul>
 
 ### [Framework Laptop 16" (2023)](https://frame.work/laptop-16)
 
