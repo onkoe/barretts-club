@@ -21,11 +21,21 @@
         align-items: center;
         padding: 0;
         margin: 0;
+        padding-top: 4pt;
 
         // cal icon
         i {
-            margin-right: 8pt;
+            margin-right: 4pt;
         }
+    }
+
+    .postcard-icon {
+        text-align: center;
+        align-self: center;
+    }
+
+    .post-description {
+        margin: 4pt 0;
     }
 
     .post-title {
