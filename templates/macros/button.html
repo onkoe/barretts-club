@@ -1,8 +1,9 @@
-{% macro button(label="", type="default", style="default", href="#", other_classes="", left_image="", right_image="", onclick="") %}
+{% macro button(label="", type="default", style="default", href="#", other_classes="", left_image="", right_image="", onclick="", aria_label="") %}
 
 {% if type == "default" %}
+
     <div class="btn-wrapper">
-        <a class="btn btn-{{style}} {{other_classes}}" href="{{ href }}" draggable="false">
+        <a class="btn btn-{{style}} {{other_classes}}" href="{{ href }}" role="button" draggable="false" {% if aria_label %} aria-label="{{aria_label}}" {% endif %}>
             {% if left_image != "" %}
                 <i class="fa-solid fa-{{left_image}}"></i>
             {% endif %}
@@ -12,8 +13,8 @@
     </div>
 {% elif type == "extended-fab" %}
     <div class="btn-wrapper" >
-        <a class="extended-fab-btn btn-{{style}} {{ other_classes }}" href="{{ href }} draggable="false""  
-                {% if onclick != "" %} onclick="{{onclick}}" {% endif %}>
+        <a class="extended-fab-btn btn-{{style}} {{ other_classes }}" href="{{ href }}" role="button" draggable="false" 
+                {% if onclick != "" %} onclick="{{onclick}}" {% endif %} {% if aria_label %} aria-label="{{aria_label}}" {% endif %}>
             {% if left_image != "" %}
                 <i class="fa-solid fa-{{left_image}}"></i>
             {% endif %}
@@ -27,7 +28,7 @@
     </div>
 {% elif type == "small-fab"%}
     <div class="btn-wrapper" >
-        <a class="btn small-fab-btn btn-{{style}} {{other_classes}}" href={{href}} draggable="false">
+        <a class="btn small-fab-btn btn-{{style}} {{other_classes}}" href={{href}} role="button" draggable="false" {% if aria_label != "" %} aria-label="{{aria_label}}" {% else %} aria-label="{{label}}" {% endif %}>
             <i class="fa-solid fa-{{left_image}} fa-lg"></i>
         </a>
     </div>

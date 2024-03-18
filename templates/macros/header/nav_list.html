@@ -15,12 +15,12 @@
                     {% if current_path %}
                         {# Check to see if a section is selected #}
                         {% if current_url | safe | slugify | replace(from="/", to="") == url | safe | slugify | replace(from="/", to="") %}
-                            {{ button::button(label=s.name | safe, style="text", href=url, other_classes="current") }}
+                            {{ button::button(label=s.name | safe, style="text", href=url, other_classes="current", aria_label="currently open page: " ~ s.name) }}
                         {% else %}
-                            {{ button::button(label=s.name | safe, style="text", href=url) }}
+                            {{ button::button(label=s.name | safe, style="text", href=url, aria_label=s.name) }}
                         {% endif %}
                     {% else %}
-                        {{ button::button(label=s.name | safe, style="text", href=url) }}
+                        {{ button::button(label=s.name | safe, style="text", href=url, aria_label=s.name) }}
                     {% endif %} 
                 </li>
             {% endfor %} 

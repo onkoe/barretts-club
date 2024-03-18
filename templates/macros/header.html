@@ -10,7 +10,7 @@
             <div class="header-bar">
 
                 <div class="left-section">
-                    <a href="{{get_url(path="/")}}" class="header-icon" aria-label="Home icon">
+                    <a href="{{get_url(path="/")}}" class="header-icon" role="button" aria-label="Homepage menu button icon">
                         <img src="{{get_url(path="svg/box.svg")}}" id="header-icon" alt="Box icon that links to the homepage">
                     </a>
                 </div>
@@ -31,7 +31,7 @@
                         </script>
 
                         {{ button::button(style="surface", href="javascript:inc()",
-                            left_image="lightbulb", type="small-fab", other_classes="theme-btn") }}
+                            left_image="lightbulb", type="small-fab", other_classes="theme-btn", aria_label="Dark mode toggle") }}
 
                         {{ button::button(label="Donations", style="outlined", 
                             left_image="piggy-bank", href="https://github.com/sponsors/onkoe/", other_classes="dono-btn") }}

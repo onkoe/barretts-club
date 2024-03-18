@@ -25,20 +25,23 @@
         {% set icon = "fa-angles-right" %}
         {% set title = page.higher.title | truncate(length=25) | safe %}
         {% set url = page.higher.permalink | safe %}
+        {% set aria_label = label ~ " Suggestion: " ~ page.higher.title %}
     {% elif direction == "previous" %}
         {% set label = "Previous Article" %}
         {% set icon = "fa-angles-left" %}
         {% set title = page.lower.title | truncate(length=25) | safe %}
         {% set url = page.lower.permalink | safe %}
+        {% set aria_label = label ~ " Suggestion: " ~ page.lower.title %}
     {% else %}
         {% set label = "Go Home" %}
         {% set icon = "fa-house" %}
         {% set title = "" %}
         {% set url = get_url(path="/", trailing_slash=false) | safe %}
+        {% set aria_label = "Article Suggestion: " ~ label %}
     {% endif %}
 
 <div class="ars-parent {{direction}}-article btn-wrapper-transparent">
-    <a class="ars-btn fab-surface btn extended-fab-btn" href="{{ url }}">
+    <a class="ars-btn fab-surface btn extended-fab-btn" href="{{ url }}" role="button" draggable="false" aria-label="{{aria_label}}">
         <div class="suggested-heading">
             <i class="suggested-icon fa-solid {{ icon }}"></i>
             <p class="suggested-label">{{ label }}</p>
