@@ -2,7 +2,7 @@
 title = "The Laptop List"
 description = "This is a continually-updated list of laptops that I like!"
 date = 2023-01-15
-updated = 2024-03-20
+updated = 2024-03-30
 [taxonomies]
 tags = ["laptops", "linux", "macos", "windows"]
 +++
@@ -296,6 +296,21 @@ I'm pretty blown away by these little machines! If nothing else, they're in the 
     </li>
 </ul>
 
+### [Dell XPS 14 (9440, 2024)](https://dell.com/en-us/shop/laptops/new-xps-14-laptop/spd/xps-14-9440-laptop/usexchcto9440mtl01)
+
+<ul>
+    <li> {{spec_color(c="y", text="Battery")}}: 70 Wh. </li>
+    <li> {{spec_color(c="g", text="Display")}}: 16:10 at 400s nits with a resolution of 2000p120. </li>
+    <li> {{spec_color(c="g", text="Panel Size/Weight")}}: 14 inches. 3.8 lbs, but this may be with a dedicated GPU. Additional details aren't given. </li>
+    <li> {{spec_color(c="g", text="Processor")}}: The Intel Ultra 7 155H isn't bad, but with a TDP of 28W, I'd still prefer a Ryzen chip. </li>
+    <li> {{spec_color(c="y", text="Linux Support")}}: No guarentees are given by Dell, and I couldn't find a `linux-hardware` report. Here's a mini-list of important parts from [the datasheet](https://www.dell.com/support/manuals/en-us/xps-14-9440-laptop/xps-14-9440-owners-manual/specifications-of-xps-14-9440)! </li>
+        <ul>
+            <li>🔈 Cirrus Logic CS42L43: support gained with kernel 6.6.</li>
+            <li>🛜 AX211: well-supported in Linux!</li>
+            <li>⌨️ Keyboard: Touchbar compatibility isn't known. Be careful on Linux.</li>
+        </ul>
+</ul>
+
 ## Discontinued Machines
 
 ### [SLIMBOOK ProX 15" (2022)](https://slimbook.com/en/prox)
@@ -326,21 +341,6 @@ SCHENKER left Linux Support unmentioned on their website. That may be worth cons
     <li> {{spec_color(c="y", text="Processor")}}: 13000H. 35W TDP. 😖 </li>
     <li> {{spec_color(c="y", text="Linux Support")}}: Unknown! Please [let me know](mailto:contact@barretts.club) if you have any information! </li>
     <li> {{spec_color(c="y", text="Note")}}: Lacks ANSI keyboard options. </li>
-</ul>
-
-### [Dell XPS 14 (9440, 2024)](https://dell.com/en-us/shop/laptops/new-xps-14-laptop/spd/xps-14-9440-laptop/usexchcto9440mtl01)
-
-<ul>
-    <li> {{spec_color(c="y", text="Battery")}}: 70 Wh. </li>
-    <li> {{spec_color(c="g", text="Display")}}: 16:10 at 400s nits with a resolution of 2000p120. </li>
-    <li> {{spec_color(c="g", text="Panel Size/Weight")}}: 14 inches. 3.8 lbs, but this may be with a dedicated GPU. Additional details aren't given. </li>
-    <li> {{spec_color(c="g", text="Processor")}}: The Intel Ultra 7 155H isn't bad, but with a TDP of 28W, I'd still prefer a Ryzen chip. </li>
-    <li> {{spec_color(c="y", text="Linux Support")}}: No guarentees are given by Dell, and I couldn't find a `linux-hardware` report. Here's a mini-list of important parts from [the datasheet](https://www.dell.com/support/manuals/en-us/xps-14-9440-laptop/xps-14-9440-owners-manual/specifications-of-xps-14-9440)! </li>
-        <ul>
-            <li>🔈 Cirrus Logic CS42L43: support gained with kernel 6.6.</li>
-            <li>🛜 AX211: well-supported in Linux!</li>
-            <li>⌨️ Keyboard: Touchbar compatibility isn't known. Be careful on Linux.</li>
-        </ul>
 </ul>
 
 ## Conclusion
