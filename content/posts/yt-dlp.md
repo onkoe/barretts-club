@@ -18,7 +18,7 @@ To get it, just download the [package for your system](https://repology.org/proj
 
 - Fedora: `sudo dnf install yt-dlp`
 - Ubuntu: `sudo apt install yt-dlp`
-  - 20.04 needs backports: `sudo apt install yt-dlp/focal-backports`
+    - 20.04 needs backports: `sudo apt install yt-dlp/focal-backports`
 - macOS: `brew install yt-dlp` (if you don't have Homebrew, [get it here](https://brew.sh/))
 - Windows: `winget install yt-dlp`
 
@@ -74,7 +74,7 @@ It also has a Share button feature!
 
 On iOS, apps that download from services like YouTube are not allowed on the Apple App Store (see the App Store Review Guidelines, [section 5.2.3](https://developer.apple.com/app-store/review/guidelines/#intellectual-property)). However, you are able to install a Shortcut that does this for you!
 
-Tap here, then click "An _iOS shortcut_..." to install the script. When you want to download something, share it, then click the red `youtube-dl` icon in the listing.
+Tap here, then click "An *iOS shortcut*..." to install the script. When you want to download something, share it, then click the red `youtube-dl` icon in the listing.
 
 While the script has been helpful at times, I've found that it tends to freeze often. (In fact, it froze when I took the screenshot below.) I suggest using the website instead.
 
@@ -82,13 +82,13 @@ While the script has been helpful at times, I've found that it tends to freeze o
 
 ## Online
 
-Finally, if no other options do, you can use the web interface! On iOS devices in particular, I prefer using a web interface instead.
+If you can't use any of these other options, there's a website known as `cobalt` you can use as an alternative.
 
-The iOS Shortcut uses projectlounge's site underneath, so if you want, you can just paste links into their website instead! You can find [the website here](https://projectlounge.pw/ytdl).
+iOS users will love this site, as it provides a handy iOS shortcut!
 
-It works great, and unlike many of the other websites, the person behind it has a clear path to sustaining their website. Donate to them [here](https://patreon.com/TheEssem)!
+However, it's worth noting that Cobalt doesn't support some websites that `yt-dlp` does. It spins its own parsers and [doesn't use existing tools](https://github.com/wukko/cobalt/issues/95) whatsoever. If that's alright with you, you'll love Cobalt!
 
-{{ cache_image(alt="a screenshot of the minimal downloader website. it has many download links for each resolution.", link="/images/yt-dlp/lounge.webp", filetype="webp") }}
+{{ cache_image(alt="a screenshot of the minimal downloader website.", link="/images/yt-dlp/cobalt.webp", filetype="webp") }}
 
 ## Conclusion
 
