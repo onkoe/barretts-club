@@ -323,6 +323,16 @@ This machine looks fantastic, but it suffers from a couple flaws. Its CPU is a b
     <li> {{spec_color(c="g", text="Linux support")}}: Slimbook happily supports Linux on their machines! </li>
 </ul>
 
+### [TUXEDO Stellaris Slim 15 (Gen6, 2024)](https://www.tuxedocomputers.com/en/TUXEDO-Stellaris-Slim-15-Gen6-AMD.tuxedo)
+
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 99 Wh! </li>
+    <li> {{spec_color(c="g", text="Display")}}: 1600p240 at 500 nits; 16:10 aspect ratio. </li>
+    <li> {{spec_color(c="y", text="Panel Size/Weight")}}: At 4.62 lb, this 15 inch machine is too heavy for my preferences. It's likely made heavier by its large dedicated GPU and respective cooling. </li>
+    <li> {{spec_color(c="g", text="Processor")}}: AMD's Ryzen 7 8845HS is both powerful and efficient. It does have a TDP of 35 W, but online tests indicate serious efficiency. </li>
+    <li> {{spec_color(c="g", text="Linux support")}}: TUXEDO fully supports Linux! </li>
+</ul>
+
 ## Discontinued Machines
 
 ### [SLIMBOOK ProX 15" (2022)](https://slimbook.com/en/prox)
