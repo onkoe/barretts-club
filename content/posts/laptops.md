@@ -56,7 +56,7 @@ I would love an AMD version of this machine in particular! The open-source commu
     <li> {{spec_color(c="g", text="Note")}}: offers ANSI keyboard support! 🎉 </li>
 </ul>
 
-#### [SCHENKER Vision 14 (M23, 2023)]
+#### [SCHENKER Vision 14 (M23, 2023)](https://www.schenker-tech.de/en/schenker-vision-14-m23/)
 
 This machine is SCHENKER's replacement for the E22. Sadly, it still lacks an ANSI keyboard offering!
 
