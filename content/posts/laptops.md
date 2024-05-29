@@ -311,6 +311,18 @@ I'm pretty blown away by these little machines! If nothing else, they're in the 
         </ul>
 </ul>
 
+### [Slimbook Excalibur (2024)](https://slimbook.com/en/excalibur)
+
+This machine looks fantastic, but it suffers from a couple flaws. Its CPU is a bit too strong, and a larger battery would make it much more considerable. At around 4 lbs, the machine is also pretty heavy.
+
+<ul>
+    <li> {{spec_color(c="y", text="Battery")}}: 67 Wh. </li>
+    <li> {{spec_color(c="g", text="Display")}}: 1600p165 at 400 nits! </li>
+    <li> {{spec_color(c="y", text="Panel Size/Weight")}}: At 16 inches, a weight of 4.1 lbs leaves the machine feeling kinda unportable. </li>
+    <li> {{spec_color(c="g", text="Processor")}}: The Ryzen 7 7840HS is power-hungry with a TDP of 35W, though a larger battery would make this issue less severe. I'll leave it green for now. </li>
+    <li> {{spec_color(c="g", text="Linux support")}}: Slimbook happily supports Linux on their machines! </li>
+</ul>
+
 ## Discontinued Machines
 
 ### [SLIMBOOK ProX 15" (2022)](https://slimbook.com/en/prox)
