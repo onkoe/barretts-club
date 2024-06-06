@@ -53,6 +53,16 @@ I'm not sure if Bevy contributors would want such a language. The current engine
 
 ## June, A New Foe
 
+{% warning() %}
+
+Unfortunately, June's primary maintainer had to archive the project. Its main source of funding pulled out, leaving her with the tough decision of either self-funding the project or archiving it. Please <a href="https://www.sophiajt.com/following-new-paths-ahead/">see her blog post</a> for additional information.
+
+If you become aware of any active forks of June, or similar languages overall, please <a href="https://github.com/onkoe/barretts-club/issues/new">reach out</a>!
+
+In any case, the following section should otherwise hold up. Take care!
+
+{% end %}
+
 The problems I've described define the complexities of creating large, extensible Rust libraries. However, the issues don't harm the library maintainers - just the users. When someone goes to write a game or make a user interface, they want minimal friction. Rust is good at that when you're in control, but without extended language features, it's difficult to create any tangible engine API that feels normal. That's not to say other languages are perfect:
 
 - Python is interpreted, slower, and lacks some of Rust's best constructs. It's good for 2D games due to its ease of use, though!
