@@ -2,6 +2,7 @@
 title = "Rust is for the Engine, Not the Game"
 description = "Macros are cool! But, if we're going to create another language anyways..."
 date = 2024-05-31
+updated = 2024-06-06
 [taxonomies]
 tags = ["rust", "game development"]
 +++
