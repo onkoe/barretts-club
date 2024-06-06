@@ -84,7 +84,7 @@ I know that there'd probably be some folks who'd ask me how Rust itself can get 
 - [A stable Rust ABI](https://github.com/rust-lang/rfcs/issues/600) for June (and other language) integration! (preferably [without the demons](https://thephd.dev/binary-banshees-digital-demons-abi-c-c++-help-me-god-please))
 - [`cargo-script`](https://rust-lang.github.io/rfcs/3424-cargo-script.html) for better example code.
 - [An effects system](https://blog.yoshuawuyts.com/extending-rusts-effect-system/) for easier handling of things like `const`, `async`, etc.
-- Anything that helps folks avoid the borrow checker in certain situations. The integration of non-lexical lifetimes is a great idea to me.
+- Anything that helps folks avoid the borrow checker in certain situations. The [integration of non-lexical lifetimes](https://blog.rust-lang.org/2022/08/05/nll-by-default.html) is a great example!
 - More `rust-lang/rust` [E-easy or "good first issue"](https://github.com/rust-lang/rust/issues?q=is%3Aopen+is%3Aissue+label%3AE-easy) labelers. The language will only get better if we continue to introduce additional contributors.
     - It's also worth nothing that there's no "unclaimed"/"claimed" issue tags. These would help a lot with keeping things clean!
 
