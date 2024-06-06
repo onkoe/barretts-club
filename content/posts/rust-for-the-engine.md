@@ -48,7 +48,7 @@ Another example of Bevy's magic glue is their task/concurrency system. For now, 
 
 In theory, Bevy could integrate these features into their API. Users could get more control over what `async` operations are happening, and they wouldn't have to create quick and dirty solutions to internal problems. However, I think the "2018 Edition"-esque `Future` errors would surface to annoy folks, particularly if the implementation is rushed. `crossbeam` (the real one, not the `std` API) is still used in various parts of Bevy, though. I don't have much hope that such sweeping changes would come to Bevy, nor do I think that they necessarily make a whole `sync`/`async` API split. That's a ton of work!
 
-So, yes - I think we'd need a new language. It could still perform Bevy's magic, use its tooling, include helpful constructs like algebraic type and `Result`, and stay 'close to the hardware'. However, it could handle complex issues like concurrency/asynchrony and dynamic plugin loading without making the user think about it at all.
+So, yes - I think we'd need a new language. It could still perform Bevy's magic, use its tooling, include helpful constructs like algebraic types and `Result`, and stay 'close to the hardware'. However, it could handle complex issues like concurrency/asynchrony and dynamic plugin loading without making the user think about it at all.
 
 I'm not sure if Bevy contributors would want such a language. The current engine is already a huge undertaking, and it introduces another layer of design, development, and bugs. However, a lot of significant issues would be completely fixed, and it would cut out several niche issues within Bevy Engine projects.
 
