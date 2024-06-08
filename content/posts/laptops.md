@@ -2,7 +2,7 @@
 title = "The Laptop List"
 description = "This is a continually-updated list of laptops that I like!"
 date = 2023-01-15
-updated = 2024-05-30
+updated = 2024-06-08
 [taxonomies]
 tags = ["laptops", "linux", "macos", "windows"]
 +++
@@ -324,6 +324,21 @@ This machine looks fantastic, but it suffers from a couple flaws. Its CPU is a b
 </ul>
 
 ### [TUXEDO Stellaris Slim 15 (Gen6, 2024)](https://www.tuxedocomputers.com/en/TUXEDO-Stellaris-Slim-15-Gen6-AMD.tuxedo)
+### [Yoga Slim 7x, 14″ Snapdragon (14Q8X9, June 2024)](https://www.lenovo.com/us/en/p/laptops/yoga/yoga-slim-series/yoga-slim-7x-gen-9-(14-inch-snapdragon)/len101y0049)
+
+<ul>
+    <li> {{spec_color(c="g", text="Battery")}}: 70 Wh. </li>
+    <li> {{spec_color(c="g", text="Display")}}: 1840p90 at 500 nits. HDR support boasts up to 1,000 nits! 16:10 aspect ratio. </li>
+    <li> {{spec_color(c="g", text="Panel Size/Weight")}}: 14.5 inches, 2.82 lbs. </li>
+    <li> {{spec_color(c="g", text="Processor")}}: The Snapdragon X Elite X1E-78-100 is a gorgeous chip with the ARM performance per watt you're used to. </li>
+    <li> {{spec_color(c="r", text="Linux support")}}: Unknown - see below. </li>
+        <ul>
+            <li> Snapdragon X Series processors aren't yet fully supported by Linux. Work is underway on [upstreaming support](https://www.qualcomm.com/developer/blog/2024/05/upstreaming-linux-kernel-support-for-the-snapdragon-x-elite). </li>
+            <li> Support status isn't known for some system components. </li>
+            <li> For example, users [have reported trouble](https://forums.linuxmint.com/viewtopic.php?t=397770) with past Slim 7 machines. </li>
+            <li> The wireless card is suspect, as [the specifications reference](https://psref.lenovo.com/syspool/Sys/PDF/Yoga/Yoga_Slim_7_14Q8X9/Yoga_Slim_7_14Q8X9_Spec.pdf) doesn't mention it. </li>
+        </ul>
+</ul>
 
 <ul>
     <li> {{spec_color(c="g", text="Battery")}}: 99 Wh! </li>
