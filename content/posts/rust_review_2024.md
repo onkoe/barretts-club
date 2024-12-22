@@ -55,20 +55,30 @@ let good: *const i32 = &raw const mps.field_a;
 let value: i32 = unsafe { good.read_unaligned() }; // this is how you'd read the value
 ```
 
-Again, though... avoid `Packed` representations if you can. They're a bit of a footgun. But... `&raw` is great to avoid creating a reference, skipping straight to the pointer.
+Again, though, avoid `Packed` representations if you can. They're a bit of a footgun. If you do need to use them, though, `&raw` is vital!
 
-### [Floating-Point Types in `const`](https://github.com/rust-lang/rust/pull/128596)
+At first, their usage might seem unclear. What is the difference if the syntax just spits out a `*const` or `*mut`... just like `as` casting would? In short, Rust usually requires you to **first** create a reference (`&MyType`) before you can cast to a raw pointer (`*const MyType` and `*mut MyType`).
 
-Now, you can use floats in `const fn`. That means you can often do those computations at compile-time instead of at runtime!
+However, Rust's references have certain guarantees that raw references don't have. In particular, they must be both **aligned** and **dereferenceable**.[^1] When these aren't true, you immediately create opportunities for undefined behavior (UB) by even compiling the thing. Miscompilations are likely due to LLVM's reliance on those two invariants.
 
-This change is based on [RFC 3514: Float Semantics](https://github.com/rust-lang/rfcs/blob/master/text/3514-float-semantics.md), which specifies how FP numbers should work in the language.
+Raw reference (`&raw`) syntax addresses these problems by telling LLVM that those invariants might not be true. Certain optimizations (and other reliant invariants) are now turned off or adjusted.
+
+### [Floating-Point Types in `const fn`](https://github.com/rust-lang/rust/pull/128596)
+
+In the past, you may have tried to use floating-point (FP) numbers within `const` functions. However, before Rust 1.82, the compiler would stop you. This limitation stemmed from platform differences in FP numbers.
+
+To understand why, you need to know a bit of context. In Rust, `const` refers to more than something that won't change - it's a block that can be computed at compile-time! This system spares many runtime operations, making programs faster. However, since FP numbers have platform differences, it's harder to compute that stuff at compile-time. If you do, your program's behavior will change depending on what machine compiled it, even if the cross-compilation is expected to be deterministic!
+
+There's also another problem. If you want to avoid those cross-compilation flaws, you have to write rules for floats to follow at compile-time. **They should be very close to runtime behavior**, and ideally, exactly the same. Notably, [Go fell into this trap](https://rtfeldman.com/0.1-plus-0.2#compile-time-vs-runtime), causing major differences in behavior depending on when floats are evaluated. Every time you use floats in Go, you have to ensure all your code agrees.
+
+With these requirements in mind, and a lot of hard work, Rust has introduced floats in `const fn`! It uses many custom rules to specify exactly how they should work. These are given in [RFC 3514: Float Semantics](https://github.com/rust-lang/rfcs/blob/master/text/3514-float-semantics.md), which specifies how floating-point numbers should work in the language.
 
 ```rust
 struct Maybe {
     pub float: f32,
 }
 
-/// As you can see, we're allowed to do floating-point operations in `const`!
+/// As you can see, we're allowed to use floats in `const`!
 const fn float_in_const(call_me: &Maybe) -> (bool, f32) {
     let f: f32 = call_me.float; // also in your data structures :)
 
@@ -77,7 +87,7 @@ const fn float_in_const(call_me: &Maybe) -> (bool, f32) {
 }
 ```
 
-Note that most methods on the `f32`/`f64` primitives don't yet use this. For example, `f32::powf` and `f32::powi` aren't yet `const`. Using [`#![feature(const_float_methods)]`](https://github.com/rust-lang/rust/issues/130843) on Nightly can get you some of the way there, though these power functions don't seem to be included..?
+Note that most methods on the `f32`/`f64` primitives don't yet use this. For example, `f32::powf` and `f32::powi` aren't yet `const`. Using [`#![feature(const_float_methods)]`](https://github.com/rust-lang/rust/issues/130843) on Nightly can get you some of the way there, though these power functions don't seem to be included yet.
 
 ### [`#[expect(lint)]`](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#expectlint)
 
@@ -539,3 +549,5 @@ Currently, we have to use `if account.username().is_none()`, which is a bit verb
 These are some of my favorite changes from 2024, and my hopes for 2025!
 
 Rust is doing its Annual Community Survey until December 23rd, 2024, so [please fill out the form](https://www.surveyhero.com/c/rust-annual-survey-2024) if you want to share your thoughts! (but blog posts work too)
+
+- [^1]: https://github.com/rust-lang/rfcs/blob/master/text/2582-raw-reference-mir-operator.md#motivation
