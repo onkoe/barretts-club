@@ -15,9 +15,9 @@ If you're here to see me complain about what we don't have yet, please head to t
 
 The Rust project has made countless improvements to the language this year. Let's review and see what might come next!
 
-### [`&raw` Pointer Syntax](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0.html#native-syntax-for-creating-a-raw-pointer)
+### [`&raw` Reference Syntax](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0.html#native-syntax-for-creating-a-raw-pointer)
 
-We now support creating `&raw const` and `&raw mut` pointers as distinct types. These let you safely refer to fields without a well-defined alignment, much like the long-time workarounds (the `addr_of!` and `addr_of_mut!` macros) did:
+We now support creating `&raw const` and `&raw mut` references as distinct types. These let you safely refer to fields without a well-defined alignment, much like the long-time workarounds (`addr_of!` and `addr_of_mut!` macros) did:
 
 ```rust
 /// These fields will be "packed", so there won't be extra padding.
