@@ -429,7 +429,6 @@ Here are some other things I liked:
 - [`use<'a>` bounds (capture syntax)](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0.html#precise-capturing-use-syntax)
     - these let you better specify your lifetimes when using `impl Trait` syntax
     - I still don't recommend this syntax in libraries due to difficulties with semantic versioning compatibility. however, it feels great in your binaries!
-- [`const` blocks](https://github.com/rust-lang/rust/pull/104087/)
 - [`c"my c string"` syntax to define c string literals](https://github.com/rust-lang/rust/pull/117472/)
     - automatic `nul` termination
     - very useful in certain contexts.
