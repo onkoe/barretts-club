@@ -551,4 +551,4 @@ These are some of my favorite changes from 2024, and my hopes for 2025!
 
 Rust is doing its Annual Community Survey until December 23rd, 2024, so [please fill out the form](https://www.surveyhero.com/c/rust-annual-survey-2024) if you want to share your thoughts! (but blog posts work too)
 
-- [^1]: https://github.com/rust-lang/rfcs/blob/master/text/2582-raw-reference-mir-operator.md#motivation
+[^1]: https://github.com/rust-lang/rfcs/blob/master/text/2582-raw-reference-mir-operator.md#motivation
