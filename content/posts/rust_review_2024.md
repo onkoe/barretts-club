@@ -539,9 +539,9 @@ This one sounds kinda funny, but I want a way to log when there's no value.
 Like so:
 
 ```rust
-let username: Option<String> = account
-    .username()
-    .inspect_none(|| tracing::error!("User does not have a username!"));
+let username: Option<String> = account.username().inspect_none(|| {
+    tracing::error!("User does not have a username! (id: `{}`)", account.id())
+});
 ```
 
 Currently, we have to use `if account.username().is_none()`, which is a bit verbose for a logging construct.
