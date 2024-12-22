@@ -182,7 +182,7 @@ When it lands on Stable, the [`lazy_get`](https://github.com/rust-lang/rust/issu
 
 Anyways, these types have always been around in one way or another. But now, you don't need to use an external crate!
 
-### The `#[diagnostic::on_unimplemented]` Attribute
+### The [`#[diagnostic::on_unimplemented]` Attribute](https://doc.rust-lang.org/stable/reference/attributes/diagnostics.html#the-diagnosticon_unimplemented-attribute)
 
 This simple attribute is extremely influential - it lets you create your own compile errors for the user to see, all without a proc macro! Here's how it works:
 
@@ -205,8 +205,10 @@ impl<'data> MyCoolTrait<'data> for CoolType<'data> {
     }
 }
 
+/// I wish that I could be like the cool kids
 struct UncoolType;
 
+/// generic to types that impl `MyCoolTrait`
 fn func_with_cool_bounds<'data, Cool: MyCoolTrait<'data>>(cool_type: Cool) {
     println!("dang look at all this data: {:#?}", cool_type.buf())
 }
@@ -223,11 +225,11 @@ fn main() {
 That last line there gives you the following error:
 
 ```rust
-Compiling rs_2024_article_codeblocks v0.1.0 (/Users/barrett/Downloads/rs_2024_article_codeblocks)
+    Checking rs_2024_article_codeblocks v0.1.0 (/Users/barrett/Downloads/rs_2024_article_codeblocks)
 error[E0277]: tell the user what's going on
-  --> src/diagnostics_on_unimpl.rs:30:27
+  --> src/diagnostics_on_unimpl.rs:32:27
    |
-30 |     func_with_cool_bounds(uncool_type); // uh oh! but hey, a custom err message...
+32 |     func_with_cool_bounds(uncool_type); // uh oh! but hey, a custom err ...
    |     --------------------- ^^^^^^^^^^^ oh hey im pointing at the failed code
    |     |
    |     required by a bound introduced by this call
