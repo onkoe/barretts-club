@@ -2,6 +2,7 @@
 title = "A Review of Rust in 2024: What Next?"
 description = "Reviewing Rust's improvements this year and talking about the future!"
 date = 2024-12-21
+updated = 2024-12-22
 [taxonomies]
 tags = ["rust", "programming", "programming languages"]
 +++
@@ -108,7 +109,9 @@ Anyways... I feel like framing this link on my wall. <https://doc.rust-lang.org/
 
 These two types are upstreamed from the well-known [`once_cell` crate](https://crates.io/crates/once_cell), but the standard library is finally catching up!
 
-[`LazyCell`](https://doc.rust-lang.org/core/cell/struct.LazyCell.html) is the upstreamed version of the `once_cell::unsync::Lazy` type. It can't be used across threads or in statics, but it's made for something else: initializing a variable only when it's needed! It's useful for all kinds of things, often related to caching and avoiding large computations.
+[`LazyCell`](https://doc.rust-lang.org/core/cell/struct.LazyCell.html) is the standard library's version of the `once_cell::unsync::Lazy` type. It can't be used across threads or in statics, but it's made for something else: initializing a variable only when it's needed! They're typically used when you need to run a large computation once, then use the cached results.
+
+In comparison to [`OnceCell`](https://doc.rust-lang.org/core/cell/struct.OnceCell.html), `LazyCell` is used when the computation is always the same. You can only specify the "creation function" in the constructor.
 
 ```rust
 /// A huge type that we need for our app!
@@ -127,15 +130,21 @@ impl BigType {
 
 /// A type that needs to provide a cached value to callers.
 struct SomethingWithCache {
-    cache: OnceCell<BigType>,
+    cache: LazyCell<BigType>,
 }
 
 impl SomethingWithCache {
+    pub fn new() -> Self {
+        Self {
+            cache: LazyCell::new(|| BigType::new(Instant::now())),
+        }
+    }
+
     fn big_type(&self) -> &BigType {
-        // if we don't have it already, initialize it.
+        // this deref will initialize the type if not done already!
         //
-        // otherwise, we'll make it and then cache it for later!
-        self.cache.get_or_init(|| BigType::new(Instant::now()))
+        // otherwise, we'll just use the cached value...
+        &*self.cache
     }
 }
 ```
@@ -156,6 +165,10 @@ impl BigType {
     fn new(creation_time: Instant) -> Self { /* ... */ }
 }
 ```
+
+By the way, you may have noticed that you don't need to have any mutability to initialize these types. You can mutate them from behind a shared reference, as they use `unsafe` behind the scenes to mutate themselves.
+
+When it lands on Stable, the [`lazy_get`](https://github.com/rust-lang/rust/issues/129333) Nightly feature will also allow you to replace the `Lazy` types' internal values with your own.
 
 Anyways, these types have always been around in one way or another. But now, you don't need to use an external crate!
 
