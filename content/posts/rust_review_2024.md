@@ -86,9 +86,10 @@ For example, if you put `#[allow(unused)]` onto a function, but later start call
 
 ```rust
 // you can just replace `#[allow(lint)]` with `#[expect(lint)]`
+//
 // #[allow(unused)]
 #[expect(unused)]
-type SOME_UNUSED_ITEM = i32;
+type SomeUnusedItem = i32;
 ```
 
 This has already fixed some bugs in my code, so I wholeheartedly suggest giving it a try!
