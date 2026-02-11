@@ -5,12 +5,12 @@ base_url = "https://barretts.club" # change for your site
 compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false # TODO: set this up? 
+build_search_index = false # TODO: set this up?
 
 # Feed config
-generate_feed = true       # set to false to disable!
-feed_filename = "atom.xml"
-#feed_limit = 20            # maximum num of articles in feed. 0 = inf
+generate_feeds = true       # set to false to disable!
+feed_filenames = [ "atom.xml" ]
+feed_limit = 0            # maximum num of articles in feed. 0 = inf
 default_language = "en" # language to show in feeds
 
 taxonomies = [{ name = "tags", feed = true, paginate_by = 10 }]
@@ -34,8 +34,6 @@ site_name = "Barrett's Club"       # change to your site's name
 site_desc = "Welcome to the Club!" # a little slogan or something idk
 favicon = "svg/box.svg"            # use an svg please! leave blank if no favicon
 author = "Barrett"                 # put your name here!
-
-# 
 
 [extra.copyright]
 enable = true
