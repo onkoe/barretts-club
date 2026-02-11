@@ -4,8 +4,9 @@ A completely-custom theme for my website, [Barrett's Club](https://barretts.club
 
 ## Development
 
-1. Before you can do anything, you'll need to install Zola. Follow the instructions [on their website](https://www.getzola.org/documentation/getting-started/installation/).
+1. Before you can do anything, you'll need to install Pixi. Follow the instructions [on their website](https://pixi.prefix.dev/latest/#installation).
 1. Go ahead and `git clone` the repo!
+1. Run: `pixi s`. Please ensure you do so every time you need to perform development tasks.
 1. Run `zola serve` and get to hacking!
 
 **Bonus Tip**:
