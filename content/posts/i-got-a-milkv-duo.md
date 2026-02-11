@@ -138,8 +138,21 @@ rustflags = [
     # "-C", "panic=abort", # Uncomment me to avoid compiling in panics
 ]
 ```
-
 Of course, replace `/home/barrett/Downloads` with wherever you cloned and compiled the SDK! Also, it's worth keeping in mind that we're using dynamic libraries here.
+
+or this, if you used the musl archive and extracted it in /opt/riscv-musl:
+
+```toml
+[target.riscv64gc-unknown-linux-musl]
+linker = "/opt/riscv-musl/bin/riscv64-buildroot-linux-musl-gcc.br_real"
+rustflags = [
+    "-C", "target-feature=-crt-static",
+    "-C", "link-arg=--sysroot=/opt/riscv-musl/riscv64-buildroot-linux-musl/sysroot",
+    # "-C", "target-feature=+crt-static", # Uncomment me to force static compilation
+    # "-C", "panic=abort", # Uncomment me to avoid compiling in panics
+]
+]
+```
 
 Let's run our build command. First, though, run a `cargo clean` to make sure all the old build artifacts are gone. Sometimes, failed artifacts won't work with new, working ones!
 
