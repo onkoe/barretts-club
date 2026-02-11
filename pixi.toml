@@ -1,0 +1,11 @@
+[workspace]
+authors = ["Barrett <onkoe@protonmail.com>"]
+channels = ["conda-forge"]
+name = "barretts-club"
+platforms = ["win-64", "linux-64", "linux-aarch64", "osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+zola = "==0.21.0"
