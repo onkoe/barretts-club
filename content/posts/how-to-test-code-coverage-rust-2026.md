@@ -2,6 +2,7 @@
 title = "How to Check Code Coverage in Rust"
 description = "Codecov can be useful! Here's how to check..."
 date = 2026-03-12
+updated = 2026-03-22
 [taxonomies]
 tags = ["rust", "programming", "testing"]
 +++
@@ -21,7 +22,7 @@ Here's an easier way to check codecov in your Rust workspace:
 $ curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
 
 # get cargo-tarpaulin
-$ cargo tarpaulin --engine llvm --out Html
+$ cargo binstall cargo-tarpaulin
 
 # cd to your project
 $ cd my_project
