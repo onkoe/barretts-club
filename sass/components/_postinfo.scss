@@ -126,17 +126,17 @@
         padding-bottom: 1em;
     }
 
-    #toc-cb:checked~.toc-list {
+    #toc-cb:checked ~ .toc-list {
         display: block;
     }
 
     // show/hide text + icon, swapped
-    #toc-cb:checked .extended-fab-btn #show-toc {
+    #toc-cb:checked ~ .toc-button #show-toc {
         display: none;
     }
 
-    #toc-cb:checked .extended-fab-btn #hide-toc {
-        display: block;
+    #toc-cb:checked ~ .toc-button #hide-toc {
+        display: inline-flex;
     }
 
     // get rid of ugly spaces
